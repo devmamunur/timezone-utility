@@ -1,4 +1,4 @@
-# Timezone Utilities
+# Timezone Utility
 
 A versatile utility package for managing time zones in both JavaScript and TypeScript, with zero dependencies. This package offers comprehensive functionalities, including listing time zones, retrieving labels and values, filtering by region, and converting between UTC and various time zones.
 
@@ -29,7 +29,7 @@ A versatile utility package for managing time zones in both JavaScript and TypeS
 Install the package using npm:
 
 ```bash
-npm install timezone-utilities
+npm install timezone-utility
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ npm install timezone-utilities
 ### Importing the Package
 
 ```javascript
-import TimeZone from "timezone-utilities";
+import TimeZone from "timezone-utility";
 ```
 
 #### 1 Get All Timezones (Label-Value Pair)
