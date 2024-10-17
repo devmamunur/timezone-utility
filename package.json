@@ -1,6 +1,6 @@
 {
   "name": "timezone-utility",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Lightweight time zone management utility for JavaScript and TypeScript with zero dependencies.",
   "type": "module",
   "main": "dist/index.js",
@@ -20,6 +20,11 @@
   ],
   "author": "devmamunur",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devmamunur/timezone-utility.git"
+  },
+  "homepage": "https://github.com/devmamunur/timezone-utility#readme",
   "devDependencies": {
     "@types/node": "^22.7.5",
     "typescript": "^5.6.3"
