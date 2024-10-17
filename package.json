@@ -1,0 +1,23 @@
+{
+  "name": "timezone-utility",
+  "version": "1.0.0",
+  "description": "A simple package to manipulate time zone data",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "node dist/test.js",
+    "build": "tsc"
+  },
+  "keywords": [
+    "timezone",
+    "time",
+    "zones"
+  ],
+  "author": "devmamunur",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  }
+}
