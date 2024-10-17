@@ -1,7 +1,7 @@
 {
   "name": "timezone-utility",
   "version": "1.0.0",
-  "description": "A simple package to manipulate time zone data",
+  "description": "A Lightweight time zone management utility for JavaScript and TypeScript with zero dependencies.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
