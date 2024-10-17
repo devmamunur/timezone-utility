@@ -12,7 +12,11 @@
   "keywords": [
     "timezone",
     "time",
-    "zones"
+    "zones",
+    "timezone-list",
+    "timezones-conversion",
+    "datetime-conversion",
+    "timezone-management"
   ],
   "author": "devmamunur",
   "license": "MIT",
