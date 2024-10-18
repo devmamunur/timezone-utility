@@ -1,5 +1,5 @@
-import timezonesData from "./data/timezones.json" assert { type: "json" };
-import regionsData from "./data/region.json" assert { type: "json" };
+import timezonesData from "./data/timezones.json";
+import regionsData from "./data/region.json";
 
 import { TimeZoneEntry, ConvertOptions, TimeZoneNames } from "./types";
 
