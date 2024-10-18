@@ -1,18 +1,17 @@
-import type { TimeZoneEntry, ConvertOptions, TimeZoneNames } from "./types";
-import timezones from "./data/timezones.json";
-import regions from "./data/region.json";
+import timezonesData from "./data/timezones.json" assert { type: "json" };
+import regionsData from "./data/region.json" assert { type: "json" };
 
+import { TimeZoneEntry, ConvertOptions, TimeZoneNames } from "./types";
 
-// Type assertion for the imported JSON as an array of TimeZoneEntry
-const timeZoneEntries: TimeZoneEntry[] = timezones as TimeZoneEntry[];
-const regionList: string[] = regions as string[];
-
+const timezones: TimeZoneEntry[] = timezonesData;
+const regions: string[] = regionsData;
 
 class TimeZone {
     // Static property containing all time zones
-    static timezones: TimeZoneEntry[] = timeZoneEntries;
+    static timezones: TimeZoneEntry[] = timezones;
 
-    static regions: string[] = regionList;
+    static regions: string[] = regions;
+
 
     private static timezoneCache: Record<string, TimeZoneEntry[]> = {};
 
@@ -320,3 +319,4 @@ class TimeZone {
 }
 
 export default TimeZone;
+export { TimeZone, TimeZoneEntry, ConvertOptions, TimeZoneNames };
