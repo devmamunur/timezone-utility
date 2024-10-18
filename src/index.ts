@@ -1,22 +1,12 @@
-import timezones from "./data/timezones.json" assert { type: "json" };
-import regions from "./data/region.json" assert { type: "json" };
+import type { TimeZoneEntry, ConvertOptions, TimeZoneNames } from "./types";
+import timezones from "./data/timezones.json";
+import regions from "./data/region.json";
 
-interface TimeZoneEntry {
-    label: string;
-    value: string; // Flexible string for time zone values
-}
 
 // Type assertion for the imported JSON as an array of TimeZoneEntry
 const timeZoneEntries: TimeZoneEntry[] = timezones as TimeZoneEntry[];
 const regionList: string[] = regions as string[];
 
-export type TimeZoneNames = TimeZoneEntry["value"];
-
-interface ConvertOptions {
-    is24Hour?: boolean;
-    dateSeparator?: string;
-    timeSeparator?: string;
-}
 
 class TimeZone {
     // Static property containing all time zones
