@@ -1,6 +1,6 @@
 {
   "name": "timezone-utility",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "type": "module",
   "description": "A Lightweight time zone management utility for JavaScript and TypeScript with zero dependencies.",
   "main": "dist/cjs/src/index.js",
@@ -8,8 +8,8 @@
   "types": "dist/types/src/index.d.ts",
   "exports": {
     ".": {
-       "import": "./dist/esm/src/index.js",
-       "require": "./dist/cjs/src/index.js"
+      "import": "./dist/esm/src/index.js",
+      "require": "./dist/cjs/src/index.js"
     }
   },
   "scripts": {
@@ -40,7 +40,7 @@
   "homepage": "https://github.com/devmamunur/timezone-utility#readme",
   "devDependencies": {
     "typescript": "^4.7.4",
-    "@types/node": "^17.0.0" 
+    "@types/node": "^17.0.0"
   },
   "engines": {
     "node": ">=16.0.0"
