@@ -1,7 +1,19 @@
-import timezonesData from "./data/timezones.json";
-import regionsData from "./data/region.json";
+import timezonesData from "./timezones.json";  
+import regionsData from "./region.json";
 
-import { TimeZoneEntry, ConvertOptions, TimeZoneNames } from "./types";
+
+interface TimeZoneEntry {
+    label: string;
+    value: string;
+}
+
+interface ConvertOptions {
+    is24Hour?: boolean;
+    dateSeparator?: string;
+    timeSeparator?: string;
+}
+
+ type TimeZoneNames = TimeZoneEntry["value"];
 
 const timezones: TimeZoneEntry[] = timezonesData;
 const regions: string[] = regionsData;
@@ -188,7 +200,6 @@ class TimeZone {
         return convertedDate;
 
         } catch (error) {
-            console.error(error);
             return "An error occurred during time zone conversion.";
         }
     }
@@ -318,5 +329,7 @@ class TimeZone {
     }
 }
 
+
+export { TimeZone };
 export default TimeZone;
-export { TimeZone, TimeZoneEntry, ConvertOptions, TimeZoneNames };
+

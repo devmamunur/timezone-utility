@@ -37,11 +37,9 @@ npm install timezone-utility
 
 ```javascript
 // For ES Module (ESM)
-import TimeZone from "timezone-utility";
 import { TimeZone } from "timezone-utility";
 
 // For CommonJS
-const TimeZone = require("timezone-utility").default;
 const { TimeZone } = require("timezone-utility");
 ```
 
