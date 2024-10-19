@@ -1,29 +1,29 @@
 # Timezone Utility
 
-A versatile utility package for managing time zones in both JavaScript and TypeScript, with zero dependencies. This package offers comprehensive functionalities, including listing time zones, retrieving labels and values, filtering by region, and converting between UTC and various time zones.
+A versatile timezone management package with zero dependencies, designed for CommonJS, ES Module (ESM), JavaScript, and TypeScript projects. It offers a range of features, including timezone listing, retrieving labels and values, region-based filtering, and converting between UTC and other timezones.
 
 
 ## Table of Contents
 
-- [⚙️ **Installation**](#installation)
-- [📖 **Usage**](#usage)
-  - [📦 **Importing the Package**](#importing-the-package)
-  - [🌍 **Get All Timezones (Label-Value Pair)**](#1-get-all-timezones-label-value-pair)
-  - [🕑 **Get All Timezone Values (Without Label)**](#2-get-all-timezone-values-without-label)
-  - [🏷️ **Get All Timezone Labels (Without Value)**](#3-get-all-timezone-labels-without-value)
-  - [🌐 **Get Timezones by Region**](#4-get-timezones-by-region)
-  - [🔖 **Get Timezone Label from Value**](#5-get-timezone-label-from-value)
-  - [🎯 **Get Timezone Value from Label**](#6-get-timezone-value-from-label)
-  - [🌏 **Get List of Regions**](#7-get-list-of-regions)
-  - [⏰ **Convert UTC Time to Specific Timezone**](#8-convert-utc-time-to-specific-timezone)
-  - [🔄 **Convert Datetime From One Timezone to Another**](#9-convert-datetime-from-one-timezone-to-another)
-  - [🌐🕓 **Convert any Date-Time String to UTC Format**](#10-convert-any-datetime-string-to-utc-format)
-  - [🕰️ **Get the Current Date-Time in a Specific Timezone**](#11-get-the-current-datetime-in-a-specific-timezone)
-  - [➕➖ **Add or Subtract Time (hours, minutes, or days) From a Date**](#12-add-or-subtract-time-hours-minutes-or-days-from-a-date)
-  - [🕒➡️🕕 **Get the Time Difference Between Two Timezones**](#13-get-the-time-difference-between-two-timezones)
-- [📋 **Methods Overview**](#methods-overview)
-- [📜 **License**](#license)
-- [🤝 **Contributing**](#contributing)
+- [⚙️ Installation](#installation)
+- [📖 Usage](#usage)
+  - [📦 Importing the Package](#importing-the-package)
+  - [🌍 Get All Timezones (Label-Value Pair)](#1-get-all-timezones-label-value-pair)
+  - [🕑 et All Timezone Values (Without Label)](#2-get-all-timezone-values-without-label)
+  - [🏷️ Get All Timezone Labels (Without Value)](#3-get-all-timezone-labels-without-value)
+  - [🌐 Get Timezones by Region](#4-get-timezones-by-region)
+  - [🔖 Get Timezone Label from Value](#5-get-timezone-label-from-value)
+  - [🎯 Get Timezone Value from Label](#6-get-timezone-value-from-label)
+  - [🌏 Get List of Regions](#7-get-list-of-regions)
+  - [⏰ Convert UTC Time to Specific Timezone](#8-convert-utc-time-to-specific-timezone)
+  - [🔄 Convert Datetime From One Timezone to Another](#9-convert-datetime-from-one-timezone-to-another)
+  - [🌐🕓 Convert any Date-Time String to UTC Format](#10-convert-any-datetime-string-to-utc-format)
+  - [🕰️ Get the Current Date-Time in a Specific Timezone](#11-get-the-current-datetime-in-a-specific-timezone)
+  - [➕➖ Add or Subtract Time (hours, minutes, or days) From a Date](#12-add-or-subtract-time-hours-minutes-or-days-from-a-date)
+  - [🕒➡️🕕 Get the Time Difference Between Two Timezones](#13-get-the-time-difference-between-two-timezones)
+- [📋 Methods Overview](#methods-overview)
+- [📜 License](#license)
+- [🤝 Contributing](#contributing)
 
 ## Installation
 Install the package using npm:
@@ -34,13 +34,18 @@ npm install timezone-utility
 
 ## Usage
 
-### Importing the Package
 
 ```javascript
+// For ES Module (ESM)
 import TimeZone from "timezone-utility";
+import { TimeZone } from "timezone-utility";
+
+// For CommonJS
+const TimeZone = require("timezone-utility").default;
+const { TimeZone } = require("timezone-utility");
 ```
 
-#### 1 Get All Timezones (Label-Value Pair)
+### 1. Get All Timezones (Label-Value Pair)
 
 Retrieve a list of all available timezones with both label and value.
 
