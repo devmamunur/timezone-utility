@@ -3,25 +3,23 @@
   "version": "1.2.1",
   "type": "module",
   "description": "A Lightweight time zone management utility for JavaScript and TypeScript with zero dependencies.",
-  "main": "dist/cjs/src/index.js",
-  "module": "dist/esm/src/index.js",
-  "types": "dist/types/src/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/esm/src/index.js",
-      "require": "./dist/cjs/src/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
     }
   },
-  "scripts": {
-    "prebuild": "echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json && echo '{\"type\": \"module\"}' > dist/esm/package.json",
-    "transpile": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json & tsc --project tsconfig.types.json",
-    "fix": "tsc-esm-fix --src='dist/esm/src/**/*.js' --ext='.js'",
-    "build:pre": "npm run transpile && npm run fix",
-    "build": "npm run prebuild && npm run transpile && npm run fix"
-  },
-  "files": [
-    "dist/**/*"
-  ],
+"scripts": {
+  "prebuild": "mkdir -p dist/cjs dist/esm && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json && echo '{\"type\": \"module\"}' > dist/esm/package.json",
+  "build": "npm run clean && npm run prebuild && npm run transpile && npm run copy && npm run remove-data",
+  "clean": "rimraf dist && mkdirp dist",
+  "transpile": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json && tsc --project tsconfig.types.json",
+  "copy": "cp -R data dist/",
+  "remove-data": "rimraf dist/cjs/data dist/esm/data dist/types/data"
+},
   "keywords": [
     "timezone",
     "time",
@@ -39,8 +37,11 @@
   },
   "homepage": "https://github.com/devmamunur/timezone-utility#readme",
   "devDependencies": {
-    "typescript": "^4.7.4",
-    "@types/node": "^17.0.0"
+    "@types/node": "^17.0.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
+    "tsc-esm-fix": "^3.1.0",
+    "typescript": "^5.0.0"
   },
   "engines": {
     "node": ">=16.0.0"

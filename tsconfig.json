@@ -3,10 +3,8 @@
     "module": "CommonJS",
     "rootDir": "./",
     "moduleResolution": "Node",
-    "baseUrl": "./src",
-    "paths": {
-      "*": ["*", "src/*"]
-    },
+    "baseUrl": ".",
+ 
     "resolveJsonModule": true,
     "declaration": true,
     "declarationMap": true,
@@ -21,5 +19,6 @@
     "strictPropertyInitialization": true,
     "noUnusedLocals": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*"] 
 }
