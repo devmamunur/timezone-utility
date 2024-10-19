@@ -1,6 +1,6 @@
 {
   "name": "timezone-utility",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "type": "module",
   "description": "A Lightweight time zone management utility for JavaScript and TypeScript with zero dependencies.",
   "main": "dist/cjs/index.js",
@@ -12,14 +12,14 @@
       "require": "./dist/cjs/index.js"
     }
   },
-"scripts": {
-  "prebuild": "mkdir -p dist/cjs dist/esm && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json && echo '{\"type\": \"module\"}' > dist/esm/package.json",
-  "build": "npm run clean && npm run prebuild && npm run transpile && npm run copy && npm run remove-data",
-  "clean": "rimraf dist && mkdirp dist",
-  "transpile": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json && tsc --project tsconfig.types.json",
-  "copy": "cp -R data dist/",
-  "remove-data": "rimraf dist/cjs/data dist/esm/data dist/types/data"
-},
+  "scripts": {
+    "prebuild": "mkdir -p dist/cjs dist/esm && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json && echo '{\"type\": \"module\"}' > dist/esm/package.json",
+    "build": "npm run clean && npm run prebuild && npm run transpile && npm run copy && npm run remove-data",
+    "clean": "rimraf dist && mkdirp dist",
+    "transpile": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json && tsc --project tsconfig.types.json",
+    "copy": "cp -R data dist/",
+    "remove-data": "rimraf dist/cjs/data dist/esm/data dist/types/data"
+  },
   "keywords": [
     "timezone",
     "time",
