@@ -22,8 +22,8 @@ A versatile timezone management package designed for CommonJS, ES Module (ESM), 
   - [getCurrentTimeInTimeZone](#getCurrentTimeInTimeZone)
   - [getTimeDifferenceBetweenTimeZones](#getTimeDifferenceBetweenTimeZones)
   - [convertToISO](#convertToISO)
-- [ConvertOptions](#convertoptions)
-- [Conclusion](#conclusion)
+- [License](#license)
+- [Contributing](#contributing)
 
 ## Installation
 Install the package using npm:
