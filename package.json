@@ -1,6 +1,6 @@
 {
   "name": "timezone-utility",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A Lightweight time zone management utility for JavaScript and TypeScript with zero dependencies.",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
