@@ -1,11 +1,31 @@
-# Ignore node_modules
+# Ignore dependencies (node_modules is ignored by default but good to include for clarity)
 node_modules/
 
-# Ignore build artifacts
-dist/
-build/
+# Ignore build artifacts and test files
 test/
+tests/
+__tests__/
+coverage/
 
+# Ignore source files (only compiled files should be shipped)
+src/
+
+# Ignore IDE and environment-specific configurations
 .vscode/
+.idea/
+
+# Ignore system files and logs
+.DS_Store
+*.log
+
+# Ignore local environment configuration (if any)
+.env
+.env.*
+
+# Ignore Git-related files
+.git
 .gitignore
 
+# Ignore configuration files not needed for the package consumers
+rollup.config.mjs
+tsconfig.json  # if using TypeScript
