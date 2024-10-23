@@ -332,7 +332,3 @@ This project is licensed under the MIT License.
 We welcome contributions to this package! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 
-### Key Points:
-- The `README.md` provides clear instructions for installation, usage, and examples for each method.
-- Each method is documented with a brief description, input/output, and examples.
-- The `convertUTCToTimeZone` method now includes an option for the 12-hour/24-hour format, as requested.
