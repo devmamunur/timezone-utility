@@ -30,7 +30,6 @@ Install the package using npm:
 
 ```bash
 npm install timezone-utility
-npm install luxon
 ```
 
 ## Usage
