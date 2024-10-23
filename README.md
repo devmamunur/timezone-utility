@@ -6,7 +6,7 @@ A versatile timezone management package designed for CommonJS, ES Module (ESM), 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Importing](#importing)
+- [Usage](#usage)
 - [Methods Overview](#methods-overview)
 - [Methods](#methods)
   - [list](#list)
