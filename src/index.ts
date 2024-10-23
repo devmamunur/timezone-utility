@@ -1,6 +1,14 @@
-import timezonesData from "./timezones.json";  
-import regionsData from "./region.json";
+/**
+ * Timezone Utility
+ * 
+ * A versatile timezone management package designed for CommonJS, ES Module (ESM), JavaScript, and TypeScript projects. 
+ * It offers a range of features, including timezone listing, retrieving labels and values, region-based filtering, and converting between UTC and other timezones.
+ * @packageDocumentation
+ */
 
+import { DateTime } from 'luxon';
+import timezonesData from "./timezones.json";
+import regionsData from "./region.json";
 
 interface TimeZoneEntry {
     label: string;
@@ -13,49 +21,94 @@ interface ConvertOptions {
     timeSeparator?: string;
 }
 
- type TimeZoneNames = TimeZoneEntry["value"];
+type TimeZoneNames = TimeZoneEntry["value"];
+
 
 const timezones: TimeZoneEntry[] = timezonesData;
 const regions: string[] = regionsData;
 
+/**
+ * TimeZone class providing static methods for time zone operations.
+ */
 class TimeZone {
-    // Static property containing all time zones
-    static timezones: TimeZoneEntry[] = timezones;
-
-    static regions: string[] = regions;
-
+    static readonly timezones: TimeZoneEntry[] = timezones;
+    static readonly regions: string[] = regions;
 
     private static timezoneCache: Record<string, TimeZoneEntry[]> = {};
 
-    // Check if the input string is a valid ISO 8601 date-time string
-    static isISODateTime(dateTime: string): boolean {
-        // Basic ISO 8601 DateTime regex
-        const isoRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|([+-]\d{2}:\d{2}))?$/;
-        return isoRegex.test(dateTime);
-    }
     /**
-     * 1. Get all timezone list with label and value pair
+     * Checks if a given string is a valid ISO date-time format.
+     * @param dateTime - The date-time string to validate.
+     * @returns True if the string is a valid ISO date-time, false otherwise.
+     */
+    static isISODateTime(dateTime: string): boolean {
+        return DateTime.fromISO(dateTime).isValid;
+    }
+
+    /**
+     * Validates if a given string is a valid time zone.
+     * @param timeZone - The time zone string to validate.
+     * @returns True if the time zone is valid, false otherwise.
+     */
+    static isValidTimeZone(timeZone: string): boolean {
+        return this.listWithoutLabel().includes(timeZone);
+    }
+
+    /**
+     * Converts a date-time from one time zone to another.
+     * @param dateTime - The date-time to convert (Date object or ISO string).
+     * @param sourceTimeZone - The source time zone.
+     * @param targetTimeZone - The target time zone.
+     * @param is24Hour - Whether to use 24-hour format (default: false).
+     * @returns Converted date-time string or Error if conversion fails.
+     */
+    static convertDateTime(dateTime: Date | string, sourceTimeZone: TimeZoneNames, targetTimeZone: TimeZoneNames, is24Hour: boolean = false): string | Error {
+        if (!this.isValidTimeZone(sourceTimeZone) || !this.isValidTimeZone(targetTimeZone)) {
+            return new Error('Invalid time zone provided.');
+        }
+
+        try {
+            const sourceDate = typeof dateTime === 'string' ? DateTime.fromISO(dateTime, { zone: sourceTimeZone }) : DateTime.fromJSDate(dateTime, { zone: sourceTimeZone });
+
+            if (!sourceDate.isValid) {
+                throw new Error('Invalid date-time format.');
+            }
+
+            const targetDate = sourceDate.setZone(targetTimeZone);
+            return targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+        } catch (error) {
+            return error;
+        }
+    }
+
+    /**
+     * Returns a list of all available time zones.
+     * @returns Array of TimeZoneEntry objects.
      */
     static list(): TimeZoneEntry[] {
         return this.timezones;
     }
 
     /**
-     * 2. Get all timezone list only values
+     * Returns a list of all time zone values without labels.
+     * @returns Array of time zone values.
      */
     static listWithoutLabel(): TimeZoneNames[] {
         return this.timezones.map((tz) => tz.value);
     }
 
     /**
-     * 3. Get all timezone list only labels
+     * Returns a list of all time zone labels without values.
+     * @returns Array of time zone labels.
      */
     static listWithoutValue(): string[] {
         return this.timezones.map((tz) => tz.label);
     }
 
     /**
-     * 4. Get timezone list by a region
+     * Lists time zones for a specific region.
+     * @param region - The region to filter time zones.
+     * @returns Array of TimeZoneEntry objects for the specified region.
      */
     static listByRegion(region: string): TimeZoneEntry[] {
         if (!this.timezoneCache[region]) {
@@ -67,7 +120,9 @@ class TimeZone {
     }
 
     /**
-     * 5. Get timezone label from value
+     * Gets the label for a given time zone value.
+     * @param value - The time zone value.
+     * @returns The corresponding label or null if not found.
      */
     static getLabelFromValue(value: TimeZoneNames): string | null {
         const tz = this.timezones.find((tz) => tz.value === value);
@@ -75,7 +130,9 @@ class TimeZone {
     }
 
     /**
-     * 6. Get timezone value from label
+     * Gets the value for a given time zone label.
+     * @param label - The time zone label.
+     * @returns The corresponding value or null if not found.
      */
     static getValueFromLabel(label: string): TimeZoneNames | null {
         const tz = this.timezones.find((tz) => tz.label === label);
@@ -83,253 +140,188 @@ class TimeZone {
     }
 
     /**
-     * 7. Get region list
+     * Returns a list of all available regions.
+     * @returns Array of region strings.
      */
     static getRegions(): string[] {
         return this.regions;
     }
 
     /**
-     * 8. Convert a UTC DateTime to the selected timezone
-     * @param {Date | string} utcDate - The UTC DateTime (Date object or ISO string)
-     * @param {string} targetTimeZone - The target timezone (e.g., 'America/New_York')
-     * @param {object} options - The options object
-     * @returns {string | null} - The converted date string or null if invalid
+     * Converts a UTC date to a specified time zone.
+     * @param utcDate - The UTC date (Date object or ISO string).
+     * @param targetTimeZone - The target time zone.
+     * @param options - Conversion options (optional).
+     * @returns Formatted date-time string in the target time zone or error message.
      */
-    static convertUTCToTimeZone(
-        utcDate: Date | string,
-        targetTimeZone: TimeZoneNames,
-        options: ConvertOptions = {}
-    ): string | null {
+    static convertUTCToTimeZone(utcDate: Date | string, targetTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | null {
+        const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
 
-        // Set default values for options
-        const { is24Hour = true, dateSeparator = '/', timeSeparator = ':' } = options || {};
-
-        if (!this.listWithoutLabel().includes(targetTimeZone)) {
+        if (!this.isValidTimeZone(targetTimeZone)) {
             return "Invalid timezone provided.";
         }
-    
-        let date: Date;
-        if (typeof utcDate === 'string') {
-            date = new Date(utcDate);
-        } else {
-            date = utcDate;
-        }
-    
-        if (isNaN(date.getTime())) {
+
+        const date = typeof utcDate === "string" ? DateTime.fromISO(utcDate, { zone: 'UTC' }) : DateTime.fromJSDate(utcDate, { zone: 'UTC' });
+
+        if (!date.isValid) {
             return "Invalid date format.";
         }
-    
-        const formatOptions: Intl.DateTimeFormatOptions = {
-            timeZone: targetTimeZone,
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: !is24Hour // Toggle between 24-hour and 12-hour format
-        };
-    
-        const formatter = new Intl.DateTimeFormat("en-US", formatOptions);
-        let formattedDate = formatter.format(date);
-    
-        // Replace the default date separator with the user-defined one
-        formattedDate = formattedDate.replace(/\//g, dateSeparator);
 
-        // Replace the default time separator with the user-defined one
+        const targetDate = date.setZone(targetTimeZone);
+        let formattedDate = targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+
+        if (dateSeparator !== '-') {
+            formattedDate = formattedDate.replace(/-/g, dateSeparator);
+        }
         if (timeSeparator !== ':') {
             formattedDate = formattedDate.replace(/:/g, timeSeparator);
         }
+
         return formattedDate;
     }
 
     /**
-     * 9. Convert DateTime from one timezone to another
-     * @param {string} date - The original date string
-     * @param {string} fromTimeZone - The source timezone
-     * @param {string} toTimeZone - The target timezone
-     * @param {object} options - The options object
-     * @returns {string | null} - The converted date string or null if invalid
+     * Converts a date-time from a specified time zone to UTC.
+     * @param dateTime - The date-time to convert (Date object or ISO string).
+     * @param sourceTimeZone - The source time zone.
+     * @param options - Conversion options (optional).
+     * @returns Formatted UTC date-time string or error message.
      */
-    static convertBetweenTimeZones(
-        date: string,
-        fromTimeZone: TimeZoneNames,
-        toTimeZone: TimeZoneNames,
-        options: ConvertOptions = {}
-    ): string | null {
-        // Set default values for options
-        const { is24Hour = true, dateSeparator = '/', timeSeparator = ':' } = options;
+    static convertToUTC(dateTime: Date | string, sourceTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | Error {
         try {
-            if (!this.listWithoutLabel().includes(fromTimeZone) || !this.listWithoutLabel().includes(toTimeZone)) {
-                return 'Invalid timezone provided.';
+            const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+
+            if (!this.isValidTimeZone(sourceTimeZone)) {
+                return "Invalid timezone provided.";
             }
-    
-            // Create a date object from the input date string
-            const originalDate = new Date(date);
-            if (isNaN(originalDate.getTime())) {
+
+            const date = typeof dateTime === "string" ? DateTime.fromISO(dateTime, { zone: sourceTimeZone }) : DateTime.fromJSDate(dateTime, { zone: sourceTimeZone });
+
+            if (!date.isValid) {
+                return "Invalid date format.";
+            }
+
+            const utcDate = date.setZone('UTC');
+            let formattedUTC = utcDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+
+            if (dateSeparator !== '-') {
+                formattedUTC = formattedUTC.replace(/-/g, dateSeparator);
+            }
+            if (timeSeparator !== ':') {
+                formattedUTC = formattedUTC.replace(/:/g, timeSeparator);
+            }
+
+            return formattedUTC;
+        } catch (error) {
+            return "An error occurred during conversion.";
+        }
+    }
+
+    /**
+     * Converts a date-time between two specified time zones.
+     * @param date - The date-time string to convert.
+     * @param fromTimeZone - The source time zone.
+     * @param toTimeZone - The target time zone.
+     * @param options - Conversion options (optional).
+     * @returns Formatted date-time string in the target time zone or error message.
+     */
+    static convertBetweenTimeZones(date: string, fromTimeZone: TimeZoneNames, toTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | null {
+        const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+        try {
+            if (!this.isValidTimeZone(fromTimeZone) || !this.isValidTimeZone(toTimeZone)) {
+                return "Invalid timezone provided.";
+            }
+
+            const originalDate = DateTime.fromISO(date, { zone: fromTimeZone });
+
+            if (!originalDate.isValid) {
                 return 'Invalid date format.';
             }
 
-            // Convert the original date to the source timezone using toLocaleString
-            const formattedInSourceTimeZone = originalDate.toLocaleString("en-US", {
-                timeZone: fromTimeZone,
-            });
+            const targetDate = originalDate.setZone(toTimeZone);
+            let formattedDate = targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
 
-            // Convert the source timezone date to a Date object
-            const dateInSourceTimeZone = new Date(formattedInSourceTimeZone);
-    
-            // Convert to target timezone using the updated Date object
-            let convertedDate = dateInSourceTimeZone.toLocaleString("en-US", {
-                timeZone: fromTimeZone,
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: !is24Hour // Toggle between 24-hour and 12-hour format
-            });
-    
-            // Replace default separators with user-provided ones
-            convertedDate = convertedDate.replace(/\//g, dateSeparator);
+            if (dateSeparator !== '-') {
+                formattedDate = formattedDate.replace(/-/g, dateSeparator);
+            }
             if (timeSeparator !== ':') {
-                convertedDate = convertedDate.replace(/:/g, timeSeparator);
+                formattedDate = formattedDate.replace(/:/g, timeSeparator);
             }
 
-        return convertedDate;
-
+            return formattedDate;
         } catch (error) {
             return "An error occurred during time zone conversion.";
         }
     }
 
     /**
-     * 10. Convert any date-time string to UTC format
-     * @param {string} dateTime - The input date-time string in any format
-     * @returns {string | null} - The corresponding UTC date string in ISO format or null if invalid
+     * Gets the current time in a specified time zone.
+     * @param targetTimeZone - The target time zone.
+     * @param options - Formatting options (optional).
+     * @returns Formatted current date-time string in the target time zone or error message.
      */
-    static convertToUTC(dateTime: string): string | null {
-        try {
+    static getCurrentTimeInTimeZone(targetTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | null {
+        const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
 
-            // Trim the input to remove extra spaces
-            const trimmedDateTime = dateTime.trim();
-
-            // Check if the input string is a valid ISO 8601 date-time string
-            if(!this.isISODateTime(trimmedDateTime)) {
-                return "Invalid date format.";
-            }
-
-            // Attempt to create a new Date object
-            const date = new Date(trimmedDateTime);
-            
-            // Check if the date is valid
-            if (isNaN(date.getTime())) {
-                return "Invalid date format.";
-            }
-
-            // Convert to UTC format (ISO 8601)
-            return date.toISOString();
-        } catch (error) {
-            return "An error occurred during conversion.";
-        }
-    }
-    /**
-     * 11. Get the current date-time in a specific timezone
-     * @param {string} targetTimeZone - The target timezone
-     * @param {object} options - The options object
-     * @returns {string | null} - The current date-time string in the target timezone or null if invalid
-     */
-    static getCurrentTimeInTimeZone(
-        targetTimeZone: TimeZoneNames, 
-        options: ConvertOptions = {}
-    ): string | null {
-        const { is24Hour = true, dateSeparator = '/', timeSeparator = ':' } = options;
-
-        // Check if the provided target timezone is valid
-        if (!this.listWithoutLabel().includes(targetTimeZone)) {
+        if (!this.isValidTimeZone(targetTimeZone)) {
             return "Invalid timezone provided.";
         }
 
-        // Get the current UTC date-time
-        const now = new Date();
+        const currentDateInTimeZone = DateTime.now().setZone(targetTimeZone);
+        let formattedDate = currentDateInTimeZone.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
 
-        // Convert the current date-time to the target timezone using the existing convertUTCToTimeZone method
-        return this.convertUTCToTimeZone(now, targetTimeZone, { is24Hour, dateSeparator, timeSeparator });
+        if (dateSeparator !== '-') {
+            formattedDate = formattedDate.replace(/-/g, dateSeparator);
+        }
+
+        if (timeSeparator !== ':') {
+            formattedDate = formattedDate.replace(/:/g, timeSeparator);
+        }
+
+        return formattedDate;
     }
 
     /**
-     * 12. Add or subtract time (hours, minutes, or days) from a date
-     * @param {Date | string} date - The base date (Date object or string)
-     * @param {number} amount - The amount of time to add (positive) or subtract (negative)
-     * @param {string} unit - The unit of time ('hours', 'minutes', 'days')
-     * @returns {string | null} - The new date in UTC format or null if invalid
+     * Calculates the time difference between two time zones for a given date.
+     * @param date - The date string to use for calculation.
+     * @param fromTimeZone - The source time zone.
+     * @param toTimeZone - The target time zone.
+     * @returns Formatted time difference string or error message.
      */
-    static addTimeToDate(date: Date | string, amount: number, unit: 'hours' | 'minutes' | 'days'): string | null {
-        let parsedDate = typeof date === 'string' ? new Date(date) : date;
-
-        // Check if the date is valid
-        if (isNaN(parsedDate.getTime())) {
-            return "Invalid date format.";
+    static getTimeDifferenceBetweenTimeZones(date: string, fromTimeZone: TimeZoneNames, toTimeZone: TimeZoneNames): string | null {
+        if (!this.isValidTimeZone(fromTimeZone) || !this.isValidTimeZone(toTimeZone)) {
+            return "Invalid timezone provided.";
         }
 
-        switch (unit) {
-            case 'hours':
-                parsedDate.setHours(parsedDate.getHours() + amount);
-                break;
-            case 'minutes':
-                parsedDate.setMinutes(parsedDate.getMinutes() + amount);
-                break;
-            case 'days':
-                parsedDate.setDate(parsedDate.getDate() + amount);
-                break;
-            default:
-                return "Invalid time unit provided.";
+        const fromTime = DateTime.fromISO(date, { zone: fromTimeZone });
+        const toTime = DateTime.fromISO(date, { zone: toTimeZone });
+
+        if (!fromTime.isValid || !toTime.isValid) {
+            return 'Invalid date format.';
         }
 
-        // Return the updated date in UTC format
-        return parsedDate.toISOString();
+        const timeDifference = toTime.diff(fromTime, ['hours', 'minutes']);
+        const hours = Math.abs(timeDifference.hours);
+        const minutes = Math.abs(timeDifference.minutes);
+
+        return `${timeDifference.toMillis() >= 0 ? "+" : "-"}${hours} hours ${minutes} minutes`;
     }
 
     /**
-     * 13. Get the time difference between two timezones
-     * @param {string} date - The base date-time string
-     * @param {string} fromTimeZone - The source timezone
-     * @param {string} toTimeZone - The target timezone
-     * @returns {string | null} - The time difference in hours and minutes or null if invalid
+     * Converts a formatted date-time string to ISO format.
+     * @param dateTimeString - The date-time string to convert.
+     * @returns ISO formatted date-time string or null if conversion fails.
      */
-    static getTimeDifferenceBetweenTimeZones(
-        date: string, 
-        fromTimeZone: TimeZoneNames, 
-        toTimeZone: TimeZoneNames
-        ): string | null {
+    static convertToISO(dateTimeString: string): string | null {
+        const dateTime = DateTime.fromFormat(dateTimeString, "d'th' MMMM yyyy, h:mm a", { zone: 'UTC' });
 
-        // Trim the input to remove extra spaces
-        const trimmedDate = date.trim();
-
-        const fromDate = new Date(trimmedDate);
-        const toDate = new Date(trimmedDate);
-
-        // Check if both dates are valid
-        if (isNaN(fromDate.getTime()) || isNaN(toDate.getTime())) {
-            return "Invalid date format.";
+        if (!dateTime.isValid) {
+            return null;
         }
 
-        // Convert both dates to their respective timezones
-        const fromOffset = -fromDate.getTimezoneOffset() / 60;
-        const toOffset = -toDate.getTimezoneOffset() / 60;
-
-        // Calculate the time difference
-        const timeDifference = toOffset - fromOffset;
-
-        const hours = Math.floor(Math.abs(timeDifference));
-        const minutes = (Math.abs(timeDifference) % 1) * 60;
-
-        return `${timeDifference >= 0 ? "+" : "-"}${hours} hours ${minutes} minutes`;
+        return dateTime.toISO({ suppressMilliseconds: true, includeOffset: false });
     }
 }
 
-
 export { TimeZone };
 export default TimeZone;
-

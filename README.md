@@ -1,35 +1,36 @@
 # Timezone Utility
 
-A versatile timezone management package with zero dependencies, designed for CommonJS, ES Module (ESM), JavaScript, and TypeScript projects. It offers a range of features, including timezone listing, retrieving labels and values, region-based filtering, and converting between UTC and other timezones.
+A versatile timezone management package designed for CommonJS, ES Module (ESM), JavaScript, and TypeScript projects. It offers a range of features, including timezone listing, retrieving labels and values, region-based filtering, and converting between UTC and other timezones.
 
 
 ## Table of Contents
 
-- [⚙️ Installation](#installation)
-- [📖 Usage](#usage)
-  - [📦 Importing the Package](#importing-the-package)
-  - [🌍 Get All Timezones (Label-Value Pair)](#1-get-all-timezones-label-value-pair)
-  - [🕑 et All Timezone Values (Without Label)](#2-get-all-timezone-values-without-label)
-  - [🏷️ Get All Timezone Labels (Without Value)](#3-get-all-timezone-labels-without-value)
-  - [🌐 Get Timezones by Region](#4-get-timezones-by-region)
-  - [🔖 Get Timezone Label from Value](#5-get-timezone-label-from-value)
-  - [🎯 Get Timezone Value from Label](#6-get-timezone-value-from-label)
-  - [🌏 Get List of Regions](#7-get-list-of-regions)
-  - [⏰ Convert UTC Time to Specific Timezone](#8-convert-utc-time-to-specific-timezone)
-  - [🔄 Convert Datetime From One Timezone to Another](#9-convert-datetime-from-one-timezone-to-another)
-  - [🌐🕓 Convert any Date-Time String to UTC Format](#10-convert-any-datetime-string-to-utc-format)
-  - [🕰️ Get the Current Date-Time in a Specific Timezone](#11-get-the-current-datetime-in-a-specific-timezone)
-  - [➕➖ Add or Subtract Time (hours, minutes, or days) From a Date](#12-add-or-subtract-time-hours-minutes-or-days-from-a-date)
-  - [🕒➡️🕕 Get the Time Difference Between Two Timezones](#13-get-the-time-difference-between-two-timezones)
-- [📋 Methods Overview](#methods-overview)
-- [📜 License](#license)
-- [🤝 Contributing](#contributing)
+- [Installation](#installation)
+- [Importing](#importing)
+- [Methods Overview](#methods-overview)
+- [Methods](#methods)
+  - [list](#list)
+  - [listWithoutLabel](#listWithoutLabel)
+  - [listWithoutValue](#listWithoutValue)
+  - [listByRegion](#listByRegion)
+  - [getLabelFromValue](#getLabelFromValue)
+  - [getValueFromLabel](#getValueFromLabel)
+  - [getRegions](#getRegions)
+  - [convertUTCToTimeZone](#convertUTCToTimeZone)
+  - [convertToUTC](#convertToUTC)
+  - [convertBetweenTimeZones](#convertBetweenTimeZones)
+  - [getCurrentTimeInTimeZone](#getCurrentTimeInTimeZone)
+  - [getTimeDifferenceBetweenTimeZones](#getTimeDifferenceBetweenTimeZones)
+  - [convertToISO](#convertToISO)
+- [ConvertOptions](#convertoptions)
+- [Conclusion](#conclusion)
 
 ## Installation
 Install the package using npm:
 
 ```bash
 npm install timezone-utility
+npm install luxon
 ```
 
 ## Usage
@@ -43,13 +44,34 @@ import { TimeZone } from "timezone-utility";
 const { TimeZone } = require("timezone-utility");
 ```
 
-### 1. Get All Timezones (Label-Value Pair)
 
-Retrieve a list of all available timezones with both label and value.
+## Methods Overview
+
+| Method Name | Description |
+|-------------|-------------|
+| `list` | Returns a list of all available time zones. |
+| `listWithoutLabel` | Returns a list of all time zone values without labels. |
+| `listWithoutValue` | Returns a list of all time zone labels without values. |
+| `listByRegion` | Lists time zones for a specific region. |
+| `getLabelFromValue` | Gets the label for a given time zone value. |
+| `getValueFromLabel` | Gets the value for a given time zone label. |
+| `getRegions` | Returns a list of all available regions. |
+| `convertUTCToTimeZone` | Converts a UTC date to a specified time zone. |
+| `convertToUTC` | Converts a date-time from a specified time zone to UTC. |
+| `convertBetweenTimeZones` | Converts a date-time between two specified time zones. |
+| `getCurrentTimeInTimeZone` | Gets the current time in a specified time zone. |
+| `getTimeDifferenceBetweenTimeZones` | Calculates the time difference between two time zones. |
+| `convertToISO` | Converts a formatted date-time string to ISO format. |
+
+## Methods
+
+
+### list
+Returns a list of all available time zones.
 
 ```javascript
-const allTimezones = TimeZone.list();
-console.log(allTimezones);
+const timeZones = TimeZone.list();
+console.log(timeZones);
 ```
 
 Output Example:
@@ -62,12 +84,12 @@ Output Example:
 ]
 ```
 
-#### 2. Get All Timezone Values (Without Label)
-Get a list of timezone values (useful for APIs or forms where only the value is needed).
+### listWithoutLabel
+Returns a list of all time zone values without labels.
 
 ```javascript
-const timezoneValues = TimeZone.listWithoutLabel();
-console.log(timezoneValues);
+const timeZoneValues = TimeZone.listWithoutLabel();
+console.log(timeZoneValues);
 ```
 
 Output Example:
@@ -80,12 +102,12 @@ Output Example:
 ]
 ```
 
-#### 3. Get All Timezone Labels (Without Value)
-Retrieve a list of timezone labels.
+### listWithoutValue
+Returns a list of all time zone labels without values.
 
 ```javascript
-const timezoneLabels = TimeZone.listWithoutValue();
-console.log(timezoneLabels);
+const timeZoneLabels = TimeZone.listWithoutValue();
+console.log(timeZoneLabels);
 ```
 
 Output Example:
@@ -98,12 +120,12 @@ Output Example:
 ]
 ```
 
-#### 4. Get Timezones by Region
-Retrieve timezones for a specific region (e.g., America, Europe, Asia).
+### listByRegion
+Lists time zones for a specific region.
 
 ```javascript
-const americanTimezones = TimeZone.listByRegion("America");
-console.log(americanTimezones);
+const timeZonesInRegion = TimeZone.listByRegion('America');
+console.log(timeZonesInRegion);
 ```
 
 Output Example:
@@ -116,15 +138,15 @@ Output Example:
 ]
 ```
 
-Parameters: 
-- `region: string`: The region to filter by (e.g., "America", "Europe").
+Parameters:
+- `region: string`: The region to filter time zones.
 
-#### 5. Get Timezone Label from Value
-Retrieve the label (human-readable name) for a given timezone value.
+### getLabelFromValue
+Gets the label for a given time zone value.
 
 ```javascript
-const labelFromValue = TimeZone.getLabelFromValue("America/New_York");
-console.log(labelFromValue);
+const label = TimeZone.getLabelFromValue('America/New_York');
+console.log(label);
 ```
 
 Output Example:
@@ -133,15 +155,15 @@ Output Example:
 "(UTC-05:00) America/New_York"
 ```
 
-Parameters: 
-- `value: string`: The timezone value to convert to a label.
+Parameters:
+- `value: TimeZoneNames`: The time zone value.
 
-#### 6. Get Timezone Value from Label
-Retrieve the timezone value from a label.
+### getValueFromLabel
+Gets the value for a given time zone label.
 
 ```javascript
-const valueFromLabel = TimeZone.getValueFromLabel("(UTC-05:00) America/New_York");
-console.log(valueFromLabel);
+const value = TimeZone.getValueFromLabel('(UTC-05:00) America/New_York');
+console.log(value);
 ```
 
 Output Example:
@@ -150,10 +172,11 @@ Output Example:
 "America/New_York"
 ```
 
-Parameters: 
-- `label: string`: The timezone label to convert to a value.
-#### 7. Get List of Regions
-Retrieve a list of all available regions.
+Parameters:
+- `label: string`: The time zone label.
+
+### getRegions
+Returns a list of all available regions.
 
 ```javascript
 const regions = TimeZone.getRegions();
@@ -175,36 +198,56 @@ Output Example:
 ]
 ```
 
-#### 8. Convert UTC Time to Specific Timezone
-Convert a UTC/GMT time to a specific timezone and format it in either 12-hour or 24-hour format. You can also specify a custom date separator. By default, the function uses a 24-hour format (`is24Hour = true`) and the date separator is `/`.
-
+### convertUTCToTimeZone
+Converts a UTC date to a specified time zone.
 
 ```javascript
-const utcDate = "2024-10-15T14:00:00Z";
-const convertedTime = TimeZone.convertUTCToTimeZone(utcDate, 'America/New_York', {is24Hour: false, dateSeparator: '/', timeSeparator: ':'});
-console.log(convertedTime);
+const converted = TimeZone.convertUTCToTimeZone('2023-10-10T10:00:00', 'America/New_York', { is24Hour: true });
+console.log(converted);
 ```
 
 Output Example:
 
 ```javascript
-"10/15/2024, 10:00:00 AM"
+"2023-10-10 06:00:00"
 ```
 
-Parameters: 
-- `dateTimeString: string`: The date-time string to convert.
-- `toTimeZone: TimeZoneNames`: The target timezone.
+Parameters:
+- `utcDate: Date | string`: The UTC date.
+- `targetTimeZone: TimeZoneNames`: The target time zone.
 - `options: ConvertOptions (optional)`: Object containing optional formatting options:
   - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
-  - `dateSeparator: string`: The date separator (default `/`).
+  - `dateSeparator: string`: The date separator (default `-`).
   - `timeSeparator: string`: The time separator (default `:`).
 
-#### 9. Convert Datetime From One Timezone to Another
-Convert a datetime from one timezone to another and format it in either 12-hour or 24-hour format. You can also specify a custom date separator. By default, the function uses a 24-hour format (`is24Hour = true`) and the date separator is `/`.
+### convertToUTC
+Converts a date-time from a specified time zone to UTC.
+
+```javascript
+const converted = TimeZone.convertToUTC('2023-10-10T10:00:00', 'America/New_York', { is24Hour: false });
+console.log(converted);
+```
+
+Output Example:
+
+```javascript
+"2023-10-10T14:00:00.000Z"
+```
+
+Parameters:
+- `dateTime: Date | string`: The date-time to convert.
+- `sourceTimeZone: TimeZoneNames`: The source time zone.
+- `options: ConvertOptions (optional)`: Object containing optional formatting options:
+  - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
+  - `dateSeparator: string`: The date separator (default `-`).
+  - `timeSeparator: string`: The time separator (default `:`).
+
+### convertBetweenTimeZones
+Convert a datetime from one timezone to another and format it in either 12-hour or 24-hour format. You can also specify a custom date separator. By default, the function uses a 24-hour format (`is24Hour = true`) and the date separator is `-`.
 
 ```javascript
 const originalDate = "2024-10-15T14:00:00Z";
-const convertedTime = TimeZone.convertBetweenTimeZones(originalDate, 'America/New_York', 'Asia/Dhaka', {is24Hour: false, dateSeparator: '/', timeSeparator: ':'});
+const convertedTime = TimeZone.convertBetweenTimeZones(originalDate, 'America/New_York', 'Asia/Dhaka', {is24Hour: false, dateSeparator: '-', timeSeparator: ':'});
 console.log(convertedTime); 
 ```
 
@@ -215,38 +258,15 @@ Output Example:
 ```
 
 Parameters: 
-- `dateTimeString: string`: The date-time string to convert.
+- `date: string`: The date-time string to convert.
 - `fromTimeZone: TimeZoneNames`: The source timezone.
 - `toTimeZone: TimeZoneNames`: The target timezone.
 - `options: ConvertOptions (optional)`: Object containing optional formatting options:
   - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
-  - `dateSeparator: string`: The date separator (default `/`).
+  - `dateSeparator: string`: The date separator (default `-`).
   - `timeSeparator: string`: The time separator (default `:`).
 
-
-#### 10. Convert any Date-Time String to UTC Format.
-Converts any date-time string into a UTC format (ISO 8601). This method also validates the input and provides a clear error message if the date is invalid.
-
-```javascript
-const utcDate1 = TimeZone.convertToUTC('October 15, 2024 12:34:56');
-console.log(utcDate1); 
-
-const utcDate2 = TimeZone.convertToUTC('2024-10-15T12:34:56');
-console.log(utcDate2); 
-```
-
-Output Example:
-
-```javascript
-"2024-10-15T12:34:56.000Z"
-"2024-10-15T12:34:56.000Z"
-```
-
-Parameters: 
-- `dateTimeString: string`: The date-time string to convert to UTC.
-- `format: string`: The format of the date-time string (e.g., 'MM-dd-yyyy HH:mm:ss AM/PM', 'yyyy-MM-ddTHH:mm:ss').
-
-#### 11. Get the Current Date-Time in a Specific Timezone
+### getCurrentTimeInTimeZone
 Returns the current date and time in the specified timezone. The method allows formatting options such as 24-hour or 12-hour format and custom date and time separators.
 
 ```javascript
@@ -264,67 +284,45 @@ Parameters:
 - `targetTimeZone: TimeZoneNames`: The target timezone in which you want the current time.
 - `options: ConvertOptions (optional)`: Object containing optional formatting options:
   - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
-  - `dateSeparator: string`: The date separator (default `/`).
+  - `dateSeparator: string`: The date separator (default `-`).
   - `timeSeparator: string`: The time separator (default `:`).
 
-
-#### 12. Add or Subtract Time (hours, minutes, or days) From a Date.
-Adds or subtracts time (hours, minutes, or days) to a given date and returns the resulting date in UTC format.
+### getTimeDifferenceBetweenTimeZones
+Calculates the time difference between two time zones for a specific date.
 
 ```javascript
-const newDate = TimeZone.addTimeToDate('2024-10-15T12:00:00', 3, 'hours');
-console.log(newDate); 
+const difference = TimeZone.getTimeDifferenceBetweenTimeZones('2023-10-10T10:00:00', 'UTC', 'America/New_York');
+console.log(difference);
 ```
 
 Output Example:
 
 ```javascript
-"2024-10-15T15:00:00.000Z"
+"+4 hours 0 minutes"
 ```
 
 Parameters:
-- `date: Date | string`: The base date (as a `Date` object or string) from which to add/subtract time.
-- `amount: number`: The amount of time to add (positive) or subtract (negative).
-- `unit: 'hours' | 'minutes' | 'days'`: The unit of time to add or subtract.
+- `date: string`: The date string to use for calculation.
+- `fromTimeZone: TimeZoneNames`: The source time zone.
+- `toTimeZone: TimeZoneNames`: The target time zone.
 
-
-
-#### 13. Get the Time Difference Between Two Timezones.
-Calculates the time difference between two timezones in hours and minutes for a specific date.
+### convertToISO
+Converts a formatted date-time string to ISO format.
 
 ```javascript
-const timeDiff = TimeZone.getTimeDifferenceBetweenTimeZones('2024-10-15T12:00:00', 'America/New_York', 'Asia/Tokyo');
-console.log(timeDiff); 
+const isoString = TimeZone.convertToISO("10th October 2023, 10:00 AM");
+console.log(isoString);
 ```
 
 Output Example:
 
 ```javascript
-"+13 hours 0 minutes"
+"2023-10-10T10:00:00"
 ```
 
 Parameters:
-- `date: string`: The base date-time string to calculate the difference from.
-- `fromTimeZone: TimeZoneNames`: The source timezone.
-- `toTimeZone: TimeZoneNames`: The target timezone.
+- `dateTimeString: string`: The date-time string to convert.
 
-## Methods Overview
-
-| Method Name | Description |
-|-------------|-------------|
-| TimeZone.list() | Get a list of all timezones (label-value pairs). |
-| TimeZone.listWithoutLabel() | Get a list of all timezone values. |
-| TimeZone.listWithoutValue() | Get a list of all timezone labels. |
-| TimeZone.listByRegion(region) | Get timezones by a specific region (e.g., "America", "Europe"). |
-| TimeZone.getLabelFromValue(value) | Get the timezone label for a specific value. |
-| TimeZone.getValueFromLabel(label) | Get the timezone value for a specific label. |
-| TimeZone.getRegions() | Get a list of all regions. |
-| TimeZone.convertUTCToTimeZone() | Convert a UTC date/time string to a specific timezone, with support for 12-hour or 24-hour format (default 24-hour) and customizable date and time separators. |
-| TimeZone.convertBetweenTimeZones() | Convert a date from one timezone to another with support for 12-hour or 24-hour format (default 24-hour) and customizable date and time separators. |
-| TimeZone.convertToUTC() | Convert any date-time string into a UTC format (ISO 8601). |
-| TimeZone.getCurrentTimeInTimeZone() | Get the current date and time in a specific timezone, with options for 12-hour or 24-hour format (default 24-hour) and customizable date and time separators. |
-| TimeZone.addTimeToDate() | Add or subtract time (hours, minutes, or days) from a given date and return the result in UTC format. |
-| TimeZone.getTimeDifferenceBetweenTimeZones() | Get the time difference between two timezones in hours and minutes for a specific date. |
 
 
 ## License

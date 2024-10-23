@@ -13,5 +13,5 @@
     "esModuleInterop": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "rollup.config.js"]
+  "exclude": ["node_modules", "dist", "rollup.config.js", "test"]
 }
