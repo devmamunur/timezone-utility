@@ -13,6 +13,7 @@ A versatile timezone management package designed for CommonJS, ES Module (ESM), 
   - [listWithoutLabel](#listWithoutLabel)
   - [listWithoutValue](#listWithoutValue)
   - [listByRegion](#listByRegion)
+  - [listByCountry](#listByCountry)
   - [getLabelFromValue](#getLabelFromValue)
   - [getValueFromLabel](#getValueFromLabel)
   - [getRegions](#getRegions)
@@ -52,6 +53,7 @@ const { TimeZone } = require("timezone-utility");
 | `listWithoutLabel` | Returns a list of all time zone values without labels. |
 | `listWithoutValue` | Returns a list of all time zone labels without values. |
 | `listByRegion` | Lists time zones for a specific region. |
+| `listByCountry` | Lists time zones for a specific country. |
 | `getLabelFromValue` | Gets the label for a given time zone value. |
 | `getValueFromLabel` | Gets the value for a given time zone label. |
 | `getRegions` | Returns a list of all available regions. |
@@ -139,6 +141,27 @@ Output Example:
 
 Parameters:
 - `region: string`: The region to filter time zones.
+
+### listByCountry
+Lists time zones for a specific country.
+
+```javascript
+const timeZonesInCountry = TimeZone.listByCountry('America');
+console.log(timeZonesInCountry);
+```
+
+Output Example:
+
+```javascript
+[
+  { "label": "(UTC-05:00) America/New_York", "value": "America/New_York" },
+  { "label": "(UTC-06:00) America/Chicago", "value": "America/Chicago" },
+  ...
+]
+```
+
+Parameters:
+- `country: string`: The region to filter time zones.
 
 ### getLabelFromValue
 Gets the label for a given time zone value.

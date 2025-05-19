@@ -1,2210 +1,3859 @@
 [
     {
         "label": "(UTC+00:00) Africa/Abidjan",
-        "value": "Africa/Abidjan"
+        "value": "Africa/Abidjan",
+        "country": "Ivory Coast",
+        "phoneCode": "+225",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Africa/Accra",
-        "value": "Africa/Accra"
+        "value": "Africa/Accra",
+        "country": "Ghana",
+        "phoneCode": "+233",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+03:00) Africa/Addis_Ababa",
-        "value": "Africa/Addis_Ababa"
+        "value": "Africa/Addis_Ababa",
+        "country": "Ethiopia",
+        "phoneCode": "+251",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Africa/Algiers",
-        "value": "Africa/Algiers"
+        "value": "Africa/Algiers",
+        "country": "Algeria",
+        "phoneCode": "+213",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+03:00) Africa/Asmara",
-        "value": "Africa/Asmara"
+        "value": "Africa/Asmara",
+        "country": "Eritrea",
+        "phoneCode": "+291",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+03:00) Africa/Asmera",
-        "value": "Africa/Asmera"
+        "value": "Africa/Asmera",
+        "country": "Eritrea",
+        "phoneCode": "+291",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+00:00) Africa/Bamako",
-        "value": "Africa/Bamako"
+        "value": "Africa/Bamako",
+        "country": "Mali",
+        "phoneCode": "+223",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+01:00) Africa/Bangui",
-        "value": "Africa/Bangui"
+        "value": "Africa/Bangui",
+        "country": "Central African Republic",
+        "phoneCode": "+236",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Africa/Banjul",
-        "value": "Africa/Banjul"
+        "value": "Africa/Banjul",
+        "country": "Gambia",
+        "phoneCode": "+220",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Africa/Bissau",
-        "value": "Africa/Bissau"
+        "value": "Africa/Bissau",
+        "country": "Guinea-Bissau",
+        "phoneCode": "+245",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+02:00) Africa/Blantyre",
-        "value": "Africa/Blantyre"
+        "value": "Africa/Blantyre",
+        "country": "Malawi",
+        "phoneCode": "+265",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Africa/Brazzaville",
-        "value": "Africa/Brazzaville"
+        "value": "Africa/Brazzaville",
+        "country": "Republic of the Congo",
+        "phoneCode": "+242",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Africa/Bujumbura",
-        "value": "Africa/Bujumbura"
+        "value": "Africa/Bujumbura",
+        "country": "Burundi",
+        "phoneCode": "+257",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Africa/Cairo",
-        "value": "Africa/Cairo"
+        "value": "Africa/Cairo",
+        "country": "Egypt",
+        "phoneCode": "+20",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Africa/Casablanca",
-        "value": "Africa/Casablanca"
+        "value": "Africa/Casablanca",
+        "country": "Morocco",
+        "phoneCode": "+212",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Africa/Ceuta",
-        "value": "Africa/Ceuta"
+        "value": "Africa/Ceuta",
+        "country": "Spain",
+        "phoneCode": "+34",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Africa/Conakry",
-        "value": "Africa/Conakry"
+        "value": "Africa/Conakry",
+        "country": "Guinea",
+        "phoneCode": "+224",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Africa/Dakar",
-        "value": "Africa/Dakar"
+        "value": "Africa/Dakar",
+        "country": "Senegal",
+        "phoneCode": "+221",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+03:00) Africa/Dar_es_Salaam",
-        "value": "Africa/Dar_es_Salaam"
+        "value": "Africa/Dar_es_Salaam",
+        "country": "Tanzania",
+        "phoneCode": "+255",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+03:00) Africa/Djibouti",
-        "value": "Africa/Djibouti"
+        "value": "Africa/Djibouti",
+        "country": "Djibouti",
+        "phoneCode": "+253",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Africa/Douala",
-        "value": "Africa/Douala"
+        "value": "Africa/Douala",
+        "country": "Cameroon",
+        "phoneCode": "+237",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Africa/El_Aaiun",
-        "value": "Africa/El_Aaiun"
+        "value": "Africa/El_Aaiun",
+        "country": "Western Sahara",
+        "phoneCode": "+212",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Africa/Freetown",
-        "value": "Africa/Freetown"
+        "value": "Africa/Freetown",
+        "country": "Sierra Leone",
+        "phoneCode": "+232",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+02:00) Africa/Gaborone",
-        "value": "Africa/Gaborone"
+        "value": "Africa/Gaborone",
+        "country": "Botswana",
+        "phoneCode": "+267",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Africa/Harare",
-        "value": "Africa/Harare"
+        "value": "Africa/Harare",
+        "country": "Zimbabwe",
+        "phoneCode": "+263",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Africa/Johannesburg",
-        "value": "Africa/Johannesburg"
+        "value": "Africa/Johannesburg",
+        "country": "South Africa",
+        "phoneCode": "+27",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+03:00) Africa/Juba",
-        "value": "Africa/Juba"
+        "value": "Africa/Juba",
+        "country": "South Sudan",
+        "phoneCode": "+211",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+03:00) Africa/Kampala",
-        "value": "Africa/Kampala"
+        "value": "Africa/Kampala",
+        "country": "Uganda",
+        "phoneCode": "+256",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+02:00) Africa/Khartoum",
-        "value": "Africa/Khartoum"
+        "value": "Africa/Khartoum",
+        "country": "Sudan",
+        "phoneCode": "+249",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Africa/Kigali",
-        "value": "Africa/Kigali"
+        "value": "Africa/Kigali",
+        "country": "Rwanda",
+        "phoneCode": "+250",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Africa/Kinshasa",
-        "value": "Africa/Kinshasa"
+        "value": "Africa/Kinshasa",
+        "country": "Democratic Republic of the Congo",
+        "phoneCode": "+243",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Africa/Lagos",
-        "value": "Africa/Lagos"
+        "value": "Africa/Lagos",
+        "country": "Nigeria",
+        "phoneCode": "+234",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Africa/Libreville",
-        "value": "Africa/Libreville"
+        "value": "Africa/Libreville",
+        "country": "Gabon",
+        "phoneCode": "+241",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Africa/Lome",
-        "value": "Africa/Lome"
+        "value": "Africa/Lome",
+        "country": "Togo",
+        "phoneCode": "+228",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+01:00) Africa/Luanda",
-        "value": "Africa/Luanda"
+        "value": "Africa/Luanda",
+        "country": "Angola",
+        "phoneCode": "+244",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Africa/Lubumbashi",
-        "value": "Africa/Lubumbashi"
+        "value": "Africa/Lubumbashi",
+        "country": "Democratic Republic of the Congo",
+        "phoneCode": "+243",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Africa/Lusaka",
-        "value": "Africa/Lusaka"
+        "value": "Africa/Lusaka",
+        "country": "Zambia",
+        "phoneCode": "+260",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Africa/Malabo",
-        "value": "Africa/Malabo"
+        "value": "Africa/Malabo",
+        "country": "Equatorial Guinea",
+        "phoneCode": "+240",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Africa/Maputo",
-        "value": "Africa/Maputo"
+        "value": "Africa/Maputo",
+        "country": "Mozambique",
+        "phoneCode": "+258",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Africa/Maseru",
-        "value": "Africa/Maseru"
+        "value": "Africa/Maseru",
+        "country": "Lesotho",
+        "phoneCode": "+266",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Africa/Mbabane",
-        "value": "Africa/Mbabane"
+        "value": "Africa/Mbabane",
+        "country": "Eswatini",
+        "phoneCode": "+268",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+03:00) Africa/Mogadishu",
-        "value": "Africa/Mogadishu"
+        "value": "Africa/Mogadishu",
+        "country": "Somalia",
+        "phoneCode": "+252",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+00:00) Africa/Monrovia",
-        "value": "Africa/Monrovia"
+        "value": "Africa/Monrovia",
+        "country": "Liberia",
+        "phoneCode": "+231",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+03:00) Africa/Nairobi",
-        "value": "Africa/Nairobi"
+        "value": "Africa/Nairobi",
+        "country": "Kenya",
+        "phoneCode": "+254",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Africa/Ndjamena",
-        "value": "Africa/Ndjamena"
+        "value": "Africa/Ndjamena",
+        "country": "Chad",
+        "phoneCode": "+235",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Africa/Niamey",
-        "value": "Africa/Niamey"
+        "value": "Africa/Niamey",
+        "country": "Niger",
+        "phoneCode": "+227",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Africa/Nouakchott",
-        "value": "Africa/Nouakchott"
+        "value": "Africa/Nouakchott",
+        "country": "Mauritania",
+        "phoneCode": "+222",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Africa/Ouagadougou",
-        "value": "Africa/Ouagadougou"
+        "value": "Africa/Ouagadougou",
+        "country": "Burkina Faso",
+        "phoneCode": "+226",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+01:00) Africa/Porto-Novo",
-        "value": "Africa/Porto-Novo"
+        "value": "Africa/Porto-Novo",
+        "country": "Benin",
+        "phoneCode": "+229",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Africa/Sao_Tome",
-        "value": "Africa/Sao_Tome"
+        "value": "Africa/Sao_Tome",
+        "country": "São Tomé and Príncipe",
+        "phoneCode": "+239",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Africa/Timbuktu",
-        "value": "Africa/Timbuktu"
+        "value": "Africa/Timbuktu",
+        "country": "Mali",
+        "phoneCode": "+223",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+02:00) Africa/Tripoli",
-        "value": "Africa/Tripoli"
+        "value": "Africa/Tripoli",
+        "country": "Libya",
+        "phoneCode": "+218",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Africa/Tunis",
-        "value": "Africa/Tunis"
+        "value": "Africa/Tunis",
+        "country": "Tunisia",
+        "phoneCode": "+216",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Africa/Windhoek",
-        "value": "Africa/Windhoek"
+        "value": "Africa/Windhoek",
+        "country": "Namibia",
+        "phoneCode": "+264",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC-10:00) America/Adak",
-        "value": "America/Adak"
+        "value": "America/Adak",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-10:00"
     },
     {
         "label": "(UTC-09:00) America/Anchorage",
-        "value": "America/Anchorage"
+        "value": "America/Anchorage",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-09:00"
     },
     {
         "label": "(UTC-04:00) America/Anguilla",
-        "value": "America/Anguilla"
+        "value": "America/Anguilla",
+        "country": "Anguilla",
+        "phoneCode": "+1264",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Antigua",
-        "value": "America/Antigua"
+        "value": "America/Antigua",
+        "country": "Antigua and Barbuda",
+        "phoneCode": "+1268",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Araguaina",
-        "value": "America/Araguaina"
+        "value": "America/Araguaina",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Buenos_Aires",
-        "value": "America/Argentina/Buenos_Aires"
+        "value": "America/Argentina/Buenos_Aires",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Catamarca",
-        "value": "America/Argentina/Catamarca"
+        "value": "America/Argentina/Catamarca",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/ComodRivadavia",
-        "value": "America/Argentina/ComodRivadavia"
+        "value": "America/Argentina/ComodRivadavia",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Cordoba",
-        "value": "America/Argentina/Cordoba"
+        "value": "America/Argentina/Cordoba",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Jujuy",
-        "value": "America/Argentina/Jujuy"
+        "value": "America/Argentina/Jujuy",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/La_Rioja",
-        "value": "America/Argentina/La_Rioja"
+        "value": "America/Argentina/La_Rioja",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Mendoza",
-        "value": "America/Argentina/Mendoza"
+        "value": "America/Argentina/Mendoza",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Rio_Gallegos",
-        "value": "America/Argentina/Rio_Gallegos"
+        "value": "America/Argentina/Rio_Gallegos",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Salta",
-        "value": "America/Argentina/Salta"
+        "value": "America/Argentina/Salta",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/San_Juan",
-        "value": "America/Argentina/San_Juan"
+        "value": "America/Argentina/San_Juan",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/San_Luis",
-        "value": "America/Argentina/San_Luis"
+        "value": "America/Argentina/San_Luis",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Tucuman",
-        "value": "America/Argentina/Tucuman"
+        "value": "America/Argentina/Tucuman",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Argentina/Ushuaia",
-        "value": "America/Argentina/Ushuaia"
+        "value": "America/Argentina/Ushuaia",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-04:00) America/Aruba",
-        "value": "America/Aruba"
+        "value": "America/Aruba",
+        "country": "Aruba",
+        "phoneCode": "+297",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Asuncion",
-        "value": "America/Asuncion"
+        "value": "America/Asuncion",
+        "country": "Paraguay",
+        "phoneCode": "+595",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Atikokan",
-        "value": "America/Atikokan"
+        "value": "America/Atikokan",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-09:00) America/Atka",
-        "value": "America/Atka"
+        "value": "America/Atka",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-09:00"
     },
     {
         "label": "(UTC-03:00) America/Bahia",
-        "value": "America/Bahia"
+        "value": "America/Bahia",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-06:00) America/Bahia_Banderas",
-        "value": "America/Bahia_Banderas"
+        "value": "America/Bahia_Banderas",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-04:00) America/Barbados",
-        "value": "America/Barbados"
+        "value": "America/Barbados",
+        "country": "Barbados",
+        "phoneCode": "+1246",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Belem",
-        "value": "America/Belem"
+        "value": "America/Belem",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-06:00) America/Belize",
-        "value": "America/Belize"
+        "value": "America/Belize",
+        "country": "Belize",
+        "phoneCode": "+501",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-04:00) America/Blanc-Sablon",
-        "value": "America/Blanc-Sablon"
+        "value": "America/Blanc-Sablon",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Boa_Vista",
-        "value": "America/Boa_Vista"
+        "value": "America/Boa_Vista",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Bogota",
-        "value": "America/Bogota"
+        "value": "America/Bogota",
+        "country": "Colombia",
+        "phoneCode": "+57",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-06:00) America/Boise",
-        "value": "America/Boise"
+        "value": "America/Boise",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-03:00) America/Buenos_Aires",
-        "value": "America/Buenos_Aires"
+        "value": "America/Buenos_Aires",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-06:00) America/Cambridge_Bay",
-        "value": "America/Cambridge_Bay"
+        "value": "America/Cambridge_Bay",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-04:00) America/Campo_Grande",
-        "value": "America/Campo_Grande"
+        "value": "America/Campo_Grande",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Cancun",
-        "value": "America/Cancun"
+        "value": "America/Cancun",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Caracas",
-        "value": "America/Caracas"
+        "value": "America/Caracas",
+        "country": "Venezuela",
+        "phoneCode": "+58",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Catamarca",
-        "value": "America/Catamarca"
+        "value": "America/Catamarca",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Cayenne",
-        "value": "America/Cayenne"
+        "value": "America/Cayenne",
+        "country": "French Guiana",
+        "phoneCode": "+594",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-05:00) America/Cayman",
-        "value": "America/Cayman"
+        "value": "America/Cayman",
+        "country": "Cayman Islands",
+        "phoneCode": "+1345",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-06:00) America/Chicago",
-        "value": "America/Chicago"
+        "value": "America/Chicago",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-07:00) America/Chihuahua",
-        "value": "America/Chihuahua"
+        "value": "America/Chihuahua",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-04:00) America/Coral_Harbour",
-        "value": "America/Coral_Harbour"
+        "value": "America/Coral_Harbour",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Cordoba",
-        "value": "America/Cordoba"
+        "value": "America/Cordoba",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-06:00) America/Costa_Rica",
-        "value": "America/Costa_Rica"
+        "value": "America/Costa_Rica",
+        "country": "Costa Rica",
+        "phoneCode": "+506",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-07:00) America/Creston",
-        "value": "America/Creston"
+        "value": "America/Creston",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-04:00) America/Cuiaba",
-        "value": "America/Cuiaba"
+        "value": "America/Cuiaba",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Curacao",
-        "value": "America/Curacao"
+        "value": "America/Curacao",
+        "country": "Curaçao",
+        "phoneCode": "+599",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Danmarkshavn",
-        "value": "America/Danmarkshavn"
+        "value": "America/Danmarkshavn",
+        "country": "Greenland",
+        "phoneCode": "+299",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-08:00) America/Dawson",
-        "value": "America/Dawson"
+        "value": "America/Dawson",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-07:00) America/Dawson_Creek",
-        "value": "America/Dawson_Creek"
+        "value": "America/Dawson_Creek",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-07:00) America/Denver",
-        "value": "America/Denver"
+        "value": "America/Denver",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-05:00) America/Detroit",
-        "value": "America/Detroit"
+        "value": "America/Detroit",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Dominica",
-        "value": "America/Dominica"
+        "value": "America/Dominica",
+        "country": "Dominica",
+        "phoneCode": "+1767",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-06:00) America/Edmonton",
-        "value": "America/Edmonton"
+        "value": "America/Edmonton",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-05:00) America/Eirunepe",
-        "value": "America/Eirunepe"
+        "value": "America/Eirunepe",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-06:00) America/El_Salvador",
-        "value": "America/El_Salvador"
+        "value": "America/El_Salvador",
+        "country": "El Salvador",
+        "phoneCode": "+503",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-07:00) America/Ensenada",
-        "value": "America/Ensenada"
+        "value": "America/Ensenada",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-07:00) America/Fort_Nelson",
-        "value": "America/Fort_Nelson"
+        "value": "America/Fort_Nelson",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-05:00) America/Fort_Wayne",
-        "value": "America/Fort_Wayne"
+        "value": "America/Fort_Wayne",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-03:00) America/Fortaleza",
-        "value": "America/Fortaleza"
+        "value": "America/Fortaleza",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-04:00) America/Glace_Bay",
-        "value": "America/Glace_Bay"
+        "value": "America/Glace_Bay",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Godthab",
-        "value": "America/Godthab"
+        "value": "America/Godthab",
+        "country": "Greenland",
+        "phoneCode": "+299",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-04:00) America/Goose_Bay",
-        "value": "America/Goose_Bay"
+        "value": "America/Goose_Bay",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Grand_Turk",
-        "value": "America/Grand_Turk"
+        "value": "America/Grand_Turk",
+        "country": "Turks and Caicos Islands",
+        "phoneCode": "+1649",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Grenada",
-        "value": "America/Grenada"
+        "value": "America/Grenada",
+        "country": "Grenada",
+        "phoneCode": "+1473",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Guadeloupe",
-        "value": "America/Guadeloupe"
+        "value": "America/Guadeloupe",
+        "country": "Guadeloupe",
+        "phoneCode": "+590",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-06:00) America/Guatemala",
-        "value": "America/Guatemala"
+        "value": "America/Guatemala",
+        "country": "Guatemala",
+        "phoneCode": "+502",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-05:00) America/Guayaquil",
-        "value": "America/Guayaquil"
+        "value": "America/Guayaquil",
+        "country": "Ecuador",
+        "phoneCode": "+593",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Guyana",
-        "value": "America/Guyana"
+        "value": "America/Guyana",
+        "country": "Guyana",
+        "phoneCode": "+592",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Halifax",
-        "value": "America/Halifax"
+        "value": "America/Halifax",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Havana",
-        "value": "America/Havana"
+        "value": "America/Havana",
+        "country": "Cuba",
+        "phoneCode": "+53",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-07:00) America/Hermosillo",
-        "value": "America/Hermosillo"
+        "value": "America/Hermosillo",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Indianapolis",
-        "value": "America/Indiana/Indianapolis"
+        "value": "America/Indiana/Indianapolis",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Knox",
-        "value": "America/Indiana/Knox"
+        "value": "America/Indiana/Knox",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Marengo",
-        "value": "America/Indiana/Marengo"
+        "value": "America/Indiana/Marengo",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Petersburg",
-        "value": "America/Indiana/Petersburg"
+        "value": "America/Indiana/Petersburg",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Tell_City",
-        "value": "America/Indiana/Tell_City"
+        "value": "America/Indiana/Tell_City",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Vevay",
-        "value": "America/Indiana/Vevay"
+        "value": "America/Indiana/Vevay",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Vincennes",
-        "value": "America/Indiana/Vincennes"
+        "value": "America/Indiana/Vincennes",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indiana/Winamac",
-        "value": "America/Indiana/Winamac"
+        "value": "America/Indiana/Winamac",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Indianapolis",
-        "value": "America/Indianapolis"
+        "value": "America/Indianapolis",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-07:00) America/Inuvik",
-        "value": "America/Inuvik"
+        "value": "America/Inuvik",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-05:00) America/Iqaluit",
-        "value": "America/Iqaluit"
+        "value": "America/Iqaluit",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Jamaica",
-        "value": "America/Jamaica"
+        "value": "America/Jamaica",
+        "country": "Jamaica",
+        "phoneCode": "+1876",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-03:00) America/Jujuy",
-        "value": "America/Jujuy"
+        "value": "America/Jujuy",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-08:00) America/Juneau",
-        "value": "America/Juneau"
+        "value": "America/Juneau",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-05:00) America/Kentucky/Louisville",
-        "value": "America/Kentucky/Louisville"
+        "value": "America/Kentucky/Louisville",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Kentucky/Monticello",
-        "value": "America/Kentucky/Monticello"
+        "value": "America/Kentucky/Monticello",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Knox_IN",
-        "value": "America/Knox_IN"
+        "value": "America/Knox_IN",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Kralendijk",
-        "value": "America/Kralendijk"
+        "value": "America/Kralendijk",
+        "country": "Bonaire",
+        "phoneCode": "+599",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/La_Paz",
-        "value": "America/La_Paz"
+        "value": "America/La_Paz",
+        "country": "Bolivia",
+        "phoneCode": "+591",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Lima",
-        "value": "America/Lima"
+        "value": "America/Lima",
+        "country": "Peru",
+        "phoneCode": "+51",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-08:00) America/Los_Angeles",
-        "value": "America/Los_Angeles"
+        "value": "America/Los_Angeles",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-05:00) America/Louisville",
-        "value": "America/Louisville"
+        "value": "America/Louisville",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Lower_Princes",
-        "value": "America/Lower_Princes"
+        "value": "America/Lower_Princes",
+        "country": "Sint Maarten",
+        "phoneCode": "+1721",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Maceio",
-        "value": "America/Maceio"
+        "value": "America/Maceio",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-06:00) America/Managua",
-        "value": "America/Managua"
+        "value": "America/Managua",
+        "country": "Nicaragua",
+        "phoneCode": "+505",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-04:00) America/Manaus",
-        "value": "America/Manaus"
+        "value": "America/Manaus",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Marigot",
-        "value": "America/Marigot"
+        "value": "America/Marigot",
+        "country": "Saint Martin",
+        "phoneCode": "+590",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Martinique",
-        "value": "America/Martinique"
+        "value": "America/Martinique",
+        "country": "Martinique",
+        "phoneCode": "+596",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-06:00) America/Matamoros",
-        "value": "America/Matamoros"
+        "value": "America/Matamoros",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-07:00) America/Mazatlan",
-        "value": "America/Mazatlan"
+        "value": "America/Mazatlan",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-03:00) America/Mendoza",
-        "value": "America/Mendoza"
+        "value": "America/Mendoza",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-06:00) America/Menominee",
-        "value": "America/Menominee"
+        "value": "America/Menominee",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-06:00) America/Merida",
-        "value": "America/Merida"
+        "value": "America/Merida",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-08:00) America/Metlakatla",
-        "value": "America/Metlakatla"
+        "value": "America/Metlakatla",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-06:00) America/Mexico_City",
-        "value": "America/Mexico_City"
+        "value": "America/Mexico_City",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-03:00) America/Miquelon",
-        "value": "America/Miquelon"
+        "value": "America/Miquelon",
+        "country": "Saint Pierre and Miquelon",
+        "phoneCode": "+508",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-04:00) America/Moncton",
-        "value": "America/Moncton"
+        "value": "America/Moncton",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Monterrey",
-        "value": "America/Monterrey"
+        "value": "America/Monterrey",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-03:00) America/Montevideo",
-        "value": "America/Montevideo"
+        "value": "America/Montevideo",
+        "country": "Uruguay",
+        "phoneCode": "+598",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-05:00) America/Montreal",
-        "value": "America/Montreal"
+        "value": "America/Montreal",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Montserrat",
-        "value": "America/Montserrat"
+        "value": "America/Montserrat",
+        "country": "Montserrat",
+        "phoneCode": "+1664",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Nassau",
-        "value": "America/Nassau"
+        "value": "America/Nassau",
+        "country": "Bahamas",
+        "phoneCode": "+1242",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/New_York",
-        "value": "America/New_York"
+        "value": "America/New_York",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Nipigon",
-        "value": "America/Nipigon"
+        "value": "America/Nipigon",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-09:00) America/Nome",
-        "value": "America/Nome"
+        "value": "America/Nome",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-09:00"
     },
     {
         "label": "(UTC-02:00) America/Noronha",
-        "value": "America/Noronha"
+        "value": "America/Noronha",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-02:00"
     },
     {
         "label": "(UTC-06:00) America/North_Dakota/Beulah",
-        "value": "America/North_Dakota/Beulah"
+        "value": "America/North_Dakota/Beulah",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-06:00) America/North_Dakota/Center",
-        "value": "America/North_Dakota/Center"
+        "value": "America/North_Dakota/Center",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-06:00) America/North_Dakota/New_Salem",
-        "value": "America/North_Dakota/New_Salem"
+        "value": "America/North_Dakota/New_Salem",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-07:00) America/Ojinaga",
-        "value": "America/Ojinaga"
+        "value": "America/Ojinaga",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-05:00) America/Panama",
-        "value": "America/Panama"
+        "value": "America/Panama",
+        "country": "Panama",
+        "phoneCode": "+507",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) America/Pangnirtung",
-        "value": "America/Pangnirtung"
+        "value": "America/Pangnirtung",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-03:00) America/Paramaribo",
-        "value": "America/Paramaribo"
+        "value": "America/Paramaribo",
+        "country": "Suriname",
+        "phoneCode": "+597",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-07:00) America/Phoenix",
-        "value": "America/Phoenix"
+        "value": "America/Phoenix",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-05:00) America/Port-au-Prince",
-        "value": "America/Port-au-Prince"
+        "value": "America/Port-au-Prince",
+        "country": "Haiti",
+        "phoneCode": "+509",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Port_of_Spain",
-        "value": "America/Port_of_Spain"
+        "value": "America/Port_of_Spain",
+        "country": "Trinidad and Tobago",
+        "phoneCode": "+1868",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Porto_Acre",
-        "value": "America/Porto_Acre"
+        "value": "America/Porto_Acre",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Porto_Velho",
-        "value": "America/Porto_Velho"
+        "value": "America/Porto_Velho",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Puerto_Rico",
-        "value": "America/Puerto_Rico"
+        "value": "America/Puerto_Rico",
+        "country": "Puerto Rico",
+        "phoneCode": "+1787",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Punta_Arenas",
-        "value": "America/Punta_Arenas"
+        "value": "America/Punta_Arenas",
+        "country": "Chile",
+        "phoneCode": "+56",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-05:00) America/Rainy_River",
-        "value": "America/Rainy_River"
+        "value": "America/Rainy_River",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-06:00) America/Rankin_Inlet",
-        "value": "America/Rankin_Inlet"
+        "value": "America/Rankin_Inlet",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-03:00) America/Recife",
-        "value": "America/Recife"
+        "value": "America/Recife",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-06:00) America/Regina",
-        "value": "America/Regina"
+        "value": "America/Regina",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-06:00) America/Resolute",
-        "value": "America/Resolute"
+        "value": "America/Resolute",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-05:00) America/Rio_Branco",
-        "value": "America/Rio_Branco"
+        "value": "America/Rio_Branco",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-03:00) America/Rosario",
-        "value": "America/Rosario"
+        "value": "America/Rosario",
+        "country": "Argentina",
+        "phoneCode": "+54",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-07:00) America/Santa_Isabel",
-        "value": "America/Santa_Isabel"
+        "value": "America/Santa_Isabel",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-03:00) America/Santarem",
-        "value": "America/Santarem"
+        "value": "America/Santarem",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) America/Santiago",
-        "value": "America/Santiago"
+        "value": "America/Santiago",
+        "country": "Chile",
+        "phoneCode": "+56",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/Santo_Domingo",
-        "value": "America/Santo_Domingo"
+        "value": "America/Santo_Domingo",
+        "country": "Dominican Republic",
+        "phoneCode": "+1809",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:00) America/Sao_Paulo",
-        "value": "America/Sao_Paulo"
+        "value": "America/Sao_Paulo",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-02:00) America/Scoresbysund",
-        "value": "America/Scoresbysund"
+        "value": "America/Scoresbysund",
+        "country": "Greenland",
+        "phoneCode": "+299",
+        "utcOffset": "-02:00"
     },
     {
         "label": "(UTC-07:00) America/Shiprock",
-        "value": "America/Shiprock"
+        "value": "America/Shiprock",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-08:00) America/Sitka",
-        "value": "America/Sitka"
+        "value": "America/Sitka",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-04:00) America/St_Barthelemy",
-        "value": "America/St_Barthelemy"
+        "value": "America/St_Barthelemy",
+        "country": "Saint Barthélemy",
+        "phoneCode": "+590",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-03:30) America/St_Johns",
-        "value": "America/St_Johns"
+        "value": "America/St_Johns",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-03:30"
     },
     {
         "label": "(UTC-04:00) America/St_Kitts",
-        "value": "America/St_Kitts"
+        "value": "America/St_Kitts",
+        "country": "Saint Kitts and Nevis",
+        "phoneCode": "+1869",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/St_Lucia",
-        "value": "America/St_Lucia"
+        "value": "America/St_Lucia",
+        "country": "Saint Lucia",
+        "phoneCode": "+1758",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/St_Thomas",
-        "value": "America/St_Thomas"
+        "value": "America/St_Thomas",
+        "country": "United States Virgin Islands",
+        "phoneCode": "+1340",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-04:00) America/St_Vincent",
-        "value": "America/St_Vincent"
+        "value": "America/St_Vincent",
+        "country": "Saint Vincent and the Grenadines",
+        "phoneCode": "+1784",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-06:00) America/Swift_Current",
-        "value": "America/Swift_Current"
+        "value": "America/Swift_Current",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-06:00) America/Tegucigalpa",
-        "value": "America/Tegucigalpa"
+        "value": "America/Tegucigalpa",
+        "country": "Honduras",
+        "phoneCode": "+504",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-02:00) America/Thule",
-        "value": "America/Thule"
+        "value": "America/Thule",
+        "country": "Greenland",
+        "phoneCode": "+299",
+        "utcOffset": "-02:00"
     },
     {
         "label": "(UTC-05:00) America/Thunder_Bay",
-        "value": "America/Thunder_Bay"
+        "value": "America/Thunder_Bay",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-08:00) America/Tijuana",
-        "value": "America/Tijuana"
+        "value": "America/Tijuana",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-05:00) America/Toronto",
-        "value": "America/Toronto"
+        "value": "America/Toronto",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-04:00) America/Tortola",
-        "value": "America/Tortola"
+        "value": "America/Tortola",
+        "country": "British Virgin Islands",
+        "phoneCode": "+1284",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-08:00) America/Vancouver",
-        "value": "America/Vancouver"
+        "value": "America/Vancouver",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-04:00) America/Virgin",
-        "value": "America/Virgin"
+        "value": "America/Virgin",
+        "country": "United States Virgin Islands",
+        "phoneCode": "+1340",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-07:00) America/Whitehorse",
-        "value": "America/Whitehorse"
+        "value": "America/Whitehorse",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-06:00) America/Winnipeg",
-        "value": "America/Winnipeg"
+        "value": "America/Winnipeg",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-09:00) America/Yakutat",
-        "value": "America/Yakutat"
+        "value": "America/Yakutat",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-09:00"
     },
     {
         "label": "(UTC-07:00) America/Yellowknife",
-        "value": "America/Yellowknife"
+        "value": "America/Yellowknife",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC+08:00) Antarctica/Casey",
-        "value": "Antarctica/Casey"
+        "value": "Antarctica/Casey",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+07:00) Antarctica/Davis",
-        "value": "Antarctica/Davis"
+        "value": "Antarctica/Davis",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+10:00) Antarctica/DumontDUrville",
-        "value": "Antarctica/DumontDUrville"
+        "value": "Antarctica/DumontDUrville",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+11:00) Antarctica/Macquarie",
-        "value": "Antarctica/Macquarie"
+        "value": "Antarctica/Macquarie",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+05:00) Antarctica/Mawson",
-        "value": "Antarctica/Mawson"
+        "value": "Antarctica/Mawson",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+08:00) Antarctica/McMurdo",
-        "value": "Antarctica/McMurdo"
+        "value": "Antarctica/McMurdo",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC-03:00) Antarctica/Palmer",
-        "value": "Antarctica/Palmer"
+        "value": "Antarctica/Palmer",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-03:00) Antarctica/Rothera",
-        "value": "Antarctica/Rothera"
+        "value": "Antarctica/Rothera",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC+00:00) Antarctica/South_Pole",
-        "value": "Antarctica/South_Pole"
+        "value": "Antarctica/South_Pole",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+03:00) Antarctica/Syowa",
-        "value": "Antarctica/Syowa"
+        "value": "Antarctica/Syowa",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+02:00) Antarctica/Troll",
-        "value": "Antarctica/Troll"
+        "value": "Antarctica/Troll",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+06:00) Antarctica/Vostok",
-        "value": "Antarctica/Vostok"
+        "value": "Antarctica/Vostok",
+        "country": "Antarctica",
+        "phoneCode": "+672",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+01:00) Arctic/Longyearbyen",
-        "value": "Arctic/Longyearbyen"
+        "value": "Arctic/Longyearbyen",
+        "country": "Norway",
+        "phoneCode": "+47",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+03:00) Asia/Aden",
-        "value": "Asia/Aden"
+        "value": "Asia/Aden",
+        "country": "Yemen",
+        "phoneCode": "+967",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+06:00) Asia/Almaty",
-        "value": "Asia/Almaty"
+        "value": "Asia/Almaty",
+        "country": "Kazakhstan",
+        "phoneCode": "+7",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+02:00) Asia/Amman",
-        "value": "Asia/Amman"
+        "value": "Asia/Amman",
+        "country": "Jordan",
+        "phoneCode": "+962",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+12:00) Asia/Anadyr",
-        "value": "Asia/Anadyr"
+        "value": "Asia/Anadyr",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+05:00) Asia/Aqtau",
-        "value": "Asia/Aqtau"
+        "value": "Asia/Aqtau",
+        "country": "Kazakhstan",
+        "phoneCode": "+7",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+05:00) Asia/Aqtobe",
-        "value": "Asia/Aqtobe"
+        "value": "Asia/Aqtobe",
+        "country": "Kazakhstan",
+        "phoneCode": "+7",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+05:00) Asia/Ashgabat",
-        "value": "Asia/Ashgabat"
+        "value": "Asia/Ashgabat",
+        "country": "Turkmenistan",
+        "phoneCode": "+993",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+05:00) Asia/Ashkhabad",
-        "value": "Asia/Ashkhabad"
+        "value": "Asia/Ashkhabad",
+        "country": "Turkmenistan",
+        "phoneCode": "+993",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+05:00) Asia/Atyrau",
-        "value": "Asia/Atyrau"
+        "value": "Asia/Atyrau",
+        "country": "Kazakhstan",
+        "phoneCode": "+7",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+03:00) Asia/Baghdad",
-        "value": "Asia/Baghdad"
+        "value": "Asia/Baghdad",
+        "country": "Iraq",
+        "phoneCode": "+964",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+03:00) Asia/Bahrain",
-        "value": "Asia/Bahrain"
+        "value": "Asia/Bahrain",
+        "country": "Bahrain",
+        "phoneCode": "+973",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+04:00) Asia/Baku",
-        "value": "Asia/Baku"
+        "value": "Asia/Baku",
+        "country": "Azerbaijan",
+        "phoneCode": "+994",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+07:00) Asia/Bangkok",
-        "value": "Asia/Bangkok"
+        "value": "Asia/Bangkok",
+        "country": "Thailand",
+        "phoneCode": "+66",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+07:00) Asia/Barnaul",
-        "value": "Asia/Barnaul"
+        "value": "Asia/Barnaul",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+02:00) Asia/Beirut",
-        "value": "Asia/Beirut"
+        "value": "Asia/Beirut",
+        "country": "Lebanon",
+        "phoneCode": "+961",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+06:00) Asia/Bishkek",
-        "value": "Asia/Bishkek"
+        "value": "Asia/Bishkek",
+        "country": "Kyrgyzstan",
+        "phoneCode": "+996",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+08:00) Asia/Brunei",
-        "value": "Asia/Brunei"
+        "value": "Asia/Brunei",
+        "country": "Brunei",
+        "phoneCode": "+673",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+05:30) Asia/Calcutta",
-        "value": "Asia/Calcutta"
+        "value": "Asia/Calcutta",
+        "country": "India",
+        "phoneCode": "+91",
+        "utcOffset": "+05:30"
     },
     {
         "label": "(UTC+09:00) Asia/Chita",
-        "value": "Asia/Chita"
+        "value": "Asia/Chita",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+08:00) Asia/Choibalsan",
-        "value": "Asia/Choibalsan"
+        "value": "Asia/Choibalsan",
+        "country": "Mongolia",
+        "phoneCode": "+976",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+08:00) Asia/Chongqing",
-        "value": "Asia/Chongqing"
+        "value": "Asia/Chongqing",
+        "country": "China",
+        "phoneCode": "+86",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+08:00) Asia/Chungking",
-        "value": "Asia/Chungking"
+        "value": "Asia/Chungking",
+        "country": "China",
+        "phoneCode": "+86",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+05:30) Asia/Colombo",
-        "value": "Asia/Colombo"
-    },
-    {
-        "label": "(UTC+06:00) Asia/Dacca",
-        "value": "Asia/Dacca"
+        "value": "Asia/Colombo",
+        "country": "Sri Lanka",
+        "phoneCode": "+94",
+        "utcOffset": "+05:30"
     },
     {
         "label": "(UTC+02:00) Asia/Damascus",
-        "value": "Asia/Damascus"
+        "value": "Asia/Damascus",
+        "country": "Syria",
+        "phoneCode": "+963",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+06:00) Asia/Dhaka",
-        "value": "Asia/Dhaka"
+        "value": "Asia/Dhaka",
+        "country": "Bangladesh",
+        "phoneCode": "+880",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+09:00) Asia/Dili",
-        "value": "Asia/Dili"
+        "value": "Asia/Dili",
+        "country": "East Timor",
+        "phoneCode": "+670",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+04:00) Asia/Dubai",
-        "value": "Asia/Dubai"
+        "value": "Asia/Dubai",
+        "country": "United Arab Emirates",
+        "phoneCode": "+971",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+05:00) Asia/Dushanbe",
-        "value": "Asia/Dushanbe"
+        "value": "Asia/Dushanbe",
+        "country": "Tajikistan",
+        "phoneCode": "+992",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+02:00) Asia/Famagusta",
-        "value": "Asia/Famagusta"
+        "value": "Asia/Famagusta",
+        "country": "Cyprus",
+        "phoneCode": "+357",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Asia/Gaza",
-        "value": "Asia/Gaza"
+        "value": "Asia/Gaza",
+        "country": "Palestine",
+        "phoneCode": "+970",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+08:00) Asia/Harbin",
-        "value": "Asia/Harbin"
+        "value": "Asia/Harbin",
+        "country": "China",
+        "phoneCode": "+86",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+02:00) Asia/Hebron",
-        "value": "Asia/Hebron"
+        "value": "Asia/Hebron",
+        "country": "Palestine",
+        "phoneCode": "+970",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+07:00) Asia/Ho_Chi_Minh",
-        "value": "Asia/Ho_Chi_Minh"
+        "value": "Asia/Ho_Chi_Minh",
+        "country": "Vietnam",
+        "phoneCode": "+84",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+08:00) Asia/Hong_Kong",
-        "value": "Asia/Hong_Kong"
+        "value": "Asia/Hong_Kong",
+        "country": "Hong Kong",
+        "phoneCode": "+852",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+07:00) Asia/Hovd",
-        "value": "Asia/Hovd"
+        "value": "Asia/Hovd",
+        "country": "Mongolia",
+        "phoneCode": "+976",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+08:00) Asia/Irkutsk",
-        "value": "Asia/Irkutsk"
+        "value": "Asia/Irkutsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+03:00) Asia/Istanbul",
-        "value": "Asia/Istanbul"
+        "value": "Asia/Istanbul",
+        "country": "Turkey",
+        "phoneCode": "+90",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+07:00) Asia/Jakarta",
-        "value": "Asia/Jakarta"
+        "value": "Asia/Jakarta",
+        "country": "Indonesia",
+        "phoneCode": "+62",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+09:00) Asia/Jayapura",
-        "value": "Asia/Jayapura"
+        "value": "Asia/Jayapura",
+        "country": "Indonesia",
+        "phoneCode": "+62",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+02:00) Asia/Jerusalem",
-        "value": "Asia/Jerusalem"
+        "value": "Asia/Jerusalem",
+        "country": "Israel",
+        "phoneCode": "+972",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+04:30) Asia/Kabul",
-        "value": "Asia/Kabul"
+        "value": "Asia/Kabul",
+        "country": "Afghanistan",
+        "phoneCode": "+93",
+        "utcOffset": "+04:30"
     },
     {
         "label": "(UTC+11:00) Asia/Kamchatka",
-        "value": "Asia/Kamchatka"
+        "value": "Asia/Kamchatka",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+05:00) Asia/Karachi",
-        "value": "Asia/Karachi"
+        "value": "Asia/Karachi",
+        "country": "Pakistan",
+        "phoneCode": "+92",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+06:00) Asia/Kashgar",
-        "value": "Asia/Kashgar"
+        "value": "Asia/Kashgar",
+        "country": "China",
+        "phoneCode": "+86",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+05:45) Asia/Kathmandu",
-        "value": "Asia/Kathmandu"
+        "value": "Asia/Kathmandu",
+        "country": "Nepal",
+        "phoneCode": "+977",
+        "utcOffset": "+05:45"
     },
     {
         "label": "(UTC+05:45) Asia/Katmandu",
-        "value": "Asia/Katmandu"
+        "value": "Asia/Katmandu",
+        "country": "Nepal",
+        "phoneCode": "+977",
+        "utcOffset": "+05:45"
     },
     {
         "label": "(UTC+09:00) Asia/Khandyga",
-        "value": "Asia/Khandyga"
+        "value": "Asia/Khandyga",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+05:30) Asia/Kolkata",
-        "value": "Asia/Kolkata"
+        "value": "Asia/Kolkata",
+        "country": "India",
+        "phoneCode": "+91",
+        "utcOffset": "+05:30"
     },
     {
         "label": "(UTC+07:00) Asia/Krasnoyarsk",
-        "value": "Asia/Krasnoyarsk"
+        "value": "Asia/Krasnoyarsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+08:00) Asia/Kuala_Lumpur",
-        "value": "Asia/Kuala_Lumpur"
+        "value": "Asia/Kuala_Lumpur",
+        "country": "Malaysia",
+        "phoneCode": "+60",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+08:00) Asia/Kuching",
-        "value": "Asia/Kuching"
+        "value": "Asia/Kuching",
+        "country": "Malaysia",
+        "phoneCode": "+60",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+03:00) Asia/Kuwait",
-        "value": "Asia/Kuwait"
+        "value": "Asia/Kuwait",
+        "country": "Kuwait",
+        "phoneCode": "+965",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+06:30) Asia/Yangon",
-        "value": "Asia/Yangon"
+        "value": "Asia/Yangon",
+        "country": "Myanmar",
+        "phoneCode": "+95",
+        "utcOffset": "+06:30"
     },
     {
         "label": "(UTC+08:00) Asia/Macao",
-        "value": "Asia/Macao"
+        "value": "Asia/Macao",
+        "country": "Macau",
+        "phoneCode": "+853",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+08:00) Asia/Macau",
-        "value": "Asia/Macau"
+        "value": "Asia/Macau",
+        "country": "Macau",
+        "phoneCode": "+853",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+10:00) Asia/Magadan",
-        "value": "Asia/Magadan"
+        "value": "Asia/Magadan",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+08:00) Asia/Makassar",
-        "value": "Asia/Makassar"
+        "value": "Asia/Makassar",
+        "country": "Indonesia",
+        "phoneCode": "+62",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+08:00) Asia/Manila",
-        "value": "Asia/Manila"
+        "value": "Asia/Manila",
+        "country": "Philippines",
+        "phoneCode": "+63",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+04:00) Asia/Muscat",
-        "value": "Asia/Muscat"
+        "value": "Asia/Muscat",
+        "country": "Oman",
+        "phoneCode": "+968",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+02:00) Asia/Nicosia",
-        "value": "Asia/Nicosia"
+        "value": "Asia/Nicosia",
+        "country": "Cyprus",
+        "phoneCode": "+357",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+07:00) Asia/Novokuznetsk",
-        "value": "Asia/Novokuznetsk"
+        "value": "Asia/Novokuznetsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+07:00) Asia/Novosibirsk",
-        "value": "Asia/Novosibirsk"
+        "value": "Asia/Novosibirsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+06:00) Asia/Omsk",
-        "value": "Asia/Omsk"
+        "value": "Asia/Omsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+05:00) Asia/Oral",
-        "value": "Asia/Oral"
+        "value": "Asia/Oral",
+        "country": "Kazakhstan",
+        "phoneCode": "+7",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+07:00) Asia/Phnom_Penh",
-        "value": "Asia/Phnom_Penh"
+        "value": "Asia/Phnom_Penh",
+        "country": "Cambodia",
+        "phoneCode": "+855",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+07:00) Asia/Pontianak",
-        "value": "Asia/Pontianak"
+        "value": "Asia/Pontianak",
+        "country": "Indonesia",
+        "phoneCode": "+62",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+09:00) Asia/Pyongyang",
-        "value": "Asia/Pyongyang"
+        "value": "Asia/Pyongyang",
+        "country": "North Korea",
+        "phoneCode": "+850",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+03:00) Asia/Qatar",
-        "value": "Asia/Qatar"
+        "value": "Asia/Qatar",
+        "country": "Qatar",
+        "phoneCode": "+974",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+06:00) Asia/Qyzylorda",
-        "value": "Asia/Qyzylorda"
+        "value": "Asia/Qyzylorda",
+        "country": "Kazakhstan",
+        "phoneCode": "+7",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+06:30) Asia/Rangoon",
-        "value": "Asia/Rangoon"
+        "value": "Asia/Rangoon",
+        "country": "Myanmar",
+        "phoneCode": "+95",
+        "utcOffset": "+06:30"
     },
     {
         "label": "(UTC+03:00) Asia/Riyadh",
-        "value": "Asia/Riyadh"
+        "value": "Asia/Riyadh",
+        "country": "Saudi Arabia",
+        "phoneCode": "+966",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+07:00) Asia/Saigon",
-        "value": "Asia/Saigon"
+        "value": "Asia/Saigon",
+        "country": "Vietnam",
+        "phoneCode": "+84",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+11:00) Asia/Sakhalin",
-        "value": "Asia/Sakhalin"
+        "value": "Asia/Sakhalin",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+05:00) Asia/Samarkand",
-        "value": "Asia/Samarkand"
+        "value": "Asia/Samarkand",
+        "country": "Uzbekistan",
+        "phoneCode": "+998",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+09:00) Asia/Seoul",
-        "value": "Asia/Seoul"
+        "value": "Asia/Seoul",
+        "country": "South Korea",
+        "phoneCode": "+82",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+08:00) Asia/Shanghai",
-        "value": "Asia/Shanghai"
+        "value": "Asia/Shanghai",
+        "country": "China",
+        "phoneCode": "+86",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+08:00) Asia/Singapore",
-        "value": "Asia/Singapore"
+        "value": "Asia/Singapore",
+        "country": "Singapore",
+        "phoneCode": "+65",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+11:00) Asia/Srednekolymsk",
-        "value": "Asia/Srednekolymsk"
+        "value": "Asia/Srednekolymsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+08:00) Asia/Taipei",
-        "value": "Asia/Taipei"
+        "value": "Asia/Taipei",
+        "country": "Taiwan",
+        "phoneCode": "+886",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+05:00) Asia/Tashkent",
-        "value": "Asia/Tashkent"
+        "value": "Asia/Tashkent",
+        "country": "Uzbekistan",
+        "phoneCode": "+998",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+04:00) Asia/Tbilisi",
-        "value": "Asia/Tbilisi"
+        "value": "Asia/Tbilisi",
+        "country": "Georgia",
+        "phoneCode": "+995",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+03:30) Asia/Tehran",
-        "value": "Asia/Tehran"
+        "value": "Asia/Tehran",
+        "country": "Iran",
+        "phoneCode": "+98",
+        "utcOffset": "+03:30"
     },
     {
         "label": "(UTC+02:00) Asia/Tel_Aviv",
-        "value": "Asia/Tel_Aviv"
+        "value": "Asia/Tel_Aviv",
+        "country": "Israel",
+        "phoneCode": "+972",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+06:00) Asia/Thimbu",
-        "value": "Asia/Thimbu"
+        "value": "Asia/Thimbu",
+        "country": "Bhutan",
+        "phoneCode": "+975",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+06:00) Asia/Thimphu",
-        "value": "Asia/Thimphu"
+        "value": "Asia/Thimphu",
+        "country": "Bhutan",
+        "phoneCode": "+975",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+09:00) Asia/Tokyo",
-        "value": "Asia/Tokyo"
+        "value": "Asia/Tokyo",
+        "country": "Japan",
+        "phoneCode": "+81",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+07:00) Asia/Tomsk",
-        "value": "Asia/Tomsk"
+        "value": "Asia/Tomsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+08:00) Asia/Ujung_Pandang",
-        "value": "Asia/Ujung_Pandang"
+        "value": "Asia/Ujung_Pandang",
+        "country": "Indonesia",
+        "phoneCode": "+62",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+08:00) Asia/Ulaanbaatar",
-        "value": "Asia/Ulaanbaatar"
+        "value": "Asia/Ulaanbaatar",
+        "country": "Mongolia",
+        "phoneCode": "+976",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+08:00) Asia/Ulan_Bator",
-        "value": "Asia/Ulan_Bator"
+        "value": "Asia/Ulan_Bator",
+        "country": "Mongolia",
+        "phoneCode": "+976",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+06:00) Asia/Urumqi",
-        "value": "Asia/Urumqi"
+        "value": "Asia/Urumqi",
+        "country": "China",
+        "phoneCode": "+86",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+11:00) Asia/Ust-Nera",
-        "value": "Asia/Ust-Nera"
+        "value": "Asia/Ust-Nera",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+07:00) Asia/Vientiane",
-        "value": "Asia/Vientiane"
+        "value": "Asia/Vientiane",
+        "country": "Laos",
+        "phoneCode": "+856",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+10:00) Asia/Vladivostok",
-        "value": "Asia/Vladivostok"
+        "value": "Asia/Vladivostok",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+09:00) Asia/Yakutsk",
-        "value": "Asia/Yakutsk"
+        "value": "Asia/Yakutsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+06:30) Asia/Yangon",
-        "value": "Asia/Yangon"
+        "value": "Asia/Yangon",
+        "country": "Myanmar",
+        "phoneCode": "+95",
+        "utcOffset": "+06:30"
     },
     {
         "label": "(UTC+05:00) Asia/Yekaterinburg",
-        "value": "Asia/Yekaterinburg"
+        "value": "Asia/Yekaterinburg",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+04:00) Asia/Yerevan",
-        "value": "Asia/Yerevan"
+        "value": "Asia/Yerevan",
+        "country": "Armenia",
+        "phoneCode": "+374",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+00:00) Atlantic/Azores",
-        "value": "Atlantic/Azores"
+        "value": "Atlantic/Azores",
+        "country": "Portugal",
+        "phoneCode": "+351",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-03:00) Atlantic/Bermuda",
-        "value": "Atlantic/Bermuda"
+        "value": "Atlantic/Bermuda",
+        "country": "Bermuda",
+        "phoneCode": "+1",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC+00:00) Atlantic/Canary",
-        "value": "Atlantic/Canary"
+        "value": "Atlantic/Canary",
+        "country": "Spain",
+        "phoneCode": "+34",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-01:00) Atlantic/Cape_Verde",
-        "value": "Atlantic/Cape_Verde"
+        "value": "Atlantic/Cape_Verde",
+        "country": "Cape Verde",
+        "phoneCode": "+238",
+        "utcOffset": "-01:00"
     },
     {
         "label": "(UTC+00:00) Atlantic/Faeroe",
-        "value": "Atlantic/Faeroe"
+        "value": "Atlantic/Faeroe",
+        "country": "Faroe Islands",
+        "phoneCode": "+298",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Atlantic/Faroe",
-        "value": "Atlantic/Faroe"
+        "value": "Atlantic/Faroe",
+        "country": "Faroe Islands",
+        "phoneCode": "+298",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+01:00) Atlantic/Jan_Mayen",
-        "value": "Atlantic/Jan_Mayen"
+        "value": "Atlantic/Jan_Mayen",
+        "country": "Norway",
+        "phoneCode": "+47",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Atlantic/Madeira",
-        "value": "Atlantic/Madeira"
+        "value": "Atlantic/Madeira",
+        "country": "Portugal",
+        "phoneCode": "+351",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Atlantic/Reykjavik",
-        "value": "Atlantic/Reykjavik"
+        "value": "Atlantic/Reykjavik",
+        "country": "Iceland",
+        "phoneCode": "+354",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-02:00) Atlantic/South_Georgia",
-        "value": "Atlantic/South_Georgia"
+        "value": "Atlantic/South_Georgia",
+        "country": "South Georgia and the South Sandwich Islands",
+        "phoneCode": "+500",
+        "utcOffset": "-02:00"
     },
     {
         "label": "(UTC+00:00) Atlantic/St_Helena",
-        "value": "Atlantic/St_Helena"
+        "value": "Atlantic/St_Helena",
+        "country": "Saint Helena",
+        "phoneCode": "+290",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-03:00) Atlantic/Stanley",
-        "value": "Atlantic/Stanley"
+        "value": "Atlantic/Stanley",
+        "country": "Falkland Islands",
+        "phoneCode": "+500",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC+10:00) Australia/ACT",
-        "value": "Australia/ACT"
+        "value": "Australia/ACT",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+09:30) Australia/Adelaide",
-        "value": "Australia/Adelaide"
+        "value": "Australia/Adelaide",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+09:30"
     },
     {
         "label": "(UTC+10:00) Australia/Brisbane",
-        "value": "Australia/Brisbane"
+        "value": "Australia/Brisbane",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+09:30) Australia/Broken_Hill",
-        "value": "Australia/Broken_Hill"
+        "value": "Australia/Broken_Hill",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+09:30"
     },
     {
         "label": "(UTC+10:00) Australia/Canberra",
-        "value": "Australia/Canberra"
+        "value": "Australia/Canberra",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/Currie",
-        "value": "Australia/Currie"
+        "value": "Australia/Currie",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+09:30) Australia/Darwin",
-        "value": "Australia/Darwin"
+        "value": "Australia/Darwin",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+09:30"
     },
     {
         "label": "(UTC+08:45) Australia/Eucla",
-        "value": "Australia/Eucla"
+        "value": "Australia/Eucla",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+08:45"
     },
     {
         "label": "(UTC+10:00) Australia/Hobart",
-        "value": "Australia/Hobart"
+        "value": "Australia/Hobart",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/LHI",
-        "value": "Australia/LHI"
+        "value": "Australia/LHI",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/Lindeman",
-        "value": "Australia/Lindeman"
+        "value": "Australia/Lindeman",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/Lord_Howe",
-        "value": "Australia/Lord_Howe"
+        "value": "Australia/Lord_Howe",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/Melbourne",
-        "value": "Australia/Melbourne"
+        "value": "Australia/Melbourne",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/NSW",
-        "value": "Australia/NSW"
+        "value": "Australia/NSW",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+09:30) Australia/North",
-        "value": "Australia/North"
+        "value": "Australia/North",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+09:30"
     },
     {
         "label": "(UTC+08:00) Australia/Perth",
-        "value": "Australia/Perth"
+        "value": "Australia/Perth",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+10:00) Australia/Queensland",
-        "value": "Australia/Queensland"
+        "value": "Australia/Queensland",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/South",
-        "value": "Australia/South"
+        "value": "Australia/South",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/Sydney",
-        "value": "Australia/Sydney"
+        "value": "Australia/Sydney",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/Tasmania",
-        "value": "Australia/Tasmania"
+        "value": "Australia/Tasmania",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Australia/Victoria",
-        "value": "Australia/Victoria"
+        "value": "Australia/Victoria",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+08:00) Australia/West",
-        "value": "Australia/West"
+        "value": "Australia/West",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+09:30) Australia/Yancowinna",
-        "value": "Australia/Yancowinna"
+        "value": "Australia/Yancowinna",
+        "country": "Australia",
+        "phoneCode": "+61",
+        "utcOffset": "+09:30"
     },
     {
         "label": "(UTC-05:00) Brazil/Acre",
-        "value": "Brazil/Acre"
+        "value": "Brazil/Acre",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-02:00) Brazil/DeNoronha",
-        "value": "Brazil/DeNoronha"
+        "value": "Brazil/DeNoronha",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-02:00"
     },
     {
         "label": "(UTC-03:00) Brazil/East",
-        "value": "Brazil/East"
+        "value": "Brazil/East",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-04:00) Brazil/West",
-        "value": "Brazil/West"
+        "value": "Brazil/West",
+        "country": "Brazil",
+        "phoneCode": "+55",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC+01:00) CET",
-        "value": "CET"
+        "value": "CET",
+        "country": "Central European Time",
+        "phoneCode": "+33",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC-06:00) CST6CDT",
-        "value": "CST6CDT"
+        "value": "CST6CDT",
+        "country": "Central Standard Time",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-04:00) Canada/Atlantic",
-        "value": "Canada/Atlantic"
+        "value": "Canada/Atlantic",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-04:00"
     },
     {
         "label": "(UTC-06:00) Canada/Central",
-        "value": "Canada/Central"
+        "value": "Canada/Central",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-05:00) Canada/Eastern",
-        "value": "Canada/Eastern"
+        "value": "Canada/Eastern",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-07:00) Canada/Mountain",
-        "value": "Canada/Mountain"
+        "value": "Canada/Mountain",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-03:30) Canada/Newfoundland",
-        "value": "Canada/Newfoundland"
+        "value": "Canada/Newfoundland",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-03:30"
     },
     {
         "label": "(UTC-08:00) Canada/Pacific",
-        "value": "Canada/Pacific"
+        "value": "Canada/Pacific",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-06:00) Canada/Saskatchewan",
-        "value": "Canada/Saskatchewan"
+        "value": "Canada/Saskatchewan",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-07:00) Canada/Yukon",
-        "value": "Canada/Yukon"
+        "value": "Canada/Yukon",
+        "country": "Canada",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-03:00) Chile/Continental",
-        "value": "Chile/Continental"
+        "value": "Chile/Continental",
+        "country": "Chile",
+        "phoneCode": "+56",
+        "utcOffset": "-03:00"
     },
     {
         "label": "(UTC-05:00) Chile/EasterIsland",
-        "value": "Chile/EasterIsland"
+        "value": "Chile/EasterIsland",
+        "country": "Chile",
+        "phoneCode": "+56",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) Cuba",
-        "value": "Cuba"
+        "value": "Cuba",
+        "country": "Cuba",
+        "phoneCode": "+53",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC+02:00) EET",
-        "value": "EET"
+        "value": "EET",
+        "country": "Eastern European Time",
+        "phoneCode": "+380",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC-05:00) EST",
-        "value": "EST"
+        "value": "EST",
+        "country": "Eastern Standard Time",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) EST5EDT",
-        "value": "EST5EDT"
+        "value": "EST5EDT",
+        "country": "Eastern Standard Time",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC+02:00) Egypt",
-        "value": "Egypt"
+        "value": "Egypt",
+        "country": "Egypt",
+        "phoneCode": "+20",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+00:00) Eire",
-        "value": "Eire"
+        "value": "Eire",
+        "country": "Ireland",
+        "phoneCode": "+353",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+02:00) Europe/Amsterdam",
-        "value": "Europe/Amsterdam"
+        "value": "Europe/Amsterdam",
+        "country": "Netherlands",
+        "phoneCode": "+31",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Andorra",
-        "value": "Europe/Andorra"
+        "value": "Europe/Andorra",
+        "country": "Andorra",
+        "phoneCode": "+376",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+03:00) Europe/Astrakhan",
-        "value": "Europe/Astrakhan"
+        "value": "Europe/Astrakhan",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+03:00) Europe/Athens",
-        "value": "Europe/Athens"
+        "value": "Europe/Athens",
+        "country": "Greece",
+        "phoneCode": "+30",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Europe/Belfast",
-        "value": "Europe/Belfast"
+        "value": "Europe/Belfast",
+        "country": "United Kingdom",
+        "phoneCode": "+44",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Belgrade",
-        "value": "Europe/Belgrade"
+        "value": "Europe/Belgrade",
+        "country": "Serbia",
+        "phoneCode": "+381",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Berlin",
-        "value": "Europe/Berlin"
+        "value": "Europe/Berlin",
+        "country": "Germany",
+        "phoneCode": "+49",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Bratislava",
-        "value": "Europe/Bratislava"
+        "value": "Europe/Bratislava",
+        "country": "Slovakia",
+        "phoneCode": "+421",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Brussels",
-        "value": "Europe/Brussels"
+        "value": "Europe/Brussels",
+        "country": "Belgium",
+        "phoneCode": "+32",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Bucharest",
-        "value": "Europe/Bucharest"
+        "value": "Europe/Bucharest",
+        "country": "Romania",
+        "phoneCode": "+40",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Europe/Budapest",
-        "value": "Europe/Budapest"
+        "value": "Europe/Budapest",
+        "country": "Hungary",
+        "phoneCode": "+36",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Busingen",
-        "value": "Europe/Busingen"
+        "value": "Europe/Busingen",
+        "country": "Germany",
+        "phoneCode": "+49",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Chisinau",
-        "value": "Europe/Chisinau"
+        "value": "Europe/Chisinau",
+        "country": "Moldova",
+        "phoneCode": "+373",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Europe/Copenhagen",
-        "value": "Europe/Copenhagen"
+        "value": "Europe/Copenhagen",
+        "country": "Denmark",
+        "phoneCode": "+45",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Europe/Dublin",
-        "value": "Europe/Dublin"
+        "value": "Europe/Dublin",
+        "country": "Ireland",
+        "phoneCode": "+353",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+01:00) Europe/Gibraltar",
-        "value": "Europe/Gibraltar"
+        "value": "Europe/Gibraltar",
+        "country": "Gibraltar",
+        "phoneCode": "+350",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Europe/Guernsey",
-        "value": "Europe/Guernsey"
+        "value": "Europe/Guernsey",
+        "country": "Guernsey",
+        "phoneCode": "+44",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+02:00) Europe/Helsinki",
-        "value": "Europe/Helsinki"
+        "value": "Europe/Helsinki",
+        "country": "Finland",
+        "phoneCode": "+358",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+00:00) Europe/Isle_of_Man",
-        "value": "Europe/Isle_of_Man"
+        "value": "Europe/Isle_of_Man",
+        "country": "Isle of Man",
+        "phoneCode": "+44",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+03:00) Europe/Istanbul",
-        "value": "Europe/Istanbul"
+        "value": "Europe/Istanbul",
+        "country": "Turkey",
+        "phoneCode": "+90",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+00:00) Europe/Jersey",
-        "value": "Europe/Jersey"
+        "value": "Europe/Jersey",
+        "country": "Jersey",
+        "phoneCode": "+44",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+02:00) Europe/Kaliningrad",
-        "value": "Europe/Kaliningrad"
+        "value": "Europe/Kaliningrad",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+02:00) Europe/Kiev",
-        "value": "Europe/Kiev"
+        "value": "Europe/Kiev",
+        "country": "Ukraine",
+        "phoneCode": "+380",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+03:00) Europe/Kirov",
-        "value": "Europe/Kirov"
+        "value": "Europe/Kirov",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+00:00) Europe/Lisbon",
-        "value": "Europe/Lisbon"
+        "value": "Europe/Lisbon",
+        "country": "Portugal",
+        "phoneCode": "+351",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+01:00) Europe/Ljubljana",
-        "value": "Europe/Ljubljana"
+        "value": "Europe/Ljubljana",
+        "country": "Slovenia",
+        "phoneCode": "+386",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Europe/London",
-        "value": "Europe/London"
+        "value": "Europe/London",
+        "country": "United Kingdom",
+        "phoneCode": "+44",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+01:00) Europe/Luxembourg",
-        "value": "Europe/Luxembourg"
+        "value": "Europe/Luxembourg",
+        "country": "Luxembourg",
+        "phoneCode": "+352",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Madrid",
-        "value": "Europe/Madrid"
+        "value": "Europe/Madrid",
+        "country": "Spain",
+        "phoneCode": "+34",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Malta",
-        "value": "Europe/Malta"
+        "value": "Europe/Malta",
+        "country": "Malta",
+        "phoneCode": "+356",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Mariehamn",
-        "value": "Europe/Mariehamn"
+        "value": "Europe/Mariehamn",
+        "country": "Finland",
+        "phoneCode": "+358",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+03:00) Europe/Minsk",
-        "value": "Europe/Minsk"
+        "value": "Europe/Minsk",
+        "country": "Belarus",
+        "phoneCode": "+375",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Europe/Monaco",
-        "value": "Europe/Monaco"
+        "value": "Europe/Monaco",
+        "country": "Monaco",
+        "phoneCode": "+377",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+03:00) Europe/Moscow",
-        "value": "Europe/Moscow"
+        "value": "Europe/Moscow",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+02:00) Europe/Nicosia",
-        "value": "Europe/Nicosia"
+        "value": "Europe/Nicosia",
+        "country": "Cyprus",
+        "phoneCode": "+357",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Europe/Oslo",
-        "value": "Europe/Oslo"
+        "value": "Europe/Oslo",
+        "country": "Norway",
+        "phoneCode": "+47",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Paris",
-        "value": "Europe/Paris"
+        "value": "Europe/Paris",
+        "country": "France",
+        "phoneCode": "+33",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Podgorica",
-        "value": "Europe/Podgorica"
+        "value": "Europe/Podgorica",
+        "country": "Montenegro",
+        "phoneCode": "+382",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Prague",
-        "value": "Europe/Prague"
+        "value": "Europe/Prague",
+        "country": "Czech Republic",
+        "phoneCode": "+420",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+03:00) Europe/Riga",
-        "value": "Europe/Riga"
+        "value": "Europe/Riga",
+        "country": "Latvia",
+        "phoneCode": "+371",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Europe/Rome",
-        "value": "Europe/Rome"
+        "value": "Europe/Rome",
+        "country": "Italy",
+        "phoneCode": "+39",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+03:00) Europe/Samara",
-        "value": "Europe/Samara"
+        "value": "Europe/Samara",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Europe/San_Marino",
-        "value": "Europe/San_Marino"
+        "value": "Europe/San_Marino",
+        "country": "San Marino",
+        "phoneCode": "+378",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Sarajevo",
-        "value": "Europe/Sarajevo"
+        "value": "Europe/Sarajevo",
+        "country": "Bosnia and Herzegovina",
+        "phoneCode": "+387",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+03:00) Europe/Saratov",
-        "value": "Europe/Saratov"
+        "value": "Europe/Saratov",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+03:00) Europe/Simferopol",
-        "value": "Europe/Simferopol"
+        "value": "Europe/Simferopol",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Europe/Skopje",
-        "value": "Europe/Skopje"
+        "value": "Europe/Skopje",
+        "country": "North Macedonia",
+        "phoneCode": "+389",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Sofia",
-        "value": "Europe/Sofia"
+        "value": "Europe/Sofia",
+        "country": "Bulgaria",
+        "phoneCode": "+359",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Europe/Stockholm",
-        "value": "Europe/Stockholm"
+        "value": "Europe/Stockholm",
+        "country": "Sweden",
+        "phoneCode": "+46",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Tallinn",
-        "value": "Europe/Tallinn"
+        "value": "Europe/Tallinn",
+        "country": "Estonia",
+        "phoneCode": "+372",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Europe/Tirane",
-        "value": "Europe/Tirane"
+        "value": "Europe/Tirane",
+        "country": "Albania",
+        "phoneCode": "+355",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Tiraspol",
-        "value": "Europe/Tiraspol"
+        "value": "Europe/Tiraspol",
+        "country": "Moldova",
+        "phoneCode": "+373",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+03:00) Europe/Ulyanovsk",
-        "value": "Europe/Ulyanovsk"
+        "value": "Europe/Ulyanovsk",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+02:00) Europe/Uzhgorod",
-        "value": "Europe/Uzhgorod"
+        "value": "Europe/Uzhgorod",
+        "country": "Ukraine",
+        "phoneCode": "+380",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+02:00) Europe/Vaduz",
-        "value": "Europe/Vaduz"
+        "value": "Europe/Vaduz",
+        "country": "Liechtenstein",
+        "phoneCode": "+423",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) Europe/Vatican",
-        "value": "Europe/Vatican"
+        "value": "Europe/Vatican",
+        "country": "Vatican City",
+        "phoneCode": "+379",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Vienna",
-        "value": "Europe/Vienna"
+        "value": "Europe/Vienna",
+        "country": "Austria",
+        "phoneCode": "+43",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+02:00) Europe/Vilnius",
-        "value": "Europe/Vilnius"
+        "value": "Europe/Vilnius",
+        "country": "Lithuania",
+        "phoneCode": "+370",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+03:00) Europe/Volgograd",
-        "value": "Europe/Volgograd"
+        "value": "Europe/Volgograd",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Europe/Warsaw",
-        "value": "Europe/Warsaw"
+        "value": "Europe/Warsaw",
+        "country": "Poland",
+        "phoneCode": "+48",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+01:00) Europe/Zagreb",
-        "value": "Europe/Zagreb"
+        "value": "Europe/Zagreb",
+        "country": "Croatia",
+        "phoneCode": "+385",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+03:00) Europe/Zaporozhye",
-        "value": "Europe/Zaporozhye"
+        "value": "Europe/Zaporozhye",
+        "country": "Ukraine",
+        "phoneCode": "+380",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+01:00) Europe/Zurich",
-        "value": "Europe/Zurich"
+        "value": "Europe/Zurich",
+        "country": "Switzerland",
+        "phoneCode": "+41",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Greenwich",
-        "value": "Greenwich"
+        "value": "Greenwich",
+        "country": "Greenwich Mean Time",
+        "phoneCode": "+0",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-10:00) HST",
-        "value": "HST"
+        "value": "HST",
+        "country": "Hawaii-Aleutian Standard Time",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+08:00) Hongkong",
-        "value": "Hongkong"
+        "value": "Hongkong",
+        "country": "Hong Kong",
+        "phoneCode": "+852",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+00:00) Iceland",
-        "value": "Iceland"
+        "value": "Iceland",
+        "country": "Iceland",
+        "phoneCode": "+354",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+03:00) Indian/Antananarivo",
-        "value": "Indian/Antananarivo"
+        "value": "Indian/Antananarivo",
+        "country": "Madagascar",
+        "phoneCode": "+261",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+06:00) Indian/Chagos",
-        "value": "Indian/Chagos"
+        "value": "Indian/Chagos",
+        "country": "British Indian Ocean Territory",
+        "phoneCode": "+246",
+        "utcOffset": "+06:00"
     },
     {
         "label": "(UTC+07:00) Indian/Christmas",
-        "value": "Indian/Christmas"
+        "value": "Indian/Christmas",
+        "country": "Christmas Island",
+        "phoneCode": "+61",
+        "utcOffset": "+07:00"
     },
     {
         "label": "(UTC+06:30) Indian/Cocos",
-        "value": "Indian/Cocos"
+        "value": "Indian/Cocos",
+        "country": "Cocos (Keeling) Islands",
+        "phoneCode": "+61",
+        "utcOffset": "+06:30"
     },
     {
         "label": "(UTC+03:00) Indian/Comoro",
-        "value": "Indian/Comoro"
+        "value": "Indian/Comoro",
+        "country": "Comoros",
+        "phoneCode": "+269",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+05:00) Indian/Kerguelen",
-        "value": "Indian/Kerguelen"
+        "value": "Indian/Kerguelen",
+        "country": "French Southern and Antarctic Lands",
+        "phoneCode": "+262",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+04:00) Indian/Mahe",
-        "value": "Indian/Mahe"
+        "value": "Indian/Mahe",
+        "country": "Seychelles",
+        "phoneCode": "+248",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+05:00) Indian/Maldives",
-        "value": "Indian/Maldives"
+        "value": "Indian/Maldives",
+        "country": "Maldives",
+        "phoneCode": "+960",
+        "utcOffset": "+05:00"
     },
     {
         "label": "(UTC+04:00) Indian/Mauritius",
-        "value": "Indian/Mauritius"
+        "value": "Indian/Mauritius",
+        "country": "Mauritius",
+        "phoneCode": "+230",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+03:00) Indian/Mayotte",
-        "value": "Indian/Mayotte"
+        "value": "Indian/Mayotte",
+        "country": "Mayotte",
+        "phoneCode": "+262",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+04:00) Indian/Reunion",
-        "value": "Indian/Reunion"
+        "value": "Indian/Reunion",
+        "country": "Réunion",
+        "phoneCode": "+262",
+        "utcOffset": "+04:00"
     },
     {
         "label": "(UTC+03:30) Iran",
-        "value": "Iran"
+        "value": "Iran",
+        "country": "Iran",
+        "phoneCode": "+98",
+        "utcOffset": "+03:30"
     },
     {
         "label": "(UTC+02:00) Israel",
-        "value": "Israel"
+        "value": "Israel",
+        "country": "Israel",
+        "phoneCode": "+972",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC-05:00) Jamaica",
-        "value": "Jamaica"
+        "value": "Jamaica",
+        "country": "Jamaica",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+09:00) Japan",
-        "value": "Japan"
+        "value": "Japan",
+        "country": "Japan",
+        "phoneCode": "+81",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+12:00) Kwajalein",
-        "value": "Kwajalein"
+        "value": "Kwajalein",
+        "country": "Marshall Islands",
+        "phoneCode": "+692",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+02:00) Libya",
-        "value": "Libya"
+        "value": "Libya",
+        "country": "Libya",
+        "phoneCode": "+218",
+        "utcOffset": "+02:00"
     },
     {
         "label": "(UTC+01:00) MET",
-        "value": "MET"
+        "value": "MET",
+        "country": "Middle European Time",
+        "phoneCode": "+31",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC-07:00) MST",
-        "value": "MST"
+        "value": "MST",
+        "country": "Mountain Standard Time",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-07:00) MST7MDT",
-        "value": "MST7MDT"
+        "value": "MST7MDT",
+        "country": "Mountain Standard Time",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-08:00) Mexico/BajaNorte",
-        "value": "Mexico/BajaNorte"
+        "value": "Mexico/BajaNorte",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-07:00) Mexico/BajaSur",
-        "value": "Mexico/BajaSur"
+        "value": "Mexico/BajaSur",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-06:00) Mexico/General",
-        "value": "Mexico/General"
+        "value": "Mexico/General",
+        "country": "Mexico",
+        "phoneCode": "+52",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+12:00) NZ",
-        "value": "NZ"
+        "value": "NZ",
+        "country": "New Zealand",
+        "phoneCode": "+64",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+12:00) NZ-CHAT",
-        "value": "NZ-CHAT"
+        "value": "NZ-CHAT",
+        "country": "New Zealand",
+        "phoneCode": "+64",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC-07:00) Navajo",
-        "value": "Navajo"
+        "value": "Navajo",
+        "country": "Navajo Nation",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+08:00) PRC",
-        "value": "PRC"
+        "value": "PRC",
+        "country": "People's Republic of China",
+        "phoneCode": "+86",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC-08:00) PST8PDT",
-        "value": "PST8PDT"
+        "value": "PST8PDT",
+        "country": "Pacific Standard Time",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+13:00) Pacific/Apia",
-        "value": "Pacific/Apia"
+        "value": "Pacific/Apia",
+        "country": "Samoa",
+        "phoneCode": "+685",
+        "utcOffset": "+13:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Auckland",
-        "value": "Pacific/Auckland"
+        "value": "Pacific/Auckland",
+        "country": "New Zealand",
+        "phoneCode": "+64",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Bougainville",
-        "value": "Pacific/Bougainville"
+        "value": "Pacific/Bougainville",
+        "country": "Papua New Guinea",
+        "phoneCode": "+675",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+12:45) Pacific/Chatham",
-        "value": "Pacific/Chatham"
+        "value": "Pacific/Chatham",
+        "country": "New Zealand",
+        "phoneCode": "+64",
+        "utcOffset": "+12:45"
     },
     {
         "label": "(UTC+10:00) Pacific/Chuuk",
-        "value": "Pacific/Chuuk"
+        "value": "Pacific/Chuuk",
+        "country": "Micronesia",
+        "phoneCode": "+691",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC-06:00) Pacific/Easter",
-        "value": "Pacific/Easter"
+        "value": "Pacific/Easter",
+        "country": "Chile",
+        "phoneCode": "+56",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Efate",
-        "value": "Pacific/Efate"
+        "value": "Pacific/Efate",
+        "country": "Vanuatu",
+        "phoneCode": "+678",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+14:00) Pacific/Enderbury",
-        "value": "Pacific/Enderbury"
+        "value": "Pacific/Enderbury",
+        "country": "Kiribati",
+        "phoneCode": "+686",
+        "utcOffset": "+14:00"
     },
     {
         "label": "(UTC+13:00) Pacific/Fakaofo",
-        "value": "Pacific/Fakaofo"
+        "value": "Pacific/Fakaofo",
+        "country": "Tokelau",
+        "phoneCode": "+690",
+        "utcOffset": "+13:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Fiji",
-        "value": "Pacific/Fiji"
+        "value": "Pacific/Fiji",
+        "country": "Fiji",
+        "phoneCode": "+679",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Funafuti",
-        "value": "Pacific/Funafuti"
+        "value": "Pacific/Funafuti",
+        "country": "Tuvalu",
+        "phoneCode": "+688",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC-06:00) Pacific/Galapagos",
-        "value": "Pacific/Galapagos"
+        "value": "Pacific/Galapagos",
+        "country": "Ecuador",
+        "phoneCode": "+593",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-09:00) Pacific/Gambier",
-        "value": "Pacific/Gambier"
+        "value": "Pacific/Gambier",
+        "country": "French Polynesia",
+        "phoneCode": "+689",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Guadalcanal",
-        "value": "Pacific/Guadalcanal"
+        "value": "Pacific/Guadalcanal",
+        "country": "Solomon Islands",
+        "phoneCode": "+677",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+10:00) Pacific/Guam",
-        "value": "Pacific/Guam"
+        "value": "Pacific/Guam",
+        "country": "Guam",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-10:00) Pacific/Honolulu",
-        "value": "Pacific/Honolulu"
+        "value": "Pacific/Honolulu",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-10:00) Pacific/Johnston",
-        "value": "Pacific/Johnston"
+        "value": "Pacific/Johnston",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+14:00) Pacific/Kiritimati",
-        "value": "Pacific/Kiritimati"
+        "value": "Pacific/Kiritimati",
+        "country": "Kiribati",
+        "phoneCode": "+686",
+        "utcOffset": "+14:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Kosrae",
-        "value": "Pacific/Kosrae"
+        "value": "Pacific/Kosrae",
+        "country": "Micronesia",
+        "phoneCode": "+691",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Kwajalein",
-        "value": "Pacific/Kwajalein"
+        "value": "Pacific/Kwajalein",
+        "country": "Marshall Islands",
+        "phoneCode": "+692",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Majuro",
-        "value": "Pacific/Majuro"
+        "value": "Pacific/Majuro",
+        "country": "Marshall Islands",
+        "phoneCode": "+692",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC-09:30) Pacific/Marquesas",
-        "value": "Pacific/Marquesas"
+        "value": "Pacific/Marquesas",
+        "country": "French Polynesia",
+        "phoneCode": "+689",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-11:00) Pacific/Midway",
-        "value": "Pacific/Midway"
+        "value": "Pacific/Midway",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Nauru",
-        "value": "Pacific/Nauru"
+        "value": "Pacific/Nauru",
+        "country": "Nauru",
+        "phoneCode": "+674",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC-11:00) Pacific/Niue",
-        "value": "Pacific/Niue"
+        "value": "Pacific/Niue",
+        "country": "Niue",
+        "phoneCode": "+683",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Norfolk",
-        "value": "Pacific/Norfolk"
+        "value": "Pacific/Norfolk",
+        "country": "Norfolk Island",
+        "phoneCode": "+672",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Noumea",
-        "value": "Pacific/Noumea"
+        "value": "Pacific/Noumea",
+        "country": "New Caledonia",
+        "phoneCode": "+687",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC-11:00) Pacific/Pago_Pago",
-        "value": "Pacific/Pago_Pago"
+        "value": "Pacific/Pago_Pago",
+        "country": "American Samoa",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Palau",
-        "value": "Pacific/Palau"
+        "value": "Pacific/Palau",
+        "country": "Palau",
+        "phoneCode": "+680",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC-08:00) Pacific/Pitcairn",
-        "value": "Pacific/Pitcairn"
+        "value": "Pacific/Pitcairn",
+        "country": "Pitcairn Islands",
+        "phoneCode": "+870",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Pohnpei",
-        "value": "Pacific/Pohnpei"
+        "value": "Pacific/Pohnpei",
+        "country": "Micronesia",
+        "phoneCode": "+691",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+11:00) Pacific/Ponape",
-        "value": "Pacific/Ponape"
+        "value": "Pacific/Ponape",
+        "country": "Micronesia",
+        "phoneCode": "+691",
+        "utcOffset": "+11:00"
     },
     {
         "label": "(UTC+10:00) Pacific/Port_Moresby",
-        "value": "Pacific/Port_Moresby"
+        "value": "Pacific/Port_Moresby",
+        "country": "Papua New Guinea",
+        "phoneCode": "+675",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC-10:00) Pacific/Rarotonga",
-        "value": "Pacific/Rarotonga"
+        "value": "Pacific/Rarotonga",
+        "country": "Cook Islands",
+        "phoneCode": "+682",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+10:00) Pacific/Saipan",
-        "value": "Pacific/Saipan"
+        "value": "Pacific/Saipan",
+        "country": "Northern Mariana Islands",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-11:00) Pacific/Samoa",
-        "value": "Pacific/Samoa"
+        "value": "Pacific/Samoa",
+        "country": "Samoa",
+        "phoneCode": "+685",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC-10:00) Pacific/Tahiti",
-        "value": "Pacific/Tahiti"
+        "value": "Pacific/Tahiti",
+        "country": "French Polynesia",
+        "phoneCode": "+689",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Tarawa",
-        "value": "Pacific/Tarawa"
+        "value": "Pacific/Tarawa",
+        "country": "Kiribati",
+        "phoneCode": "+686",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+13:00) Pacific/Tongatapu",
-        "value": "Pacific/Tongatapu"
+        "value": "Pacific/Tongatapu",
+        "country": "Tonga",
+        "phoneCode": "+676",
+        "utcOffset": "+13:00"
     },
     {
         "label": "(UTC+10:00) Pacific/Truk",
-        "value": "Pacific/Truk"
+        "value": "Pacific/Truk",
+        "country": "Micronesia",
+        "phoneCode": "+691",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Wake",
-        "value": "Pacific/Wake"
+        "value": "Pacific/Wake",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+12:00) Pacific/Wallis",
-        "value": "Pacific/Wallis"
+        "value": "Pacific/Wallis",
+        "country": "Wallis and Futuna",
+        "phoneCode": "+681",
+        "utcOffset": "+12:00"
     },
     {
         "label": "(UTC+10:00) Pacific/Yap",
-        "value": "Pacific/Yap"
+        "value": "Pacific/Yap",
+        "country": "Micronesia",
+        "phoneCode": "+691",
+        "utcOffset": "+10:00"
     },
     {
         "label": "(UTC+01:00) Poland",
-        "value": "Poland"
+        "value": "Poland",
+        "country": "Poland",
+        "phoneCode": "+48",
+        "utcOffset": "+01:00"
     },
     {
         "label": "(UTC+00:00) Portugal",
-        "value": "Portugal"
+        "value": "Portugal",
+        "country": "Portugal",
+        "phoneCode": "+351",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+08:00) ROC",
-        "value": "ROC"
+        "value": "ROC",
+        "country": "Republic of China",
+        "phoneCode": "+886",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+09:00) ROK",
-        "value": "ROK"
+        "value": "ROK",
+        "country": "Republic of Korea",
+        "phoneCode": "+82",
+        "utcOffset": "+09:00"
     },
     {
         "label": "(UTC+08:00) Singapore",
-        "value": "Singapore"
+        "value": "Singapore",
+        "country": "Singapore",
+        "phoneCode": "+65",
+        "utcOffset": "+08:00"
     },
     {
         "label": "(UTC+03:00) Turkey",
-        "value": "Turkey"
+        "value": "Turkey",
+        "country": "Turkey",
+        "phoneCode": "+90",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+00:00) UCT",
-        "value": "UCT"
+        "value": "UCT",
+        "country": "Coordinated Universal Time",
+        "phoneCode": "+0",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC-09:00) US/Alaska",
-        "value": "US/Alaska"
+        "value": "US/Alaska",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-09:00"
     },
     {
         "label": "(UTC-09:00) US/Aleutian",
-        "value": "US/Aleutian"
+        "value": "US/Aleutian",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-09:00"
     },
     {
         "label": "(UTC-07:00) US/Arizona",
-        "value": "US/Arizona"
+        "value": "US/Arizona",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-06:00) US/Central",
-        "value": "US/Central"
+        "value": "US/Central",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-05:00) US/East-Indiana",
-        "value": "US/East-Indiana"
+        "value": "US/East-Indiana",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-05:00) US/Eastern",
-        "value": "US/Eastern"
+        "value": "US/Eastern",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-10:00) US/Hawaii",
-        "value": "US/Hawaii"
+        "value": "US/Hawaii",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-10:00"
     },
     {
         "label": "(UTC-06:00) US/Indiana-Starke",
-        "value": "US/Indiana-Starke"
+        "value": "US/Indiana-Starke",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-06:00"
     },
     {
         "label": "(UTC-05:00) US/Michigan",
-        "value": "US/Michigan"
+        "value": "US/Michigan",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-05:00"
     },
     {
         "label": "(UTC-07:00) US/Mountain",
-        "value": "US/Mountain"
+        "value": "US/Mountain",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-07:00"
     },
     {
         "label": "(UTC-08:00) US/Pacific",
-        "value": "US/Pacific"
+        "value": "US/Pacific",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-08:00) US/Pacific-New",
-        "value": "US/Pacific-New"
+        "value": "US/Pacific-New",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-08:00"
     },
     {
         "label": "(UTC-11:00) US/Samoa",
-        "value": "US/Samoa"
+        "value": "US/Samoa",
+        "country": "United States",
+        "phoneCode": "+1",
+        "utcOffset": "-11:00"
     },
     {
         "label": "(UTC+00:00) UTC",
-        "value": "UTC"
+        "value": "UTC",
+        "country": "Coordinated Universal Time",
+        "phoneCode": "+0",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Universal",
-        "value": "Universal"
+        "value": "Universal",
+        "country": "Coordinated Universal Time",
+        "phoneCode": "+0",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+03:00) W-SU",
-        "value": "W-SU"
+        "value": "W-SU",
+        "country": "Russia",
+        "phoneCode": "+7",
+        "utcOffset": "+03:00"
     },
     {
         "label": "(UTC+00:00) WET",
-        "value": "WET"
+        "value": "WET",
+        "country": "Western European Time",
+        "phoneCode": "+358",
+        "utcOffset": "+00:00"
     },
     {
         "label": "(UTC+00:00) Zulu",
-        "value": "Zulu"
+        "value": "Zulu",
+        "country": "Coordinated Universal Time",
+        "phoneCode": "+0",
+        "utcOffset": "+00:00"
     }
 ]

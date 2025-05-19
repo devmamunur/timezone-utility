@@ -13,6 +13,9 @@ import regionsData from "./region.json";
 interface TimeZoneEntry {
     label: string;
     value: string;
+    country: string;
+    phoneCode: string;
+    utcOffset: string;
 }
 
 interface ConvertOptions {
@@ -23,8 +26,7 @@ interface ConvertOptions {
 
 type TimeZoneNames = TimeZoneEntry["value"];
 
-
-const timezones: TimeZoneEntry[] = timezonesData;
+const timezones: TimeZoneEntry[] = timezonesData; 
 const regions: string[] = regionsData;
 
 /**
@@ -117,6 +119,21 @@ class TimeZone {
             );
         }
         return this.timezoneCache[region];
+    }
+
+
+    /**
+     * Lists time zones for a specific country.
+     * @param country - The country to filter time zones.
+     * @returns Array of TimeZoneEntry objects for the specified country.
+     */
+    static listByCountry(country: string): TimeZoneEntry[] {
+        if (!this.timezoneCache[country]) {
+            this.timezoneCache[country] = this.timezones.filter((tz) =>
+                tz.country.includes(country)
+            );
+        }
+        return this.timezoneCache[country];
     }
 
     /**

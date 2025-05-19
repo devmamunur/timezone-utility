@@ -6,17 +6,33 @@ export default {
   output: [
     {
       file: 'dist/index.cjs.js',
-      format: 'cjs',  // CommonJS format
-      sourcemap: true
+      format: 'cjs',
+      compact: true,
+      minifyInternalExports: true,
+      generatedCode: {
+        preset: 'es5',
+        arrowFunctions: false
+      }
     },
     {
       file: 'dist/index.esm.js',
-      format: 'esm',  // ES module format
-      sourcemap: true
+      format: 'esm', 
+      compact: true,
+      minifyInternalExports: true,
+      generatedCode: {
+        preset: 'es5',
+        arrowFunctions: false
+      }
     }
   ],
   plugins: [
-    json(),        // Support for importing JSON files
-    typescript()   // TypeScript plugin for handling .ts files
+    json({
+      compact: true,
+      indent: ''
+    }),        // Support for importing JSON files with minification
+    typescript({
+      tsconfig: './tsconfig.json',
+      sourceMap: false
+    })   // TypeScript plugin for handling .ts files
   ]
 };
