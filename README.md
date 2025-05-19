@@ -10,12 +10,11 @@ A versatile timezone management package designed for CommonJS, ES Module (ESM), 
 - [Methods Overview](#methods-overview)
 - [Methods](#methods)
   - [list](#list)
-  - [listWithoutLabel](#listWithoutLabel)
-  - [listWithoutValue](#listWithoutValue)
+  - [listWithOnlyValue](#listWithOnlyValue)
+  - [listWithOnlyLabel](#listWithOnlyLabel)
   - [listByRegion](#listByRegion)
   - [listByCountry](#listByCountry)
-  - [getLabelFromValue](#getLabelFromValue)
-  - [getValueFromLabel](#getValueFromLabel)
+  - [getDetailsUsingTimeZoneValue](#getDetailsUsingTimeZoneValue)
   - [getRegions](#getRegions)
   - [convertUTCToTimeZone](#convertUTCToTimeZone)
   - [convertToUTC](#convertToUTC)
@@ -50,12 +49,11 @@ const { TimeZone } = require("timezone-utility");
 | Method Name | Description |
 |-------------|-------------|
 | `list` | Returns a list of all available time zones. |
-| `listWithoutLabel` | Returns a list of all time zone values without labels. |
-| `listWithoutValue` | Returns a list of all time zone labels without values. |
+| `listWithOnlyValue` | Returns a list of all time zone values. |
+| `listWithOnlyLabel` | Returns a list of all time zone labels. |
 | `listByRegion` | Lists time zones for a specific region. |
 | `listByCountry` | Lists time zones for a specific country. |
-| `getLabelFromValue` | Gets the label for a given time zone value. |
-| `getValueFromLabel` | Gets the value for a given time zone label. |
+| `getDetailsUsingTimeZoneValue` | Gets the details for a given time zone value. |
 | `getRegions` | Returns a list of all available regions. |
 | `convertUTCToTimeZone` | Converts a UTC date to a specified time zone. |
 | `convertToUTC` | Converts a date-time from a specified time zone to UTC. |
@@ -75,68 +73,30 @@ const timeZones = TimeZone.list();
 console.log(timeZones);
 ```
 
-Output Example:
-
-```javascript
-[
-  { "label": "(UTC+00:00) Africa/Abidjan", "value": "Africa/Abidjan" },
-  { "label": "(UTC-05:00) America/New_York", "value": "America/New_York" },
-  ...
-]
-```
-
-### listWithoutLabel
+### listWithOnlyValue
 Returns a list of all time zone values without labels.
 
 ```javascript
-const timeZoneValues = TimeZone.listWithoutLabel();
-console.log(timeZoneValues);
+const timeZoneWithOnlyValue = TimeZone.listWithOnlyValue();
+console.log(timeZoneWithOnlyValue);
 ```
 
-Output Example:
 
-```javascript
-[
-  "Africa/Abidjan",
-  "America/New_York",
-  ...
-]
-```
-
-### listWithoutValue
+### listWithOnlyLabel
 Returns a list of all time zone labels without values.
 
 ```javascript
-const timeZoneLabels = TimeZone.listWithoutValue();
-console.log(timeZoneLabels);
+const timeZonelistWithOnlyLabel = TimeZone.listWithOnlyLabel();
+console.log(timeZonelistWithOnlyLabel);
 ```
 
-Output Example:
-
-```javascript
-[
-  "(UTC+00:00) Africa/Abidjan",
-  "(UTC-05:00) America/New_York",
-  ...
-]
-```
 
 ### listByRegion
 Lists time zones for a specific region.
 
 ```javascript
-const timeZonesInRegion = TimeZone.listByRegion('America');
-console.log(timeZonesInRegion);
-```
-
-Output Example:
-
-```javascript
-[
-  { "label": "(UTC-05:00) America/New_York", "value": "America/New_York" },
-  { "label": "(UTC-06:00) America/Chicago", "value": "America/Chicago" },
-  ...
-]
+const timeZonesListByRegion = TimeZone.listByRegion('America');
+console.log(timeZonesListByRegion);
 ```
 
 Parameters:
@@ -146,56 +106,23 @@ Parameters:
 Lists time zones for a specific country.
 
 ```javascript
-const timeZonesInCountry = TimeZone.listByCountry('America');
-console.log(timeZonesInCountry);
-```
-
-Output Example:
-
-```javascript
-[
-  { "label": "(UTC-05:00) America/New_York", "value": "America/New_York" },
-  { "label": "(UTC-06:00) America/Chicago", "value": "America/Chicago" },
-  ...
-]
+const timeZonesListByCountry = TimeZone.listByCountry('America');
+console.log(timeZonesListByCountry);
 ```
 
 Parameters:
 - `country: string`: The region to filter time zones.
 
-### getLabelFromValue
-Gets the label for a given time zone value.
+### getDetailsUsingTimeZoneValue
+Gets the details for a given time zone value.
 
 ```javascript
-const label = TimeZone.getLabelFromValue('America/New_York');
-console.log(label);
-```
-
-Output Example:
-
-```javascript
-"(UTC-05:00) America/New_York"
+const detailsUsingTimeZoneValue = TimeZone.getDetailsUsingTimeZoneValue('America/New_York');
+console.log(detailsUsingTimeZoneValue);
 ```
 
 Parameters:
-- `value: TimeZoneNames`: The time zone value.
-
-### getValueFromLabel
-Gets the value for a given time zone label.
-
-```javascript
-const value = TimeZone.getValueFromLabel('(UTC-05:00) America/New_York');
-console.log(value);
-```
-
-Output Example:
-
-```javascript
-"America/New_York"
-```
-
-Parameters:
-- `label: string`: The time zone label.
+- `value: string`: The time zone value.
 
 ### getRegions
 Returns a list of all available regions.
@@ -205,33 +132,12 @@ const regions = TimeZone.getRegions();
 console.log(regions);
 ```
 
-Output Example:
-
-```javascript
-[
-  "Africa",
-  "America",
-  "Asia",
-  "Atlantic",
-  "Australia",
-  "Europe",
-  "Indian",
-  "Pacific"
-]
-```
-
 ### convertUTCToTimeZone
 Converts a UTC date to a specified time zone.
 
 ```javascript
 const converted = TimeZone.convertUTCToTimeZone('2023-10-10T10:00:00', 'America/New_York', { is24Hour: true });
 console.log(converted);
-```
-
-Output Example:
-
-```javascript
-"2023-10-10 06:00:00"
 ```
 
 Parameters:
@@ -250,11 +156,6 @@ const converted = TimeZone.convertToUTC('2023-10-10T10:00:00', 'America/New_York
 console.log(converted);
 ```
 
-Output Example:
-
-```javascript
-"2023-10-10T14:00:00.000Z"
-```
 
 Parameters:
 - `dateTime: Date | string`: The date-time to convert.
@@ -273,11 +174,6 @@ const convertedTime = TimeZone.convertBetweenTimeZones(originalDate, 'America/Ne
 console.log(convertedTime); 
 ```
 
-Output Example:
-
-```javascript
-"10/15/2024, 12:00:00"
-```
 
 Parameters: 
 - `date: string`: The date-time string to convert.
@@ -296,11 +192,6 @@ const currentTimeInNY = TimeZone.getCurrentTimeInTimeZone('America/New_York', { 
 console.log(currentTimeInNY); 
 ```
 
-Output Example:
-
-```javascript
-"10-15-2024 08:34:56 AM"
-```
 
 Parameters:
 - `targetTimeZone: TimeZoneNames`: The target timezone in which you want the current time.
@@ -317,11 +208,6 @@ const difference = TimeZone.getTimeDifferenceBetweenTimeZones('2023-10-10T10:00:
 console.log(difference);
 ```
 
-Output Example:
-
-```javascript
-"+4 hours 0 minutes"
-```
 
 Parameters:
 - `date: string`: The date string to use for calculation.
@@ -336,11 +222,6 @@ const isoString = TimeZone.convertToISO("10th October 2023, 10:00 AM");
 console.log(isoString);
 ```
 
-Output Example:
-
-```javascript
-"2023-10-10T10:00:00"
-```
 
 Parameters:
 - `dateTimeString: string`: The date-time string to convert.

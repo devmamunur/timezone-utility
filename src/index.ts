@@ -53,7 +53,7 @@ class TimeZone {
      * @returns True if the time zone is valid, false otherwise.
      */
     static isValidTimeZone(timeZone: string): boolean {
-        return this.listWithoutLabel().includes(timeZone);
+        return this.listWithOnlyValue().includes(timeZone);
     }
 
     /**
@@ -92,18 +92,18 @@ class TimeZone {
     }
 
     /**
-     * Returns a list of all time zone values without labels.
+     * Returns a list of all time zone values.
      * @returns Array of time zone values.
      */
-    static listWithoutLabel(): TimeZoneNames[] {
+    static listWithOnlyValue(): TimeZoneNames[] {
         return this.timezones.map((tz) => tz.value);
     }
 
     /**
-     * Returns a list of all time zone labels without values.
+     * Returns a list of all time zone labels.
      * @returns Array of time zone labels.
      */
-    static listWithoutValue(): string[] {
+    static listWithOnlyLabel(): string[] {
         return this.timezones.map((tz) => tz.label);
     }
 
@@ -113,14 +113,17 @@ class TimeZone {
      * @returns Array of TimeZoneEntry objects for the specified region.
      */
     static listByRegion(region: string): TimeZoneEntry[] {
-        if (!this.timezoneCache[region]) {
-            this.timezoneCache[region] = this.timezones.filter((tz) =>
-                tz.label.includes(region)
+        if (!region || typeof region !== 'string') {
+            return [];
+        }
+        const searchTerm = region.toLowerCase().trim();
+        if (!this.timezoneCache[searchTerm]) {
+            this.timezoneCache[searchTerm] = this.timezones.filter((tz) =>
+                tz.label.toLowerCase().includes(searchTerm)
             );
         }
-        return this.timezoneCache[region];
+        return this.timezoneCache[searchTerm];
     }
-
 
     /**
      * Lists time zones for a specific country.
@@ -128,33 +131,28 @@ class TimeZone {
      * @returns Array of TimeZoneEntry objects for the specified country.
      */
     static listByCountry(country: string): TimeZoneEntry[] {
-        if (!this.timezoneCache[country]) {
-            this.timezoneCache[country] = this.timezones.filter((tz) =>
-                tz.country.includes(country)
+        if (!country || typeof country !== 'string') {
+            return [];
+        }
+        const searchTerm = country.toLowerCase().trim();
+        if (!this.timezoneCache[searchTerm]) {
+            this.timezoneCache[searchTerm] = this.timezones.filter((tz) =>
+                tz.country.toLowerCase().includes(searchTerm)
             );
         }
-        return this.timezoneCache[country];
+        return this.timezoneCache[searchTerm];
     }
 
     /**
-     * Gets the label for a given time zone value.
+     * Gets the details for a given time zone value.
      * @param value - The time zone value.
-     * @returns The corresponding label or null if not found.
+     * @returns The corresponding details or null if not found.
      */
-    static getLabelFromValue(value: TimeZoneNames): string | null {
+    static getDetailsUsingTimeZoneValue(value: TimeZoneNames): TimeZoneEntry | null {
         const tz = this.timezones.find((tz) => tz.value === value);
-        return tz ? tz.label : null;
+        return tz ? tz : null;
     }
 
-    /**
-     * Gets the value for a given time zone label.
-     * @param label - The time zone label.
-     * @returns The corresponding value or null if not found.
-     */
-    static getValueFromLabel(label: string): TimeZoneNames | null {
-        const tz = this.timezones.find((tz) => tz.label === label);
-        return tz ? tz.value : null;
-    }
 
     /**
      * Returns a list of all available regions.
