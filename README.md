@@ -117,7 +117,7 @@ console.log(timeZonesInAmerica);
 /* OUTPUT:
 [
   {
-    "label": "(UTC-05:00) Eastern Time - New York",
+    "label": "(UTC-05:00) America/New_York",
     "value": "America/New_York",
     "country": "United States",
     "phoneCode": "+1",
