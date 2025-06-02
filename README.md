@@ -72,6 +72,7 @@ Returns a list of all available time zones.
 ```javascript
 const timeZones = TimeZone.list();
 console.log(timeZones);
+/* OUTPUT:
 [
   {
     "label": "(UTC-05:00) Eastern Time - New York",
@@ -82,6 +83,7 @@ console.log(timeZones);
   },
   ...
 ]
+*/
 ```
 
 ### listWithOnlyValue
@@ -90,7 +92,9 @@ Returns a list of all time zone values without labels.
 ```javascript
 const timeZoneValues = TimeZone.listWithOnlyValue();
 console.log(timeZoneValues);
+/* OUTPUT:
 ["America/New_York", "Europe/London", "Asia/Tokyo", ...]
+*/
 ```
 
 ### listWithOnlyLabel
@@ -99,7 +103,9 @@ Returns a list of all time zone labels without values.
 ```javascript
 const timeZoneLabels = TimeZone.listWithOnlyLabel();
 console.log(timeZoneLabels);
+/* OUTPUT:
 ["(UTC-05:00) Eastern Time - New York", "(UTC+00:00) London", ...]
+*/
 ```
 
 ### listByRegion
@@ -108,6 +114,7 @@ Lists time zones for a specific region.
 ```javascript
 const timeZonesInAmerica = TimeZone.listByRegion('America');
 console.log(timeZonesInAmerica);
+/* OUTPUT:
 [
   {
     "label": "(UTC-05:00) Eastern Time - New York",
@@ -118,6 +125,7 @@ console.log(timeZonesInAmerica);
   },
   ...
 ]
+*/
 ```
 
 Parameters:
@@ -129,6 +137,7 @@ Lists time zones for a specific country.
 ```javascript
 const timeZonesInUS = TimeZone.listByCountry('United States');
 console.log(timeZonesInUS);
+/* OUTPUT:
 [
   {
     "label": "(UTC-05:00) Eastern Time - New York",
@@ -139,6 +148,7 @@ console.log(timeZonesInUS);
   },
   ...
 ]
+*/
 ```
 
 Parameters:
@@ -150,6 +160,7 @@ Gets the details for a given time zone value.
 ```javascript
 const tzDetails = TimeZone.getDetailsUsingTimeZoneValue('America/New_York');
 console.log(tzDetails);
+/* OUTPUT:
 {
   "label": "(UTC-05:00) Eastern Time - New York",
   "value": "America/New_York",
@@ -157,6 +168,7 @@ console.log(tzDetails);
   "phoneCode": "+1",
   "utcOffset": "-05:00"
 }
+*/
 ```
 
 Parameters:
@@ -168,7 +180,9 @@ Returns a list of all available regions.
 ```javascript
 const regions = TimeZone.getRegions();
 console.log(regions);
+/* OUTPUT:
 ["Africa", "America", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"]
+*/
 ```
 
 ### convertUTCToTimeZone
@@ -178,7 +192,9 @@ Converts a UTC date to a specified time zone.
 // Using ISO string
 const converted1 = TimeZone.convertUTCToTimeZone('2024-03-15T10:00:00Z', 'America/New_York', { is24Hour: true });
 console.log(converted1);
+/* OUTPUT:
 "2024-03-15T05:00:00.000-05:00"
+*/
 
 // Using Date object with custom formatting
 const date = new Date('2024-03-15T10:00:00Z');
@@ -189,7 +205,9 @@ const converted2 = TimeZone.convertUTCToTimeZone(date, 'America/New_York', {
   timeSeparator: ':'
 });
 console.log(converted2);
+/* OUTPUT:
 "2024/03/15 05:00:00 AM"
+*/
 ```
 
 Parameters:
@@ -208,7 +226,9 @@ Converts a date-time from a specified time zone to UTC.
 // Using ISO string
 const utc1 = TimeZone.convertToUTC('2024-03-15T05:00:00', 'America/New_York', { returnISO: true });
 console.log(utc1);
+/* OUTPUT:
 "2024-03-15T10:00:00.000Z"
+*/
 
 // Using Date object with custom formatting
 const localDate = new Date('2024-03-15T05:00:00');
@@ -219,7 +239,9 @@ const utc2 = TimeZone.convertToUTC(localDate, 'America/New_York', {
   timeSeparator: ':'
 });
 console.log(utc2);
+/* OUTPUT:
 "2024/03/15 10:00:00 AM"
+*/
 ```
 
 Parameters:
@@ -243,7 +265,9 @@ const converted1 = TimeZone.convertBetweenTimeZones(
   { returnISO: true }
 );
 console.log(converted1);
+/* OUTPUT:
 "2024-03-16T00:00:00.000+09:00"
+*/
 
 // Using custom formatting
 const converted2 = TimeZone.convertBetweenTimeZones(
@@ -258,7 +282,9 @@ const converted2 = TimeZone.convertBetweenTimeZones(
   }
 );
 console.log(converted2);
+/* OUTPUT:
 "2024/03/16 12:00:00 AM"
+*/
 ```
 
 Parameters:
@@ -278,7 +304,9 @@ Returns the current date and time in the specified timezone.
 // Get current time in ISO format
 const currentTime1 = TimeZone.getCurrentTimeInTimeZone('America/New_York', { returnISO: true });
 console.log(currentTime1);
+/* OUTPUT:
 "2024-03-15T05:00:00.000-05:00"
+*/
 
 // Get current time with custom formatting
 const currentTime2 = TimeZone.getCurrentTimeInTimeZone('America/New_York', {
@@ -288,7 +316,9 @@ const currentTime2 = TimeZone.getCurrentTimeInTimeZone('America/New_York', {
   timeSeparator: ':'
 });
 console.log(currentTime2);
+/* OUTPUT:
 "2024/03/15 05:00:00 AM"
+*/
 ```
 
 Parameters:
@@ -309,7 +339,9 @@ const difference = TimeZone.getTimeDifferenceBetweenTimeZones(
   'Asia/Tokyo'
 );
 console.log(difference);
+/* OUTPUT:
 "+14 hours 0 minutes"
+*/
 ```
 
 Parameters:
@@ -323,7 +355,9 @@ Converts UTC date-time to Local date-time and returns local ISO string.
 ```javascript
 const localTime = TimeZone.convertUTCToLocal('2024-03-15T10:00:00Z');
 console.log(localTime);
-"2024-03-15T05:00:00.000-05:00"  // If in EST
+/* OUTPUT:
+"2024-03-15T05:00:00.000-05:00"  (if in EST)
+*/
 ```
 
 Parameters:
@@ -339,7 +373,9 @@ const formatted1 = TimeZone.formatDateTime(
   'yyyy-MM-dd HH:mm:ss'
 );
 console.log(formatted1);
+/* OUTPUT:
 "2024-03-15 10:00:00"
+*/
 
 // Format with specific timezone and custom pattern
 const formatted2 = TimeZone.formatDateTime(
@@ -348,7 +384,9 @@ const formatted2 = TimeZone.formatDateTime(
   'America/New_York'
 );
 console.log(formatted2);
+/* OUTPUT:
 "March 15, 2024 05:00 AM"
+*/
 ```
 
 Parameters:
@@ -362,7 +400,9 @@ Get the user's local timezone.
 ```javascript
 const localTZ = TimeZone.getLocalTimeZone();
 console.log(localTZ);
-"America/New_York"  // Example output
+/* OUTPUT:
+"America/New_York"  (example output)
+*/
 ```
 
 ## License
