@@ -370,7 +370,7 @@ Format an ISO date-time string using a custom format pattern.
 // Format with default timezone (UTC)
 const formatted1 = TimeZone.formatDateTime(
   '2024-03-15T10:00:00Z',
-  'yyyy-MM-dd HH:mm:ss'
+  'yyyy-MM-dd HH:mm:ss'  // See format tokens reference below
 );
 console.log(formatted1);
 /* OUTPUT:
@@ -380,7 +380,7 @@ console.log(formatted1);
 // Format with specific timezone and custom pattern
 const formatted2 = TimeZone.formatDateTime(
   '2024-03-15T10:00:00Z',
-  'MMMM dd, yyyy hh:mm a',
+  'MMMM dd, yyyy hh:mm a',  // See format tokens reference below
   'America/New_York'
 );
 console.log(formatted2);
@@ -391,8 +391,24 @@ console.log(formatted2);
 
 Parameters:
 - `isoDateTimeString: string`: The ISO date-time string to format.
-- `format: string`: The format pattern (using Luxon's format tokens).
+- `format: string`: The format pattern (using [Luxon's format tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens)).
 - `timezone: string`: Optional timezone to convert to before formatting (default: UTC).
+
+Format Tokens Reference:
+| Token | Example | Description |
+|-------|---------|-------------|
+| yyyy  | 2024    | Full year   |
+| MM    | 03      | Month number (01-12) |
+| dd    | 15      | Day of month (01-31) |
+| HH    | 14      | 24-hour hour (00-23) |
+| hh    | 02      | 12-hour hour (01-12) |
+| mm    | 30      | Minute (00-59) |
+| ss    | 45      | Second (00-59) |
+| a     | AM/PM   | Meridiem |
+| MMMM  | March   | Full month name |
+| MMM   | Mar     | Short month name |
+
+For a complete list of format tokens, visit the [Luxon formatting documentation](https://moment.github.io/luxon/#/formatting?id=table-of-tokens).
 
 ### getLocalTimeZone
 Get the user's local timezone.
