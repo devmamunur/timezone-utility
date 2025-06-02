@@ -21,7 +21,9 @@ A versatile timezone management package designed for CommonJS, ES Module (ESM), 
   - [convertBetweenTimeZones](#convertBetweenTimeZones)
   - [getCurrentTimeInTimeZone](#getCurrentTimeInTimeZone)
   - [getTimeDifferenceBetweenTimeZones](#getTimeDifferenceBetweenTimeZones)
-  - [convertToISO](#convertToISO)
+  - [convertUTCToLocal](#convertUTCToLocal)
+  - [formatDateTime](#formatDateTime)
+  - [getLocalTimeZone](#getLocalTimeZone)
 - [License](#license)
 - [Contributing](#contributing)
 
@@ -34,7 +36,6 @@ npm install timezone-utility
 
 ## Usage
 
-
 ```javascript
 // For ES Module (ESM)
 import { TimeZone } from "timezone-utility";
@@ -42,7 +43,6 @@ import { TimeZone } from "timezone-utility";
 // For CommonJS
 const { TimeZone } = require("timezone-utility");
 ```
-
 
 ## Methods Overview
 
@@ -60,10 +60,11 @@ const { TimeZone } = require("timezone-utility");
 | `convertBetweenTimeZones` | Converts a date-time between two specified time zones. |
 | `getCurrentTimeInTimeZone` | Gets the current time in a specified time zone. |
 | `getTimeDifferenceBetweenTimeZones` | Calculates the time difference between two time zones. |
-| `convertToISO` | Converts a formatted date-time string to ISO format. |
+| `convertUTCToLocal` | Converts UTC date-time to Local date-time. |
+| `formatDateTime` | Format an ISO date-time string using a custom format pattern. |
+| `getLocalTimeZone` | Get the user's local timezone. |
 
 ## Methods
-
 
 ### list
 Returns a list of all available time zones.
@@ -71,32 +72,52 @@ Returns a list of all available time zones.
 ```javascript
 const timeZones = TimeZone.list();
 console.log(timeZones);
+[
+  {
+    "label": "(UTC-05:00) Eastern Time - New York",
+    "value": "America/New_York",
+    "country": "United States",
+    "phoneCode": "+1",
+    "utcOffset": "-05:00"
+  },
+  ...
+]
 ```
 
 ### listWithOnlyValue
 Returns a list of all time zone values without labels.
 
 ```javascript
-const timeZoneWithOnlyValue = TimeZone.listWithOnlyValue();
-console.log(timeZoneWithOnlyValue);
+const timeZoneValues = TimeZone.listWithOnlyValue();
+console.log(timeZoneValues);
+["America/New_York", "Europe/London", "Asia/Tokyo", ...]
 ```
-
 
 ### listWithOnlyLabel
 Returns a list of all time zone labels without values.
 
 ```javascript
-const timeZonelistWithOnlyLabel = TimeZone.listWithOnlyLabel();
-console.log(timeZonelistWithOnlyLabel);
+const timeZoneLabels = TimeZone.listWithOnlyLabel();
+console.log(timeZoneLabels);
+["(UTC-05:00) Eastern Time - New York", "(UTC+00:00) London", ...]
 ```
-
 
 ### listByRegion
 Lists time zones for a specific region.
 
 ```javascript
-const timeZonesListByRegion = TimeZone.listByRegion('America');
-console.log(timeZonesListByRegion);
+const timeZonesInAmerica = TimeZone.listByRegion('America');
+console.log(timeZonesInAmerica);
+[
+  {
+    "label": "(UTC-05:00) Eastern Time - New York",
+    "value": "America/New_York",
+    "country": "United States",
+    "phoneCode": "+1",
+    "utcOffset": "-05:00"
+  },
+  ...
+]
 ```
 
 Parameters:
@@ -106,19 +127,36 @@ Parameters:
 Lists time zones for a specific country.
 
 ```javascript
-const timeZonesListByCountry = TimeZone.listByCountry('America');
-console.log(timeZonesListByCountry);
+const timeZonesInUS = TimeZone.listByCountry('United States');
+console.log(timeZonesInUS);
+[
+  {
+    "label": "(UTC-05:00) Eastern Time - New York",
+    "value": "America/New_York",
+    "country": "United States",
+    "phoneCode": "+1",
+    "utcOffset": "-05:00"
+  },
+  ...
+]
 ```
 
 Parameters:
-- `country: string`: The region to filter time zones.
+- `country: string`: The country to filter time zones.
 
 ### getDetailsUsingTimeZoneValue
 Gets the details for a given time zone value.
 
 ```javascript
-const detailsUsingTimeZoneValue = TimeZone.getDetailsUsingTimeZoneValue('America/New_York');
-console.log(detailsUsingTimeZoneValue);
+const tzDetails = TimeZone.getDetailsUsingTimeZoneValue('America/New_York');
+console.log(tzDetails);
+{
+  "label": "(UTC-05:00) Eastern Time - New York",
+  "value": "America/New_York",
+  "country": "United States",
+  "phoneCode": "+1",
+  "utcOffset": "-05:00"
+}
 ```
 
 Parameters:
@@ -130,20 +168,35 @@ Returns a list of all available regions.
 ```javascript
 const regions = TimeZone.getRegions();
 console.log(regions);
+["Africa", "America", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"]
 ```
 
 ### convertUTCToTimeZone
 Converts a UTC date to a specified time zone.
 
 ```javascript
-const converted = TimeZone.convertUTCToTimeZone('2023-10-10T10:00:00', 'America/New_York', { is24Hour: true });
-console.log(converted);
+// Using ISO string
+const converted1 = TimeZone.convertUTCToTimeZone('2024-03-15T10:00:00Z', 'America/New_York', { is24Hour: true });
+console.log(converted1);
+"2024-03-15T05:00:00.000-05:00"
+
+// Using Date object with custom formatting
+const date = new Date('2024-03-15T10:00:00Z');
+const converted2 = TimeZone.convertUTCToTimeZone(date, 'America/New_York', {
+  returnISO: false,
+  is24Hour: false,
+  dateSeparator: '/',
+  timeSeparator: ':'
+});
+console.log(converted2);
+"2024/03/15 05:00:00 AM"
 ```
 
 Parameters:
 - `utcDate: Date | string`: The UTC date.
-- `targetTimeZone: TimeZoneNames`: The target time zone.
+- `targetTimeZone: string`: The target time zone.
 - `options: ConvertOptions (optional)`: Object containing optional formatting options:
+  - `returnISO: boolean`: Whether to return ISO format (default `true`).
   - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
   - `dateSeparator: string`: The date separator (default `-`).
   - `timeSeparator: string`: The time separator (default `:`).
@@ -152,50 +205,96 @@ Parameters:
 Converts a date-time from a specified time zone to UTC.
 
 ```javascript
-const converted = TimeZone.convertToUTC('2023-10-10T10:00:00', 'America/New_York', { is24Hour: false });
-console.log(converted);
-```
+// Using ISO string
+const utc1 = TimeZone.convertToUTC('2024-03-15T05:00:00', 'America/New_York', { returnISO: true });
+console.log(utc1);
+"2024-03-15T10:00:00.000Z"
 
+// Using Date object with custom formatting
+const localDate = new Date('2024-03-15T05:00:00');
+const utc2 = TimeZone.convertToUTC(localDate, 'America/New_York', {
+  returnISO: false,
+  is24Hour: false,
+  dateSeparator: '/',
+  timeSeparator: ':'
+});
+console.log(utc2);
+"2024/03/15 10:00:00 AM"
+```
 
 Parameters:
 - `dateTime: Date | string`: The date-time to convert.
-- `sourceTimeZone: TimeZoneNames`: The source time zone.
+- `sourceTimeZone: string`: The source time zone.
 - `options: ConvertOptions (optional)`: Object containing optional formatting options:
+  - `returnISO: boolean`: Whether to return ISO format (default `true`).
   - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
   - `dateSeparator: string`: The date separator (default `-`).
   - `timeSeparator: string`: The time separator (default `:`).
 
 ### convertBetweenTimeZones
-Convert a datetime from one timezone to another and format it in either 12-hour or 24-hour format. You can also specify a custom date separator. By default, the function uses a 24-hour format (`is24Hour = true`) and the date separator is `-`.
+Convert a datetime from one timezone to another.
 
 ```javascript
-const originalDate = "2024-10-15T14:00:00Z";
-const convertedTime = TimeZone.convertBetweenTimeZones(originalDate, 'America/New_York', 'Asia/Dhaka', {is24Hour: false, dateSeparator: '-', timeSeparator: ':'});
-console.log(convertedTime); 
+// Using ISO format
+const converted1 = TimeZone.convertBetweenTimeZones(
+  '2024-03-15T10:00:00Z',
+  'America/New_York',
+  'Asia/Tokyo',
+  { returnISO: true }
+);
+console.log(converted1);
+"2024-03-16T00:00:00.000+09:00"
+
+// Using custom formatting
+const converted2 = TimeZone.convertBetweenTimeZones(
+  '2024-03-15T10:00:00Z',
+  'America/New_York',
+  'Asia/Tokyo',
+  {
+    returnISO: false,
+    is24Hour: false,
+    dateSeparator: '/',
+    timeSeparator: ':'
+  }
+);
+console.log(converted2);
+"2024/03/16 12:00:00 AM"
 ```
 
-
-Parameters: 
+Parameters:
 - `date: string`: The date-time string to convert.
-- `fromTimeZone: TimeZoneNames`: The source timezone.
-- `toTimeZone: TimeZoneNames`: The target timezone.
+- `fromTimeZone: string`: The source timezone.
+- `toTimeZone: string`: The target timezone.
 - `options: ConvertOptions (optional)`: Object containing optional formatting options:
+  - `returnISO: boolean`: Whether to return ISO format (default `true`).
   - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
   - `dateSeparator: string`: The date separator (default `-`).
   - `timeSeparator: string`: The time separator (default `:`).
 
 ### getCurrentTimeInTimeZone
-Returns the current date and time in the specified timezone. The method allows formatting options such as 24-hour or 12-hour format and custom date and time separators.
+Returns the current date and time in the specified timezone.
 
 ```javascript
-const currentTimeInNY = TimeZone.getCurrentTimeInTimeZone('America/New_York', { is24Hour: false, dateSeparator: '-', timeSeparator: ':' });
-console.log(currentTimeInNY); 
+// Get current time in ISO format
+const currentTime1 = TimeZone.getCurrentTimeInTimeZone('America/New_York', { returnISO: true });
+console.log(currentTime1);
+"2024-03-15T05:00:00.000-05:00"
+
+// Get current time with custom formatting
+const currentTime2 = TimeZone.getCurrentTimeInTimeZone('America/New_York', {
+  returnISO: false,
+  is24Hour: false,
+  dateSeparator: '/',
+  timeSeparator: ':'
+});
+console.log(currentTime2);
+"2024/03/15 05:00:00 AM"
 ```
 
-
 Parameters:
-- `targetTimeZone: TimeZoneNames`: The target timezone in which you want the current time.
+- `targetTimeZone: string`: The target timezone.
 - `options: ConvertOptions (optional)`: Object containing optional formatting options:
+  - `returnISO: boolean`: Whether to return ISO format (default `true`).
   - `is24Hour: boolean`: Whether to use 24-hour format (default `true`).
   - `dateSeparator: string`: The date separator (default `-`).
   - `timeSeparator: string`: The time separator (default `:`).
@@ -204,29 +303,67 @@ Parameters:
 Calculates the time difference between two time zones for a specific date.
 
 ```javascript
-const difference = TimeZone.getTimeDifferenceBetweenTimeZones('2023-10-10T10:00:00', 'UTC', 'America/New_York');
+const difference = TimeZone.getTimeDifferenceBetweenTimeZones(
+  '2024-03-15T10:00:00Z',
+  'America/New_York',
+  'Asia/Tokyo'
+);
 console.log(difference);
+"+14 hours 0 minutes"
 ```
-
 
 Parameters:
 - `date: string`: The date string to use for calculation.
-- `fromTimeZone: TimeZoneNames`: The source time zone.
-- `toTimeZone: TimeZoneNames`: The target time zone.
+- `fromTimeZone: string`: The source time zone.
+- `toTimeZone: string`: The target time zone.
 
-### convertToISO
-Converts a formatted date-time string to ISO format.
+### convertUTCToLocal
+Converts UTC date-time to Local date-time and returns local ISO string.
 
 ```javascript
-const isoString = TimeZone.convertToISO("10th October 2023, 10:00 AM");
-console.log(isoString);
+const localTime = TimeZone.convertUTCToLocal('2024-03-15T10:00:00Z');
+console.log(localTime);
+"2024-03-15T05:00:00.000-05:00"  // If in EST
 ```
 
+Parameters:
+- `dateTimeString: string`: The UTC date-time string to convert.
+
+### formatDateTime
+Format an ISO date-time string using a custom format pattern.
+
+```javascript
+// Format with default timezone (UTC)
+const formatted1 = TimeZone.formatDateTime(
+  '2024-03-15T10:00:00Z',
+  'yyyy-MM-dd HH:mm:ss'
+);
+console.log(formatted1);
+"2024-03-15 10:00:00"
+
+// Format with specific timezone and custom pattern
+const formatted2 = TimeZone.formatDateTime(
+  '2024-03-15T10:00:00Z',
+  'MMMM dd, yyyy hh:mm a',
+  'America/New_York'
+);
+console.log(formatted2);
+"March 15, 2024 05:00 AM"
+```
 
 Parameters:
-- `dateTimeString: string`: The date-time string to convert.
+- `isoDateTimeString: string`: The ISO date-time string to format.
+- `format: string`: The format pattern (using Luxon's format tokens).
+- `timezone: string`: Optional timezone to convert to before formatting (default: UTC).
 
+### getLocalTimeZone
+Get the user's local timezone.
 
+```javascript
+const localTZ = TimeZone.getLocalTimeZone();
+console.log(localTZ);
+"America/New_York"  // Example output
+```
 
 ## License
 This project is licensed under the MIT License.

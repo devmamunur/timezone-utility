@@ -19,6 +19,7 @@ interface TimeZoneEntry {
 }
 
 interface ConvertOptions {
+    returnISO?: boolean;
     is24Hour?: boolean;
     dateSeparator?: string;
     timeSeparator?: string;
@@ -61,10 +62,10 @@ class TimeZone {
      * @param dateTime - The date-time to convert (Date object or ISO string).
      * @param sourceTimeZone - The source time zone.
      * @param targetTimeZone - The target time zone.
-     * @param is24Hour - Whether to use 24-hour format (default: false).
-     * @returns Converted date-time string or Error if conversion fails.
+     * @param returnISO - Whether to return ISO format (default: true).
+     * @returns Converted date-time string in ISO format or Error if conversion fails.
      */
-    static convertDateTime(dateTime: Date | string, sourceTimeZone: TimeZoneNames, targetTimeZone: TimeZoneNames, is24Hour: boolean = false): string | Error {
+    static convertDateTime(dateTime: Date | string, sourceTimeZone: TimeZoneNames, targetTimeZone: TimeZoneNames, returnISO: boolean = true): string | Error {
         if (!this.isValidTimeZone(sourceTimeZone) || !this.isValidTimeZone(targetTimeZone)) {
             return new Error('Invalid time zone provided.');
         }
@@ -77,7 +78,7 @@ class TimeZone {
             }
 
             const targetDate = sourceDate.setZone(targetTimeZone);
-            return targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+            return returnISO ? targetDate.toISO() : targetDate.toFormat('yyyy-MM-dd HH:mm:ss');
         } catch (error) {
             return error;
         }
@@ -167,10 +168,10 @@ class TimeZone {
      * @param utcDate - The UTC date (Date object or ISO string).
      * @param targetTimeZone - The target time zone.
      * @param options - Conversion options (optional).
-     * @returns Formatted date-time string in the target time zone or error message.
+     * @returns ISO formatted date-time string in the target time zone or error message.
      */
     static convertUTCToTimeZone(utcDate: Date | string, targetTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | null {
-        const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+        const { returnISO = true } = options;
 
         if (!this.isValidTimeZone(targetTimeZone)) {
             return "Invalid timezone provided.";
@@ -183,16 +184,22 @@ class TimeZone {
         }
 
         const targetDate = date.setZone(targetTimeZone);
-        let formattedDate = targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+        
+        if (returnISO) {
+            return targetDate.toISO();
+        } else {
+            const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+            let formattedDate = targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
 
-        if (dateSeparator !== '-') {
-            formattedDate = formattedDate.replace(/-/g, dateSeparator);
+            if (dateSeparator !== '-') {
+                formattedDate = formattedDate.replace(/-/g, dateSeparator);
+            }
+            if (timeSeparator !== ':') {
+                formattedDate = formattedDate.replace(/:/g, timeSeparator);
+            }
+            
+            return formattedDate;
         }
-        if (timeSeparator !== ':') {
-            formattedDate = formattedDate.replace(/:/g, timeSeparator);
-        }
-
-        return formattedDate;
     }
 
     /**
@@ -200,11 +207,11 @@ class TimeZone {
      * @param dateTime - The date-time to convert (Date object or ISO string).
      * @param sourceTimeZone - The source time zone.
      * @param options - Conversion options (optional).
-     * @returns Formatted UTC date-time string or error message.
+     * @returns ISO formatted UTC date-time string or error message.
      */
     static convertToUTC(dateTime: Date | string, sourceTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | Error {
         try {
-            const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+            const { returnISO = true } = options;
 
             if (!this.isValidTimeZone(sourceTimeZone)) {
                 return "Invalid timezone provided.";
@@ -217,16 +224,22 @@ class TimeZone {
             }
 
             const utcDate = date.setZone('UTC');
-            let formattedUTC = utcDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+            
+            if (returnISO) {
+                return utcDate.toISO();
+            } else {
+                const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+                let formattedUTC = utcDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
 
-            if (dateSeparator !== '-') {
-                formattedUTC = formattedUTC.replace(/-/g, dateSeparator);
+                if (dateSeparator !== '-') {
+                    formattedUTC = formattedUTC.replace(/-/g, dateSeparator);
+                }
+                if (timeSeparator !== ':') {
+                    formattedUTC = formattedUTC.replace(/:/g, timeSeparator);
+                }
+                
+                return formattedUTC;
             }
-            if (timeSeparator !== ':') {
-                formattedUTC = formattedUTC.replace(/:/g, timeSeparator);
-            }
-
-            return formattedUTC;
         } catch (error) {
             return "An error occurred during conversion.";
         }
@@ -238,10 +251,11 @@ class TimeZone {
      * @param fromTimeZone - The source time zone.
      * @param toTimeZone - The target time zone.
      * @param options - Conversion options (optional).
-     * @returns Formatted date-time string in the target time zone or error message.
+     * @returns ISO formatted date-time string in the target time zone or error message.
      */
     static convertBetweenTimeZones(date: string, fromTimeZone: TimeZoneNames, toTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | null {
-        const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+        const { returnISO = true } = options;
+        
         try {
             if (!this.isValidTimeZone(fromTimeZone) || !this.isValidTimeZone(toTimeZone)) {
                 return "Invalid timezone provided.";
@@ -254,16 +268,22 @@ class TimeZone {
             }
 
             const targetDate = originalDate.setZone(toTimeZone);
-            let formattedDate = targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+            
+            if (returnISO) {
+                return targetDate.toISO();
+            } else {
+                const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+                let formattedDate = targetDate.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
 
-            if (dateSeparator !== '-') {
-                formattedDate = formattedDate.replace(/-/g, dateSeparator);
+                if (dateSeparator !== '-') {
+                    formattedDate = formattedDate.replace(/-/g, dateSeparator);
+                }
+                if (timeSeparator !== ':') {
+                    formattedDate = formattedDate.replace(/:/g, timeSeparator);
+                }
+                
+                return formattedDate;
             }
-            if (timeSeparator !== ':') {
-                formattedDate = formattedDate.replace(/:/g, timeSeparator);
-            }
-
-            return formattedDate;
         } catch (error) {
             return "An error occurred during time zone conversion.";
         }
@@ -273,27 +293,33 @@ class TimeZone {
      * Gets the current time in a specified time zone.
      * @param targetTimeZone - The target time zone.
      * @param options - Formatting options (optional).
-     * @returns Formatted current date-time string in the target time zone or error message.
+     * @returns ISO formatted current date-time string in the target time zone or error message.
      */
     static getCurrentTimeInTimeZone(targetTimeZone: TimeZoneNames, options: ConvertOptions = {}): string | null {
-        const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+        const { returnISO = true } = options;
 
         if (!this.isValidTimeZone(targetTimeZone)) {
             return "Invalid timezone provided.";
         }
 
         const currentDateInTimeZone = DateTime.now().setZone(targetTimeZone);
-        let formattedDate = currentDateInTimeZone.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
+        
+        if (returnISO) {
+            return currentDateInTimeZone.toISO();
+        } else {
+            const { is24Hour = true, dateSeparator = '-', timeSeparator = ':' } = options;
+            let formattedDate = currentDateInTimeZone.toFormat(is24Hour ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy-MM-dd hh:mm:ss a');
 
-        if (dateSeparator !== '-') {
-            formattedDate = formattedDate.replace(/-/g, dateSeparator);
+            if (dateSeparator !== '-') {
+                formattedDate = formattedDate.replace(/-/g, dateSeparator);
+            }
+
+            if (timeSeparator !== ':') {
+                formattedDate = formattedDate.replace(/:/g, timeSeparator);
+            }
+            
+            return formattedDate;
         }
-
-        if (timeSeparator !== ':') {
-            formattedDate = formattedDate.replace(/:/g, timeSeparator);
-        }
-
-        return formattedDate;
     }
 
     /**
@@ -323,18 +349,58 @@ class TimeZone {
     }
 
     /**
-     * Converts a formatted date-time string to ISO format.
+     * Convert UTC date-time to Local date-time and return local ISO string
      * @param dateTimeString - The date-time string to convert.
-     * @returns ISO formatted date-time string or null if conversion fails.
+     * @returns Local formatted date-time string or null if conversion fails.
      */
-    static convertToISO(dateTimeString: string): string | null {
-        const dateTime = DateTime.fromFormat(dateTimeString, "d'th' MMMM yyyy, h:mm a", { zone: 'UTC' });
+    static convertUTCToLocal(dateTimeString: string): string | null {
+        try {
+  
+            const utcDateTime = DateTime.fromISO(dateTimeString, { zone: 'UTC' });
 
-        if (!dateTime.isValid) {
+            if (!utcDateTime.isValid) {
+                return null;
+            }
+            const localDateTime = utcDateTime.toLocal();
+
+            return localDateTime.toISO();
+        } catch (error) {
             return null;
         }
+    }
 
-        return dateTime.toISO({ suppressMilliseconds: true, includeOffset: false });
+    /**
+     * Format an ISO date-time string using a custom format pattern
+     * @param isoDateTimeString - The ISO date-time string to format
+     * @param format - The format pattern (using Luxon's format tokens)
+     * @param timezone - Optional timezone to convert to before formatting (default: UTC)
+     * @returns Formatted date-time string or null if formatting fails
+     */
+    static formatDateTime(isoDateTimeString: string, format: string, timezone: TimeZoneNames = 'UTC'): string | null {
+        try {
+            if (!this.isValidTimeZone(timezone) && timezone !== 'UTC') {
+                return "Invalid timezone provided.";
+            }
+
+            const dateTime = DateTime.fromISO(isoDateTimeString);
+            
+            if (!dateTime.isValid) {
+                return "Invalid ISO date-time string.";
+            }
+            
+            const dateInTimezone = dateTime.setZone(timezone);
+            return dateInTimezone.toFormat(format);
+        } catch (error) {
+            return null;
+        }
+    }
+
+    /**
+     * Get the user's local timezone
+     * @returns The IANA timezone identifier string for the user's local timezone
+     */
+    static getLocalTimeZone(): string {
+        return DateTime.local().zoneName;
     }
 }
 
