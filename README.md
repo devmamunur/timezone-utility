@@ -75,7 +75,7 @@ console.log(timeZones);
 /* OUTPUT:
 [
   {
-    "label": "(UTC-05:00) Eastern Time - New York",
+    "label": "(UTC-05:00) America/New_York",
     "value": "America/New_York",
     "country": "United States",
     "phoneCode": "+1",
@@ -104,7 +104,7 @@ Returns a list of all time zone labels without values.
 const timeZoneLabels = TimeZone.listWithOnlyLabel();
 console.log(timeZoneLabels);
 /* OUTPUT:
-["(UTC-05:00) Eastern Time - New York", "(UTC+00:00) London", ...]
+["(UTC-05:00) America/New_York", "(UTC+00:00) London", ...]
 */
 ```
 
@@ -140,7 +140,7 @@ console.log(timeZonesInUS);
 /* OUTPUT:
 [
   {
-    "label": "(UTC-05:00) Eastern Time - New York",
+    "label": "(UTC-05:00) America/New_York",
     "value": "America/New_York",
     "country": "United States",
     "phoneCode": "+1",
@@ -162,7 +162,7 @@ const tzDetails = TimeZone.getDetailsUsingTimeZoneValue('America/New_York');
 console.log(tzDetails);
 /* OUTPUT:
 {
-  "label": "(UTC-05:00) Eastern Time - New York",
+  "label": "(UTC-05:00) America/New_York",
   "value": "America/New_York",
   "country": "United States",
   "phoneCode": "+1",
