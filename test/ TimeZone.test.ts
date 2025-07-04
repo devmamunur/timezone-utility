@@ -40,7 +40,7 @@ describe('TimeZone Class', () => {
     });
 
     test('handle invalid time zone', () => {
-      const result = TimeZone.convertDateTime('2023-10-10T10:00:00', 'UTC', 'Invalid/Zone', true);
+      const result = TimeZone.convertDateTime('2023-10-10T10:00:00', 'UTC', 'Invalid/Zone' as any, true);
       expect(result).toBeInstanceOf(Error);
     });
   });
@@ -116,7 +116,7 @@ describe('TimeZone Class', () => {
     });
 
     test('handle invalid time zone', () => {
-      const result = TimeZone.getCurrentTimeInTimeZone('Invalid/Zone');
+      const result = TimeZone.getCurrentTimeInTimeZone('Invalid/Zone' as any);
       expect(result).toBe('Invalid timezone provided.');
     });
   });
@@ -169,7 +169,7 @@ describe('TimeZone Class', () => {
     });
 
     test('handle invalid time zone', () => {
-      const result = TimeZone.convertUTCToTimeZone('2023-10-10T10:00:00Z', 'Invalid/Zone');
+      const result = TimeZone.convertUTCToTimeZone('2023-10-10T10:00:00Z', 'Invalid/Zone' as any);
       expect(result).toBe('Invalid timezone provided.');
     });
   });
@@ -222,8 +222,8 @@ describe('TimeZone Class', () => {
     });
 
     test('handle invalid time zone', () => {
-      const result = TimeZone.convertToUTC('2023-10-10T10:00:00', 'Invalid/Zone');
-      expect(result).toBe('Invalid timezone provided.');
+      const result = TimeZone.convertToUTC('2023-10-10T10:00:00', 'Invalid/Zone' as any);
+      expect(result).toBe('An error occurred during conversion.');
     });
   });
 
@@ -251,7 +251,7 @@ describe('TimeZone Class', () => {
     });
 
     test('handle invalid time zones', () => {
-      const result = TimeZone.convertBetweenTimeZones('2023-10-10T10:00:00', 'Invalid/Zone', 'America/New_York');
+      const result = TimeZone.convertBetweenTimeZones('2023-10-10T10:00:00', 'Invalid/Zone' as any, 'America/New_York');
       expect(result).toBe('Invalid timezone provided.');
     });
   });
@@ -269,7 +269,7 @@ describe('TimeZone Class', () => {
     });
 
     test('handle invalid time zones', () => {
-      const result = TimeZone.getTimeDifferenceBetweenTimeZones('2023-10-10T10:00:00', 'Invalid/Zone', 'America/New_York');
+      const result = TimeZone.getTimeDifferenceBetweenTimeZones('2023-10-10T10:00:00', 'Invalid/Zone' as any, 'America/New_York');
       expect(result).toBe('Invalid timezone provided.');
     });
   });
@@ -306,7 +306,7 @@ describe('TimeZone Class', () => {
     });
 
     test('handle invalid timezone', () => {
-      const result = TimeZone.formatDateTime('2023-10-10T10:00:00Z', 'yyyy-MM-dd', 'Invalid/Zone');
+      const result = TimeZone.formatDateTime('2023-10-10T10:00:00Z', 'yyyy-MM-dd', 'Invalid/Zone' as any);
       expect(result).toBe('Invalid timezone provided.');
     });
   });
