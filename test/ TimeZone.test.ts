@@ -139,6 +139,30 @@ describe('TimeZone Class', () => {
       expect(typeof converted === 'string' && converted.includes('/')).toBe(true);
     });
 
+    test('return ISO format when returnISO is true', () => {
+      const utcDate = '2023-10-10T10:00:00Z';
+      const converted = TimeZone.convertUTCToTimeZone(utcDate, 'America/New_York', { returnISO: true });
+      expect(typeof converted).toBe('string');
+      // ISO format should contain 'T' and follow YYYY-MM-DDTHH:mm:ss pattern
+      expect(converted).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/);
+    });
+
+    test('return non-ISO format when returnISO is false', () => {
+      const utcDate = '2023-10-10T10:00:00Z';
+      const converted = TimeZone.convertUTCToTimeZone(utcDate, 'America/New_York', { returnISO: false });
+      expect(typeof converted).toBe('string');
+      // Non-ISO format should not contain 'T' and should be in readable format
+      expect(converted).not.toContain('T');
+    });
+
+    test('return ISO format by default when no options provided', () => {
+      const utcDate = '2023-10-10T10:00:00Z';
+      const converted = TimeZone.convertUTCToTimeZone(utcDate, 'America/New_York');
+      expect(typeof converted).toBe('string');
+      // Should return ISO format by default
+      expect(converted).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/);
+    });
+
     test('handle invalid UTC date format', () => {
       const result = TimeZone.convertUTCToTimeZone('invalid-date', 'America/New_York');
       expect(result).toBe('Invalid date format.');
@@ -166,6 +190,30 @@ describe('TimeZone Class', () => {
         timeSeparator: '-'
       });
       expect(typeof converted === 'string' && converted.includes('/')).toBe(true);
+    });
+
+    test('return ISO format when returnISO is true', () => {
+      const dateTime = '2023-10-10T10:00:00';
+      const converted = TimeZone.convertToUTC(dateTime, 'America/New_York', { returnISO: true });
+      expect(typeof converted).toBe('string');
+      // ISO format should contain 'T' and follow YYYY-MM-DDTHH:mm:ss pattern
+      expect(converted).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/);
+    });
+
+    test('return non-ISO format when returnISO is false', () => {
+      const dateTime = '2023-10-10T10:00:00';
+      const converted = TimeZone.convertToUTC(dateTime, 'America/New_York', { returnISO: false });
+      expect(typeof converted).toBe('string');
+      // Non-ISO format should not contain 'T' and should be in readable format
+      expect(converted).not.toContain('T');
+    });
+
+    test('return ISO format by default when no options provided', () => {
+      const dateTime = '2023-10-10T10:00:00';
+      const converted = TimeZone.convertToUTC(dateTime, 'America/New_York');
+      expect(typeof converted).toBe('string');
+      // Should return ISO format by default
+      expect(converted).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/);
     });
 
     test('handle invalid date-time format', () => {
