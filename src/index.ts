@@ -24,6 +24,11 @@ interface ConvertOptions {
     timeSeparator?: string;
 }
 
+interface CountryEntry {
+    name: string;
+    code: string;
+}
+
 type TimeZoneNames = 
     | "Africa/Abidjan"
     | "Africa/Accra"
@@ -594,6 +599,26 @@ class TimeZone {
     }
 
     /**
+     * Returns a list of all unique countries with their phone codes.
+     * @returns Array of CountryEntry objects containing country names and phone codes.
+     */
+    static getCountriesWithCodes(): CountryEntry[] {
+        const countryMap = new Map<string, string>();
+        
+        // Iterate through all timezones and collect unique countries with their phone codes
+        this.timezones.forEach((tz) => {
+            if (tz.country && tz.phoneCode && !countryMap.has(tz.country)) {
+                countryMap.set(tz.country, tz.phoneCode);
+            }
+        });
+        
+        // Convert map to array of CountryEntry objects and sort by country name
+        return Array.from(countryMap.entries())
+            .map(([name, code]) => ({ name, code }))
+            .sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    /**
      * Converts a UTC date to a specified time zone.
      * @param utcDate - The UTC date (Date object or ISO string).
      * @param targetTimeZone - The target time zone.
@@ -928,5 +953,5 @@ class TimeZone {
     }
 }
 
-export { TimeZone };
+export { TimeZone, CountryEntry };
 export default TimeZone;

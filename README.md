@@ -19,6 +19,7 @@ A versatile timezone management package designed for CommonJS, ES Module (ESM), 
   - [listByCountry](#listByCountry)
   - [getDetailsUsingTimeZoneValue](#getDetailsUsingTimeZoneValue)
   - [getRegions](#getRegions)
+  - [getCountriesWithCodes](#getCountriesWithCodes)
   - [convertUTCToTimeZone](#convertUTCToTimeZone)
   - [convertToUTC](#convertToUTC)
   - [convertBetweenTimeZones](#convertBetweenTimeZones)
@@ -63,6 +64,7 @@ const { TimeZone } = require("timezone-utility");
 | `listByCountry` | Lists time zones for a specific country. |
 | `getDetailsUsingTimeZoneValue` | Gets the details for a given time zone value. |
 | `getRegions` | Returns a list of all available regions. |
+| `getCountriesWithCodes` | Returns a list of all unique countries with their phone codes. |
 | `convertUTCToTimeZone` | Converts a UTC date to a specified time zone. |
 | `convertToUTC` | Converts a date-time from a specified time zone to UTC. |
 | `convertBetweenTimeZones` | Converts a date-time between two specified time zones. |
@@ -280,6 +282,56 @@ console.log(regions);
 
 Returns:
 - `Array<string>`: Array of region strings.
+
+### getCountriesWithCodes
+Returns a list of all unique countries with their phone codes.
+
+```javascript
+const countries = TimeZone.getCountriesWithCodes();
+console.log(countries);
+/* OUTPUT:
+[
+  {
+    "name": "Afghanistan",
+    "code": "+93"
+  },
+  {
+    "name": "Albania", 
+    "code": "+355"
+  },
+  {
+    "name": "Algeria",
+    "code": "+213"
+  },
+  {
+    "name": "United States",
+    "code": "+1"
+  },
+  {
+    "name": "United Kingdom",
+    "code": "+44"
+  },
+  ...
+]
+*/
+
+// Find a specific country
+const usaCountry = countries.find(c => c.name === 'United States');
+console.log(usaCountry); // { name: "United States", code: "+1" }
+
+// Get all country names
+const countryNames = countries.map(c => c.name);
+console.log(countryNames); // ["Afghanistan", "Albania", "Algeria", ...]
+
+// Get all phone codes
+const phoneCodes = countries.map(c => c.code);
+console.log(phoneCodes); // ["+93", "+355", "+213", ...]
+```
+
+Returns:
+- `Array<CountryEntry>`: Array of CountryEntry objects containing unique country names and phone codes, sorted alphabetically by country name.
+
+**Note:** This method automatically deduplicates countries that have multiple timezones, ensuring each country appears only once in the result.
 
 ### convertUTCToTimeZone
 Converts a UTC date to a specified time zone.
@@ -502,14 +554,20 @@ This package includes comprehensive TypeScript support with type definitions. Th
 
 - `TimeZoneNames`: Union type of all supported timezone values
 - `TimeZoneEntry`: Interface for timezone objects with label, value, country, phoneCode, and utcOffset
+- `CountryEntry`: Interface for country objects with name and phone code
 - `ConvertOptions`: Interface for formatting options used in conversion methods
 
 ```typescript
-import { TimeZone } from "timezone-utility";
+import { TimeZone, CountryEntry, TimeZoneNames } from "timezone-utility";
 
 // TypeScript will provide intellisense and type checking
 const timeZone: TimeZoneNames = 'America/New_York';
 const isValid: boolean = TimeZone.isValidTimeZone(timeZone);
+
+// Using the new getCountriesWithCodes method with proper typing
+const countries: CountryEntry[] = TimeZone.getCountriesWithCodes();
+const firstCountry: CountryEntry = countries[0];
+console.log(`${firstCountry.name}: ${firstCountry.code}`);
 ```
 
 ## Error Handling

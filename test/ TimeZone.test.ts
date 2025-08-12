@@ -318,4 +318,76 @@ describe('TimeZone Class', () => {
       expect(localTimeZone.length).toBeGreaterThan(0);
     });
   });
+
+  describe('getCountriesWithCodes', () => {
+    test('returns array of countries with codes', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      expect(Array.isArray(countries)).toBe(true);
+      expect(countries.length).toBeGreaterThan(0);
+    });
+
+    test('each country entry has required properties', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      const firstCountry = countries[0];
+      expect(firstCountry).toHaveProperty('name');
+      expect(firstCountry).toHaveProperty('code');
+      expect(typeof firstCountry.name).toBe('string');
+      expect(typeof firstCountry.code).toBe('string');
+      expect(firstCountry.name.length).toBeGreaterThan(0);
+      expect(firstCountry.code.length).toBeGreaterThan(0);
+    });
+
+    test('countries are sorted alphabetically by name', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      for (let i = 1; i < countries.length; i++) {
+        expect(countries[i].name.localeCompare(countries[i - 1].name)).toBeGreaterThanOrEqual(0);
+      }
+    });
+
+    test('returns unique countries without duplicates', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      const countryNames = countries.map(c => c.name);
+      const uniqueNames = Array.from(new Set(countryNames));
+      expect(countryNames.length).toBe(uniqueNames.length);
+    });
+
+    test('phone codes start with + symbol', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      countries.forEach(country => {
+        expect(country.code).toMatch(/^\+/);
+      });
+    });
+
+    test('contains expected number of countries', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      // Should have around 254 unique countries based on timezone data
+      expect(countries.length).toBeGreaterThan(200);
+      expect(countries.length).toBeLessThan(300);
+    });
+
+    test('contains known countries with correct codes', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      const countryMap = new Map(countries.map(c => [c.name, c.code]));
+      
+      // Test some known countries and their phone codes
+      expect(countryMap.get('United States')).toBe('+1');
+      expect(countryMap.get('United Kingdom')).toBe('+44');
+      expect(countryMap.get('Germany')).toBe('+49');
+      expect(countryMap.get('Japan')).toBe('+81');
+      expect(countryMap.get('Australia')).toBe('+61');
+    });
+
+    test('handles countries with multiple timezones correctly', () => {
+      const countries = TimeZone.getCountriesWithCodes();
+      const countryNames = countries.map(c => c.name);
+      
+      // United States should appear only once despite having multiple timezones
+      const usCount = countryNames.filter(name => name === 'United States').length;
+      expect(usCount).toBe(1);
+      
+      // Russia should appear only once despite having multiple timezones
+      const russiaCount = countryNames.filter(name => name === 'Russia').length;
+      expect(russiaCount).toBe(1);
+    });
+  });
 });
