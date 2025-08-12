@@ -1,6 +1,6 @@
 {
   "name": "timezone-utility",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "A versatile timezone management package designed for CommonJS, ES Module (ESM), JavaScript, and TypeScript projects.",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
