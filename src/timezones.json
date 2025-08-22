@@ -1575,6 +1575,13 @@
         "utcOffset": "+05:30"
     },
     {
+        "label": "(UTC+05:30) Asia/Kolkata",
+        "value": "Asia/Kolkata",
+        "country": "India",
+        "phoneCode": "+91",
+        "utcOffset": "+05:30"
+    },
+    {
         "label": "(UTC+09:00) Asia/Chita",
         "value": "Asia/Chita",
         "country": "Russia",
