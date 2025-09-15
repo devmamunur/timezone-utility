@@ -15,6 +15,7 @@
     "test": "jest"
   },
   "keywords": [
+    "timezone-utility",
     "timezone",
     "time",
     "zones",
